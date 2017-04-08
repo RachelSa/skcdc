@@ -8,7 +8,71 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <nav class="nav-height grey lighten-4">
+    <div class="row">
+
+      <div class="col l1"></div>
+
+      <div class="col l3">
+         <div class="nav-wrapper">
+           <a href="#" class="brand-logo">
+             <div class="cardie z-depth-2">
+                  <div class="center-align">
+                    <img src="/assets/SKCDC_Logo.jpg" alt="SKCDC logo">
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+      <div class="col l2"></div>
+
+      <div class="col l6">
+       <ul id="nav-mobile" class="left">
+         <li><a href="sass.html">About Us</a></li>
+         <li><a href="badges.html">Programs</a></li>
+         <li><a href="collapsible.html">Classrooms</a></li>
+         <li><a href="collapsible.html">Contact Us</a></li>
+         <li><a href="collapsible.html">Apply</a></li>
+       </ul>
+     </div>
+
+    </div>
+  </nav>
+
+
+   <div class="row">
+     <div class="col l1">
+     </div>
     <%= yield %>
-  </body>
+      <div class="col l1">
+      </div>
+    </div>
+
+
+    <footer class="page-footer grey lighten-4">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="black-text">Footer Content</h5>
+                <p class="grey-text">You can use rows and columns here to organize your footer content.</p>
+              </div>
+              <div class="col l4 offset-l2 s12">
+                <h5 class="black-text">Links</h5>
+                <ul>
+                  <li><a class="grey-text" href="#!">Link 1</a></li>
+                  <li><a class="grey-text" href="#!">Link 2</a></li>
+                  <li><a class="grey-text" href="#!">Link 3</a></li>
+                  <li><a class="grey-text" href="#!">Link 4</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container">
+            © 2014 Copyright Text
+            <a class="grey-text right" href="#!">More Links</a>
+            </div>
+          </div>
+        </footer>
 </html>
