@@ -1,3 +1,4 @@
 class Classroom < ApplicationRecord
-  belongs_to :program
+  has_many :program_classrooms
+  has_many :programs, through: :program_classrooms
 end

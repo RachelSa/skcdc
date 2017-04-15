@@ -10,26 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170415130839) do
+ActiveRecord::Schema.define(version: 20170415140121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "classrooms", force: :cascade do |t|
-    t.string  "name"
-    t.string  "location"
-    t.string  "map_url"
-    t.string  "image_url"
-    t.integer "program_id"
-    t.text    "description"
-    t.index ["program_id"], name: "index_classrooms_on_program_id", using: :btree
+    t.string "name"
+    t.string "location"
+    t.string "map_url"
+    t.string "image_url"
+    t.text   "description"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string  "title"
     t.integer "user_id"
     t.text    "content"
-    t.index ["user_id"], name: "index_posts_on_user_id", using: :btree
+  end
+
+  create_table "program_classrooms", force: :cascade do |t|
+    t.integer  "program_id"
+    t.integer  "classroom_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
   end
 
   create_table "programs", force: :cascade do |t|
@@ -42,6 +46,4 @@ ActiveRecord::Schema.define(version: 20170415130839) do
     t.string "password_digest"
   end
 
-  add_foreign_key "classrooms", "programs"
-  add_foreign_key "posts", "users"
 end
