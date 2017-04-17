@@ -1,0 +1,18 @@
+
+<div id="left-col" class="col l4">
+  <% if @program.classrooms.present?  %>
+    <%= "Classrooms offering this program" %>
+  <% end %>
+  <ul>
+  <% @program.classrooms.each do |classroom| %>
+  <li>  <%= classroom.name %></li>
+    <% end %>
+  </ul>
+
+</div>
+
+<div id="right-col" class="col l6">
+  <h2><%= @program.title %></h2>
+
+  <p><%= @program.description %></p>
+</div>
