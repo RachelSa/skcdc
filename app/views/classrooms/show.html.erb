@@ -1,6 +1,15 @@
 
 <div id="left-col" class="col l4">
 
+  <% if @classroom.programs.present?  %>
+  <h5>  <%= "Programs offered:" %></h5>
+  <% end %>
+  <ul>
+  <% @classroom.programs.each do |program| %>
+    <li><%= link_to "#{program.title}", program %></li>
+  <% end %>
+  </ul>
+  <a class="waves-effect waves-light btn">apply</a>
 </div>
 
 <div id="right-col" class="col l6">
