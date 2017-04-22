@@ -1,0 +1,29 @@
+
+<div id="left-col" class="col l4">
+  <h5>Main Office</h5>
+  <p>Southern Kennebec Child Development Corporation</p>
+  <p>337 Maine Avenue</p>
+  <p>Farmingdale, ME 04344</p>
+  <p>Telephone: (207) 582-3110</p>
+  <p>Toll Free: (800) 525-2229</p>
+  <p>Fax (General): (207) 582-3112</p>
+  <p>Fax (Operations):	(207) 582-3113</p>
+</div>
+
+<div id="right-col" class="col l6">
+  <ul class="collection with-header">
+    <li class="collection-header"><h4>Contact Us</h4></li>
+    <% @contacts.each do |contact| %>
+      <li class="collection-item">
+        <div class="row">
+        <div class='col l5'><%= "#{contact.first_name} #{contact.last_name}" %>
+        <br><%= "#{contact.title}" %></div>
+        <div class='col l5'><%= "#{contact.email}"%></div>
+        <div class='col l2'><%=" ext: #{contact.ext}" %></div>
+      </div>
+      </li>
+    <% end %>
+
+  </ul>
+
+</div>
