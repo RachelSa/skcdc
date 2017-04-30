@@ -1,6 +1,8 @@
 
 <div id="left-col" class="col l4">
-
+  <h5><%= @classroom.name %></h5>
+  <%= @classroom.location %><br>
+  <%= @classroom.phone %>
   <% if @classroom.programs.present?  %>
   <h5>  <%= "Programs offered:" %></h5>
   <% end %>
@@ -15,6 +17,8 @@
 <div id="right-col" class="col l6">
   <h2><%= @classroom.name %></h2>
   <p><%= @classroom.description %></p>
+
+  <%= image_tag("#{@map_url}") %>
 
 
 </div>
