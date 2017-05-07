@@ -1,0 +1,23 @@
+<div id="left-col" class="col l4">
+  <p>Already have an account? <%= link_to "Login", "/login" %>.</p>
+</div>
+
+<div id="right-col" class="col l6">
+  <h3>Create Admin Account </h3>
+
+<%= form_for(@user) do |f|%>
+
+  <%= f.label :email %>
+  <%= f.text_field :email %><br>
+
+  <%= f.label :password %>
+  <%= f.password_field :password %><br>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation %><br></br>
+
+
+  <%= f.submit %><br></br>
+
+<% end %>
+</div>

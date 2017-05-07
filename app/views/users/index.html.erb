@@ -1,0 +1,30 @@
+<div id="left-col" class="col l4">
+  <h5>Admin Account</h5>
+</div>
+
+<div id="right-col" class="col l6">
+  <div class="col l7">
+    <h5>Update Blog</h5>
+      <p>new post</p>
+    <h5>Edit Contact</h5>
+      <ul>
+        <% @contact_names.each do |contact| %>
+        <li>- <%= link_to "#{contact[0]} #{contact[1]}", "/contacts/#{contact[3]}/edit" %>: <%= contact[2] %><li>
+          <% end %>
+      </ul>
+  </div>
+  <div class="col l5">
+    <h5>Edit Classroom</h5>
+      <ul>
+        <% @classroom_names.each do |classroom| %>
+        <li>- <%= link_to "#{classroom[0]}", "/classrooms/#{classroom[1]}/edit" %><li>
+          <% end %>
+      </ul>
+    <h5>Edit Program</h5>
+      <ul>
+        <% @program_names.each do |program| %>
+        <li>- <%= link_to "#{program[0]}", "/programs/#{program[1]}/edit" %><li>
+          <% end %>
+      </ul>
+  </div>
+</div>
