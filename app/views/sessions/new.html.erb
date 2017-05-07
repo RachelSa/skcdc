@@ -1,0 +1,19 @@
+<div id="left-col" class="col l4">
+  <p>Need an accout? Create a <%= link_to "new admin account", new_user_path %>.</p>
+</div>
+
+<div id="right-col" class="col l6">
+  <h3>Login</h3>
+
+<%= form_tag "/login" do %>
+
+  <%= label_tag "user[email]", "email"  %>
+  <%= text_field_tag "user[email]" %><br>
+
+  <%= label_tag "user[password]", "password" %>
+  <%= password_field_tag "user[password]" %><br></br>
+
+  <%= button_tag "login" %><br></br>
+
+  <% end %>
+</div>

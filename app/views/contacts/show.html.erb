@@ -1,0 +1,21 @@
+<div id="left-col" class="col l4">
+
+</div>
+
+
+<div id="right-col" class="col l6">
+  <h5> <%= @contact.first_name %> <%= @contact.last_name %> </h5>
+  <p><%= @contact.title %></p>
+  <ul>
+    <li>phone: <%= @contact.phone %></li>
+    <li>ext: <%= @contact.ext %></li>
+    <li>email: <%= @contact.email %></li>
+    <li>updated at: <%= @contact.updated_at %></li>
+</ul>
+<br></br>
+  Return to <%= link_to "admin main page", users_path %>.
+
+
+
+
+</div>
