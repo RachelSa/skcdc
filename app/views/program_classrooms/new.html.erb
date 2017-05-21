@@ -1,0 +1,34 @@
+<div id="left-col" class="col l4">
+  <h5>Admin Account</h5>
+
+</div>
+
+<div id="right-col" class='col l6'>
+  <h5>Add Program to Classroom</h5>
+
+  <%= form_tag '/program_classrooms' do %>
+
+    <select class='browser-default'>
+    <% @programs.each do |option| %>
+        <option value="<option.id"><%= option.title %></option>
+    <% end %>
+
+    <% @classrooms.each do |classroom| %>
+      <%= check_box_tag 'classroom_ids[]', 1, {id: 'classroom_id'}  %>
+      <%= classroom.name %><br>
+    <% end %>
+  <p>
+    <input type="checkbox" id="test5" />
+    <label for="test5">Red</label>
+  </p>
+  <p>
+    <input type="checkbox" id="hi1" name="hi1" />
+    <label for="hi1">Blue</label>
+  </p>
+
+
+
+<%= button_tag "Submit" %>
+<% end %>
+
+</div>
