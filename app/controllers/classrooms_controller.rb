@@ -26,10 +26,9 @@ class ClassroomsController < ApplicationController
   def update
     @classroom = Classroom.find(params[:id])
     @classroom.update(classroom_params)
-    set_classroom(@classroom.id)
-    params[:classroom][:program_ids]
-    byebug
-    redirect_to '/program_classrooms/#{classroom.id}/edit'
+    @programs = classroom_program_params["program_ids"].map {|id| Program.find(id)}
+    @classroom.update(programs: @programs)
+    redirect_to users_path, :notice => "Classroom updated"
   end
 
   def destroy
