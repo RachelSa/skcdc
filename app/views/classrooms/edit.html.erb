@@ -34,18 +34,13 @@
     <%= f.label :google_address %>
     <%= f.text_field :google_address %>
 
-      <% @programs.each do |program| %>
-          <%= f.check_box :programs  %>
-          <%= program.title %><br>
-           <% end %>
+    <%= f.label :programs %>
 
-
-         <%= check_box_tag 'google_address' %>
-
-    <%= f.check_box :google_address %>
-    <%= f.label :google_address %>
-
-
+    <% @programs.each do |program| %>
+      <p> <%= check_box_tag 'classroom[program_ids][]', program.id,
+      @classroom.programs.include?(program), :id => dom_id(program) %>
+      <%= label_tag dom_id(program), program.title, :class => "check_box_label" %>
+    <% end %><br></br>
 
     <%= f.submit %>
   <% end %>

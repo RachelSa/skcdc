@@ -20,13 +20,16 @@ class ClassroomsController < ApplicationController
 
   def edit
     @classroom = Classroom.find(params[:id])
-    @programs = @classroom.programs
+    @programs = Program.all
   end
 
   def update
     @classroom = Classroom.find(params[:id])
     @classroom.update(classroom_params)
-    redirect_to :new_program_classroom
+    set_classroom(@classroom.id)
+    params[:classroom][:program_ids]
+    byebug
+    redirect_to '/program_classrooms/#{classroom.id}/edit'
   end
 
   def destroy
@@ -38,6 +41,10 @@ class ClassroomsController < ApplicationController
   private
 
   def classroom_params
-    params.require(:classroom).permit(:name, :location, :map_url, :image_url, :description, :longitude, :latitude, :google_address, :phone, :program)
+    params.require(:classroom).permit(:name, :location, :map_url, :image_url, :description, :longitude, :latitude, :google_address, :phone)
+  end
+
+  def classroom_program_params
+      params.require(:classroom).permit({:program_ids => []})
   end
 end
