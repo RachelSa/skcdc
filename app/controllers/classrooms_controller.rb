@@ -6,7 +6,7 @@ class ClassroomsController < ApplicationController
 
   def create
     @classroom = Classroom.create(classroom_params)
-    redirect_to :users
+    redirect_to :users, :notice => "Classroom created"
   end
 
   def index
@@ -34,7 +34,7 @@ class ClassroomsController < ApplicationController
   def destroy
     @classroom = Classroom.find(params[:id])
     @classroom.destroy
-    redirect_to :users
+    redirect_to :users, :notice => "Classroom destroyed"
   end
 
   private

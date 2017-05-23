@@ -6,7 +6,7 @@ class ProgramsController < ApplicationController
 
   def create
     @program = Program.create(program_params)
-    redirect_to :users
+    redirect_to :users, :notice => "Program created"
   end
 
   def index
@@ -24,13 +24,13 @@ class ProgramsController < ApplicationController
   def update
     @program = Program.find(params[:id])
     @program.update(program_params)
-    redirect_to :users
+    redirect_to :users, :notice => "Program updated"
   end
 
   def destroy
     @program = Program.find(params[:id])
     @program.destroy
-    redirect_to :users
+    redirect_to :users, :notice => "Program deleted"
   end
 
   private
