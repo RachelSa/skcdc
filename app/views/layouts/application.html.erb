@@ -15,10 +15,13 @@
 
 <%= render file: 'general/nav'%>
 
+<div class="row lime lighten-3">
+  <div class="col l6"></div>
 <% flash.each do |k, v| %>
-  <div id="<%= k %>"><%= v %></div>
+  <div id="col l5"><%= v %></div>
 <% end %>
-
+  <div class="col l1"></div>
+</div>
 
    <div class="row">
      <div class="col l1">
