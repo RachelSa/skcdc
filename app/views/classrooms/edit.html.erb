@@ -1,0 +1,47 @@
+<div id="left-col" class="col l4">
+  <h5>Admin Account</h5>
+  Does <%= @classroom.name %> no longer exist?<br>
+  <%= button_to "delete classroom", @classroom, :method => :delete, data: {confirm: "Are you sure you want to delete this classroom?"} %>
+</div>
+
+<div id="right-col" class='col l6'>
+  <h5><%= @classroom.name %></h5>
+  <%= form_for @classroom do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :image_url %>
+    <%= f.text_field :image_url %>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+
+    <%= f.label :description %>
+    <%= f.text_field :description %>
+
+    <%= f.label :latitude %>
+    <%= f.text_field :latitude %>
+
+    <%= f.label :longitude %>
+    <%= f.text_field :longitude %>
+
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+
+    <%= f.label :google_address %>
+    <%= f.text_field :google_address %>
+
+    <%= f.label :programs %>
+
+    <% @programs.each do |program| %>
+      <p> <%= check_box_tag 'classroom[program_ids][]', program.id,
+      @classroom.programs.include?(program), :id => dom_id(program) %>
+      <%= label_tag dom_id(program), program.title, :class => "check_box_label" %>
+    <% end %><br></br>
+
+    <%= f.submit %>
+  <% end %>
+</div>
