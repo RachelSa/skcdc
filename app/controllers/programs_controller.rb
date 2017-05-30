@@ -5,8 +5,14 @@ class ProgramsController < ApplicationController
   end
 
   def create
-    @program = Program.create(program_params)
-    redirect_to :users, :notice => "Program created"
+    @program = Program.new(program_params)
+    if @program.save
+      redirect_to :users, :notice => "#{@program.title} created"
+    else
+      flash[:notice] = "Programs must have a title"
+      render :new
+    end
+
   end
 
   def index
@@ -23,8 +29,13 @@ class ProgramsController < ApplicationController
 
   def update
     @program = Program.find(params[:id])
-    @program.update(program_params)
-    redirect_to :users, :notice => "Program updated"
+    if @program.update(program_params)
+      redirect_to :users, :notice => "#{@program.title} updated"
+    else
+      flash[:notice] = "Programs must have a title"
+      render :edit
+    end
+
   end
 
   def destroy
