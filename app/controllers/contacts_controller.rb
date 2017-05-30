@@ -4,8 +4,12 @@ class ContactsController < ApplicationController
     end
 
     def create
-      @contact = Contact.create(contact_params)
-      redirect_to @contact
+      @contact = Contact.new(contact_params)
+      if @contact.save
+        redirect_to @contact
+      else
+        redirect_to new_contact_path, :notice => "Contacts must have a first and last name"
+      end
     end
 
     def index
@@ -18,8 +22,11 @@ class ContactsController < ApplicationController
 
     def update
       @contact = Contact.find(params[:id])
-      @contact.update(contact_params)
-      redirect_to @contact
+      if @contact.update(contact_params)
+        redirect_to @contact
+      else
+        redirect_to edit_contact_path, :notice => "Contacts must have a first and last name"
+      end
     end
 
     def show

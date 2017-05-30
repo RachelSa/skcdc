@@ -5,8 +5,13 @@ class ClassroomsController < ApplicationController
   end
 
   def create
-    @classroom = Classroom.create(classroom_params)
-    redirect_to :users, :notice => "Classroom created"
+    @classroom = Classroom.new(classroom_params)
+    if @classroom.save
+      redirect_to :users, :notice => "#{@classroom.name} created"
+    else
+      flash[:notice] = "Classrooms must have a name"
+      render :new
+    end
   end
 
   def index
@@ -25,16 +30,21 @@ class ClassroomsController < ApplicationController
 
   def update
     @classroom = Classroom.find(params[:id])
-    @classroom.update(classroom_params)
-    @programs = classroom_program_params["program_ids"].map {|id| Program.find(id)}
-    @classroom.update(programs: @programs)
-    redirect_to users_path, :notice => "Classroom updated"
+    if @classroom.update(classroom_params)
+      @programs = classroom_program_params["program_ids"].map {|id| Program.find(id)}
+      @classroom.update(programs: @programs)
+      redirect_to users_path, :notice => "#{@classroom.name} updated"
+    else
+      flash[:notice] = "Classrooms must have a name"
+      @programs = Program.all
+      render :edit
+    end
   end
 
   def destroy
     @classroom = Classroom.find(params[:id])
     @classroom.destroy
-    redirect_to :users, :notice => "Classroom destroyed"
+    redirect_to :users, :notice => "Classroom deleted"
   end
 
   private

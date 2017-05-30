@@ -7,9 +7,11 @@ class UsersController < ApplicationController
   @user = User.new(user_params)
   @user.email.downcase!
   if @user.save
+    flash[:notice] = "user created"
     #session[:user_id] = @user.id
     redirect_to users_path
    else
+    flash[:notice] = "User emails must be unique SKCDC emails. Passwords must be six characters in length."
     render :new
   end
 end
