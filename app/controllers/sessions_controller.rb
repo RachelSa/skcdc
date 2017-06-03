@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
 
   def new
-
+    @admin = Contact.find_by(title: "Information Systems Manager")
   end
 
   def create

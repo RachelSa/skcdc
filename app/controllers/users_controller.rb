@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user
   def new
     @user = User.new
   end
@@ -21,6 +22,7 @@ end
     @program_names = Program.all.pluck(:title, :id)
     @contact_names = Contact.all.pluck(:first_name, :last_name, :title, :id)
   end
+
 
   private
 

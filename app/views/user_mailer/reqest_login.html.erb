@@ -1,0 +1,12 @@
+<h3><%= @site_administrator.first_name %>,</h3>
+   <p>
+     <%= @user.first_name %> <%= @user.last_name %> has requested an admin account for skcdc.org.
+  </p>
+
+  <p>If you would like to fulfill this request, please visit <%= @url %> to create an account with this email address:</p>
+
+     <p>email: <%= @user.email %></p>
+
+   <p>Please notify this user of their login credentials when the account is created.</p>
+
+<p>Thanks!</p>
