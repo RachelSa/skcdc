@@ -1,0 +1,21 @@
+<div id="left-col" class="col l4">
+  <h5>Admin Account</h5>
+
+</div>
+
+<div id="right-col" class='col l6'>
+  <h5>New Collaboration</h5>
+
+
+  <%= form_for @collaboration do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+
+<br>
+
+    <%= f.submit %>
+  <% end %>
+</div>
