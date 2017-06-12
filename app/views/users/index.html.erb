@@ -15,6 +15,12 @@
         <% end %>
         <p><%= link_to "+ new contact", "contacts/new" %></p>
 
+        <h5>Edit Collaboration</h5>
+            <% @collaboration_titles.each do |collaboration| %>
+              <p>&ensp;<%= link_to "#{collaboration[0]}", "/collaborations/#{collaboration[1]}/edit" %></p>
+            <% end %>
+            <p><%= link_to "+ new collaboration", "collaborations/new" %></p>
+
 
   </div>
   <div class="col l6">

@@ -21,6 +21,7 @@ end
     @classroom_names = Classroom.all.pluck(:name, :id)
     @program_names = Program.all.pluck(:title, :id)
     @contact_names = Contact.all.pluck(:first_name, :last_name, :title, :id)
+    @collaboration_titles = Collaboration.all.pluck(:title, :id)
   end
 
 
