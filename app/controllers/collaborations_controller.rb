@@ -20,7 +20,7 @@ class CollaborationsController < ApplicationController
   end
 
   def index
-    @collaborations = Collaboration.all
+    @collaborations = Collaboration.all.order(title: :desc)
   end
 
   def edit
