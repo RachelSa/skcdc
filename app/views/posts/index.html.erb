@@ -1,0 +1,12 @@
+<div id="left-col" class="col l4">
+</div>
+
+
+<div id="right-col" class="col l6">
+  <% @posts.each do |post| %>
+    <p><%= link_to post.title, post_path(post) %><p>
+  <% end %>
+</div>
+
+
+</div>
