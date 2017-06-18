@@ -1,0 +1,21 @@
+<div id="left-col" class="col l4">
+  <h5>Admin Account</h5>
+  <p><%= link_to "see published post", post_path(@post) %></p>
+  <%= button_to "delete #{@post.title}", @post, :method => :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+
+</div>
+
+<div id="right-col" class='col l6'>
+  <h5>New Post</h5>
+
+  <%= form_for @post do |f| %>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+
+    <%= f.label :content %>
+    <%= f.text_area :content%><br></br>
+
+    <%= f.submit "Update Post"%>
+  <% end %>
+  <br></br>
+</div>

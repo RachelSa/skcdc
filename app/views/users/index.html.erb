@@ -8,7 +8,10 @@
 <div id="right-col" class="col l6">
   <div class="col l6">
     <h5>Update Blog</h5>
-      <p>&ensp;new post</p>
+      <% @posts.each do |post| %>
+        <p>&ensp;<%= link_to post.title, edit_post_path(post) %></p>
+      <% end %>
+      <%= link_to "+ new post", new_post_path %>
     <h5>Edit Contact</h5>
         <% @contact_names.each do |contact| %>
           <p>&ensp;<%= link_to "#{contact[0]} #{contact[1]}", "/contacts/#{contact[3]}/edit" %><br>&emsp; <%= contact[2] %></p>

@@ -3,17 +3,19 @@
   <div id="left-col" class="col l4">
 
     <ul>
-    <li><a class="waves-effect waves-light btn">apply</a></li>
-    <br>
-    <li><a href='#'><h5>News and Updates</h5></a></li>
+      <li><a class="waves-effect waves-light btn">apply</a></li><br>
+      <h3><%= link_to "Recent Updates", posts_path %></h3>
       <ul>
-        <li><a href='#'><h6>Post title</h6></a>
-          <p>sdjf dionfuciousdon sndunucosdnoicds sdcnuoindscuoc  cdnsuosoidsncuon....</p>
+      <% @recent_posts.each do |post| %>
+        <li><h6><%= link_to post.title, post_path(post) %></h6>
+          <% if post.content.length > 100 %>
+            <%= post.content[0..100] + "..." %>
+          <% else %>
+          <%= post.content %>
+          <% end %>
+          <br></br>
         </li>
-
-        <li><a href='#'><h6>Another post</h6></a>
-          <p>sdjf dionfuciousdon sndunucosdnoicds sdcnuoindscuoc  cdnsuosoidsncuon....</p>
-        </li>
+        <% end %>
       </ul>
   </ul>
 </div>
@@ -60,5 +62,3 @@
           </div>
         </div>
       </div>
-
-  </div>
