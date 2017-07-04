@@ -1,10 +1,21 @@
+body {
+   display: flex;
+   min-height: 100vh;
+   flex-direction: column;
+ }
+
+ main {
+   flex: 1 0 auto;
+ }
+
 .nav-height{
-    height: 90px;
-    line-height: 90px;
+    height: 80px;
+    line-height: 80px;
     }
 
-.nav-wrapper img {
-    height: 185px;
+
+.logo-img {
+  max-width: 350px;
 }
 
 .card-xs {
@@ -18,12 +29,11 @@
 }
 
 #left-col {
-  padding: 125px 60px 0px 30px;
-
+  padding-left: 4%
 }
 
 #right-col {
-  padding: 0px 0px 0px 30px;
+
 }
 
 .container-custom {
@@ -32,19 +42,6 @@
   width: 90%;
 }
 
-.nav-logo-margin {
-  margin-left: 5%;
-}
-
-// .nav-link-margin {
-//   margin-left: 10%;
-// }
-
-.cardie {
-  background-color: white;
-  width: 370px;
-  height: 190px;
-}
 
 .footer-logo {
   max-width: 250px;
