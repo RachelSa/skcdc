@@ -1,37 +1,32 @@
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="/mission">Our Mission</a></li>
-  <li><a href="/collaborations">Our Collaborations</a></li>
+  <li><%= link_to "Our Mission", '/mission', class: "light-blue-text lighten-2" %></li>
+  <li><%= link_to "Our Collaborations", '/collaborations', class: "light-blue-text lighten-2" %></li>
 </ul>
+<div class="row nav-wrapper">
+  <nav class="nav-height light-blue lighten-2">
 
-<nav class="nav-height grey lighten-4">
-  <div class="row">
+    <div class="col l4" id="left-col">
+      <a href="/"><h5>Southern Kennebec Child<br>Development Corporation</h5></a>
+    </div>
 
-    <div class="col l1"></div>
-
-    <div class="col l3">
-       <div class="nav-wrapper">
-         <a href="/" class="brand-logo">
-           <div class="cardie z-depth-2">
-                <div class="center-align">
-                  <img src="/assets/SKCDC_Logo.jpg" alt="SKCDC logo">
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-
-    <div class="col l2"></div>
-
-    <div class="col l6 m6">
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-     <ul id="nav-mobile" class="right hide-on-med-and-down">
-       <li><a class="dropdown-button" href="/" data-activates="dropdown1">About Us<i class="material-icons right">arrow_drop_down</i></a></li>
-       <li><%= link_to "Programs", programs_path %></li>
-       <li><%= link_to "Classrooms", classrooms_path %></li>
-       <li><%= link_to "Resources", parent_resources_path %></li>
-       <li><%= link_to "Contact Us",  contacts_path%></li>
-     </ul>
-   </div>
-
-  </div>
-</nav>
+    <div class="col l8">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="large material-icons white-text right">menu</i></a>
+       <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <li><a class="dropdown-button white-text" href="/" data-activates="dropdown1">About<i class="material-icons right">arrow_drop_down</i></a></li>
+         <li><%= link_to "Programs", programs_path, class: "white-text" %></li>
+         <li><%= link_to "Classrooms", classrooms_path, class: "white-text" %></li>
+         <li><%= link_to "Resources", parent_resources_path, class: "white-text" %></li>
+         <li><%= link_to "Contact",  contacts_path, class: "white-text"%></li>
+         <li><a class="waves-effect waves-light amber lighten-1 white-text btn">apply</a></li>
+       </ul>
+       <ul class="side-nav" id="mobile-demo">
+         <li><%= link_to "Our Mission", '/mission' %></li>
+         <li><%= link_to "Our Collaborations", '/collaborations' %></li>
+         <li><%= link_to "Programs", programs_path %></li>
+         <li><%= link_to "Classrooms", classrooms_path %></li>
+         <li><%= link_to "Resources", parent_resources_path %></li>
+         <li><%= link_to "Contact Us", contacts_path%></li>
+        </ul>
+    </div>
+   </nav>
+</div>

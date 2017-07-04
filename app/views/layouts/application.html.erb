@@ -3,37 +3,43 @@
   <head>
     <title>SKCDC</title>
     <%= csrf_meta_tags %>
-
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
-
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
   <body>
 
 
-<%= render file: 'general/nav'%>
+<header><%= render file: 'general/nav'%>
 
-<div class="row lime lighten-3">
+<!-- <div class="row lime lighten-3">
+
   <div class="col l6"></div>
-<% flash.each do |k, v| %>
-  <div id="col l5"><%= v %></div>
-<% end %>
+
+    <% flash.each do |k, v| %>
+      <div id="col l5"><%= v %></div>
+    <% end %>
+
   <div class="col l1"></div>
-</div>
+
+</div> -->
+</header>
+<main>
 
    <div class="row">
-     <div class="col l1">
-     </div>
+
     <%= yield %>
-      <div class="col l1">
+      <div class="col l1 m1">
       </div>
     </div>
+</main>
 
     <%= render file: 'general/footer'%>
+
   </body>
 
 </html>

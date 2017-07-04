@@ -1,62 +1,67 @@
 
 <!-- LEFT COLUMN -->
-  <div id="left-col" class="col l4">
+  <div id="left-col" class="col l4 m4">
+    <%= render partial: "logo" %>
 
     <ul>
-      <li><a class="waves-effect waves-light btn">apply</a></li><br>
-      <h3><%= link_to "Recent Updates", posts_path %></h3>
-      <ul>
+      <li></li><br>
+
+      <div class="z-depth-1 left-card">
+      <h3><%= link_to "Recent Updates", posts_path, class:"yellow-title" %></h3>
+      <ul >
       <% @recent_posts.each do |post| %>
-        <li><h6><%= link_to post.title, post_path(post) %></h6>
-          <% if post.content.length > 100 %>
-            <%= post.content[0..100] + "..." %>
+        <li ><h6><%= link_to post.title, post_path(post), class:"blue-title" %></h6>
+          <% if post.content.length > 70 %>
+            <%= post.content[0..70] + "..." %>
           <% else %>
           <%= post.content %>
           <% end %>
           <br></br>
         </li>
         <% end %>
+      </div>
+
       </ul>
   </ul>
 </div>
 
 <!-- RIGHT COLUMN -->
 
-  <div id="right-col" class="col l6">
+  <div id="right-col" class="col l7 m8">
     <h1>Welcome</h1>
     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
     <div class="row">
-      <div class="col l4">
+      <div class="col l4 hide-on-small-and-down">
         <a href="#">
         <div class="card card-xs center-align">
           <div class="card-image">
             <img src="/assets/SKCDC_Logo.jpg">
           </div>
-            <p>learn about our programs</p>
+            <p>learn about our<br>programs</p>
         </div>
         </a>
       </div>
 
-          <div class="col l4">
+          <div class="col l4 hide-on-small-and-down">
             <a href="#">
             <div class="card card-xs center-align">
               <div class="card-image">
                 <img src="/assets/SKCDC_Logo.jpg">
               </div>
-                <p>see our classroom locations</p>
+                <p>see our classroom<br>locations</p>
               </div>
               </a>
             </div>
 
 
-          <div class="col l4">
+          <div class="col l4 hide-on-small-and-down">
             <div class="card card-xs center-align">
               <a href="#">
               <div class="card-image">
                 <img src="/assets/SKCDC_Logo.jpg">
               </div>
-              <p>view parent and caretaker resources</p>
+              <p>view parent and<br>caretaker resources</p>
             </div>
             </a>
           </div>
