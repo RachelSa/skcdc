@@ -22,12 +22,13 @@
 
     <div class="col l2"></div>
 
-    <div class="col l6">
-     <ul id="nav-mobile" class="left">
+    <div class="col l6 m6">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+     <ul id="nav-mobile" class="right hide-on-med-and-down">
        <li><a class="dropdown-button" href="/" data-activates="dropdown1">About Us<i class="material-icons right">arrow_drop_down</i></a></li>
        <li><%= link_to "Programs", programs_path %></li>
        <li><%= link_to "Classrooms", classrooms_path %></li>
-       <li><a href="collapsible.html">Parent Resources</a></li>
+       <li><%= link_to "Resources", parent_resources_path %></li>
        <li><%= link_to "Contact Us",  contacts_path%></li>
      </ul>
    </div>

@@ -1,0 +1,12 @@
+<div id="left-col" class="col l4">
+</div>
+
+
+<div id="right-col" class="col l6">
+  <% @parent_resources.each do |parent_resource| %>
+    <p><%= link_to parent_resource.title, parent_resource_path(parent_resource) %><p>
+  <% end %>
+</div>
+
+
+</div>
