@@ -23,9 +23,8 @@
               <p>&ensp;<%= link_to "#{collaboration[0]}", "/collaborations/#{collaboration[1]}/edit" %></p>
             <% end %>
             <p><%= link_to "+ new collaboration", "collaborations/new" %></p>
+          </div>
 
-
-  </div>
   <div class="col l6">
     <h5>Edit Classroom</h5>
 
@@ -39,6 +38,12 @@
           <p>&ensp;<%= link_to "#{program[0]}", "/programs/#{program[1]}/edit" %></p>
         <% end %>
         <p><%= link_to "+ new program", "programs/new" %></p>
+
+        <h5>Edit Parent Resource</h5>
+        <% @parent_resources.each do |parent_resource| %>
+          <p>&ensp;<%= link_to "#{parent_resource[0]}", "/parent_resources/#{parent_resource[1]}/edit" %></p>
+        <% end %>
+        <p><%= link_to "+ new parent resource", "parent_resources/new" %></p>
 
   </div>
 </div>

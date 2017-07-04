@@ -6,16 +6,7 @@
 </div>
 
 <div id="right-col" class='col l6'>
-  <h5>New Post</h5>
-
-  <%= form_for @post do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :content %>
-    <%= f.text_area :content%><br></br>
-
-    <%= f.submit "Update Post"%>
-  <% end %>
+  <h5>Edit Post</h5>
+  <%= render partial: 'form' %>
   <br></br>
 </div>
