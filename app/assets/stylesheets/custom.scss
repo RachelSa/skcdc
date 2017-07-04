@@ -20,8 +20,9 @@ h1 {
   color: #03a9f4;
 }
 
-.card-padding {
+.left-card {
   padding: 2%;
+  width: 100%;
 }
 
 .nav-height{
@@ -29,9 +30,8 @@ h1 {
     line-height: 80px;
     }
 
-
 .logo-img {
-  max-width: 350px;
+  width: 100%;
 }
 
 .card-xs {
@@ -45,11 +45,12 @@ h1 {
 }
 
 #left-col {
-  padding-left: 4%
+  padding-left: 4%;
 }
 
 #right-col {
-  padding-left: 5%
+  
+
 }
 
 .container-custom {
