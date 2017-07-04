@@ -5,18 +5,19 @@
 <div class="row nav-wrapper">
   <nav class="nav-height light-blue lighten-2">
 
-    <div class="col l5" id="left-col">
-      <h5>Southern Kennebec Child<br>Development Corporation</h5>
+    <div class="col l4" id="left-col">
+      <a href="/"><h5>Southern Kennebec Child<br>Development Corporation</h5></a>
     </div>
 
-    <div class="col l7">
+    <div class="col l8">
         <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="large material-icons white-text right">menu</i></a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
-         <li><a class="dropdown-button white-text" href="/" data-activates="dropdown1">About Us<i class="material-icons right">arrow_drop_down</i></a></li>
+         <li><a class="dropdown-button white-text" href="/" data-activates="dropdown1">About<i class="material-icons right">arrow_drop_down</i></a></li>
          <li><%= link_to "Programs", programs_path, class: "white-text" %></li>
          <li><%= link_to "Classrooms", classrooms_path, class: "white-text" %></li>
          <li><%= link_to "Resources", parent_resources_path, class: "white-text" %></li>
-         <li><%= link_to "Contact Us",  contacts_path, class: "white-text"%></li>
+         <li><%= link_to "Contact",  contacts_path, class: "white-text"%></li>
+         <li><a class="waves-effect waves-light amber lighten-1 white-text btn">apply</a></li>
        </ul>
        <ul class="side-nav" id="mobile-demo">
          <li><%= link_to "Our Mission", '/mission' %></li>

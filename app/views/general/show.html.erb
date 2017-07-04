@@ -1,13 +1,16 @@
 
 <!-- LEFT COLUMN -->
   <div id="left-col" class="col l4">
+    <%= render partial: "logo" %>
 
     <ul>
-      <li><a class="waves-effect waves-light btn">apply</a></li><br>
-      <h3><%= link_to "Recent Updates", posts_path %></h3>
-      <ul>
+      <li></li><br>
+
+      <div class="z-depth-1 card-padding">
+      <h3><%= link_to "Recent Updates", posts_path, class:"yellow-title" %></h3>
+      <ul >
       <% @recent_posts.each do |post| %>
-        <li><h6><%= link_to post.title, post_path(post) %></h6>
+        <li ><h6><%= link_to post.title, post_path(post), class:"blue-title" %></h6>
           <% if post.content.length > 100 %>
             <%= post.content[0..100] + "..." %>
           <% else %>
@@ -16,6 +19,8 @@
           <br></br>
         </li>
         <% end %>
+      </div>
+
       </ul>
   </ul>
 </div>

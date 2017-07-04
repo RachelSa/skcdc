@@ -8,6 +8,22 @@ body {
    flex: 1 0 auto;
  }
 
+h1 {
+  color: #03a9f4;
+}
+
+.yellow-title {
+  color: #ffc107;
+}
+
+.blue-title {
+  color: #03a9f4;
+}
+
+.card-padding {
+  padding: 2%;
+}
+
 .nav-height{
     height: 80px;
     line-height: 80px;
@@ -33,7 +49,7 @@ body {
 }
 
 #right-col {
-
+  padding-left: 5%
 }
 
 .container-custom {
