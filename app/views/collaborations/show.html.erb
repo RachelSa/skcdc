@@ -1,8 +1,9 @@
-<div id="left-col" class="col l4">
-
-
+<div id="left-col" class="col l4 m4">
+  <%= render file: "/general/_logo" %>
 </div>
-<div id="right-col" class="col l6">
+
+<div id="right-col" class="col l7 m7">
   <h2><%= @collaboration.title %></h2>
-    <p><%= @collaboration.description %></p>
+  <p><%= @collaboration.description %></p>
+  <p><%= link_to "◁ return to all collaborations", collaborations_path %></p>
 </div>
