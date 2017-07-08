@@ -1,19 +1,23 @@
 
-<div id="left-col" class="col l4">
+<div id="left-col" class="col l4 m4">
+  <%= render file: "/general/_logo" %>
 
   <% if @program.classrooms.present?  %>
     <h5><%= "Classrooms offering this program:" %></h5>
   <% end %>
+
   <ul>
   <% @program.classrooms.each do |classroom| %>
     <li> <%= link_to "#{classroom.name}", classroom %></li>
     <% end %>
   </ul>
-  <a class="waves-effect waves-light btn">apply</a>
+
 </div>
 
-<div id="right-col" class="col l6">
+<div id="right-col" class="col l7 m7">
   <h2><%= @program.title %></h2>
 
   <p><%= @program.description %></p>
+
+  <p><%= link_to "◁ return to all programs", programs_path %></p>
 </div>
