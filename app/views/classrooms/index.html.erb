@@ -1,6 +1,7 @@
 
 <div id="left-col" class="col l4 m4">
     <%= render file: "/general/_logo" %>
+    <p>add classrooms map</p>
 </div>
 
 
@@ -8,14 +9,15 @@
   <h2>Our Classrooms</h2>
   <div class="row">
     <% @classrooms.each do |classroom| %>
-    <div class="col s12 m6">
+    <div class="col s12 m12 l10">
       <div class="card">
-        <div class="card-content white-text">
-          <p><%= link_to "#{classroom.name}", classroom %></p>
+        <div class="card-content blue-grey-text center-align">
+          <div><%= link_to "#{classroom.name}", classroom %></div>
+          <div><%= classroom.location %></div>
         </div>
       </div>
     </div>
-        <% end %>
+      <% end %>
 </div>
 
 </div>
