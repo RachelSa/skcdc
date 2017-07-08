@@ -1,7 +1,6 @@
 
     <div id="left-col" class="col l4 m4">
       <%= render file: "/general/_logo" %>
-      <p>describe programs overall</p>
     </div>
 
 
@@ -9,9 +8,9 @@
   <h2>Our Programs</h2>
   <div class="row">
     <% @programs.each do |program| %>
-    <div class="col s12 m6">
+    <div class="col s12 m12 l10">
       <div class="card">
-        <div class="card-content white-text">
+        <div class="card-content blue-grey-text center-align">
           <p><%= link_to "#{program.title}", program %></p>
         </div>
       </div>

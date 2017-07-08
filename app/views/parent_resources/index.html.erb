@@ -1,11 +1,19 @@
-<div id="left-col" class="col l4">
+<div id="left-col" class="col l4 m4 s12">
+  <%= render file: "/general/_logo" %>
 </div>
 
 
-<div id="right-col" class="col l6">
-  <% @parent_resources.each do |parent_resource| %>
-    <p><%= link_to parent_resource.title, parent_resource_path(parent_resource) %><p>
-  <% end %>
+<div id="right-col" class="col l7 m7 s12">
+  <div class="row">
+    <% @parent_resources.each do |parent_resource| %>
+      <div class="col s12 m12 l10">
+        <div class="card">
+          <div class="card-content white-text center-align">
+              <p><%= link_to parent_resource.title, parent_resource_path(parent_resource) %><p>
+            <% end %>
+          </div>
+        </div>
+      </div>
 </div>
 
 
