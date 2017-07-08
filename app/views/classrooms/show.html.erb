@@ -1,5 +1,6 @@
 
-<div id="left-col" class="col l4">
+<div id="left-col" class="col l4 m4">
+  <%= render file: "/general/_logo" %>
   <h5><%= @classroom.name %></h5>
   <%= @classroom.location %><br>
   <%= @classroom.phone %>
@@ -11,14 +12,16 @@
     <li><%= link_to "#{program.title}", program %></li>
   <% end %>
   </ul>
-  <a class="waves-effect waves-light btn">apply</a>
+  <a class="waves-effect waves-light amber lighten-1 white-text btn">apply</a>
 </div>
 
-<div id="right-col" class="col l6">
+<div id="right-col" class="col l7 m7">
   <h2><%= @classroom.name %></h2>
   <p><%= @classroom.description %></p>
 
   <%= image_tag("#{@map_url}") %>
+
+  <p><%= link_to "◁ return to all classrooms", classrooms_path %></p>
 
 
 </div>
