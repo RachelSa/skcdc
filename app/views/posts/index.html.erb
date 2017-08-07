@@ -1,11 +1,19 @@
-<div id="left-col" class="col l4">
+<div id="left-col" class="col l4 m4">
+  <%= render file: "/general/_logo" %>
 </div>
 
 
-<div id="right-col" class="col l6">
-  <% @posts.each do |post| %>
-    <p><%= link_to post.title, post_path(post) %><p>
-  <% end %>
+<div id="right-col" class="col l7 m7">
+  <div class="row">
+      <% @posts.each do |post| %>
+          <div class="col s12 m12 l10">
+            <div class="card">
+              <div class="card-content blue-grey-text center-align">
+            <p><%= link_to post.title, post_path(post) %><p>
+            </div>
+          </div>
+        </div>
+      <% end %>
 </div>
 
 
