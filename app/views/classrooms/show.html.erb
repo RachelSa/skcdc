@@ -2,7 +2,9 @@
 <div id="left-col" class="col l4 m4">
   <%= render file: "/general/_logo" %>
   <h5><%= @classroom.name %></h5>
-  <%= @classroom.location %><br>
+  <%= @classroom.street_address %><br>
+  <%= @classroom.town %>, Maine <%= @classroom.zipcode %><br>
+
   <%= @classroom.phone %>
   <% if @classroom.programs.present?  %>
   <h5>  <%= "Programs offered:" %></h5>

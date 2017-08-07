@@ -17,7 +17,9 @@ ActiveRecord::Schema.define(version: 20170619111057) do
 
   create_table "classrooms", force: :cascade do |t|
     t.string "name"
-    t.string "location"
+    t.string "street_address"
+    t.string "town"
+    t.string "zipcode"
     t.string "map_url"
     t.string "image_url"
     t.text   "description"
