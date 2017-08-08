@@ -4,35 +4,5 @@
 </div>
 
 <div id="right-col" class='col l6'>
-  <h5>New Classroom</h5>
-  <%= form_for @classroom do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-
-    <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
-
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-
-    <%= f.label :description %>
-    <%= f.text_field :description %>
-
-    <%= f.label :latitude %>
-    <%= f.text_field :latitude %>
-
-    <%= f.label :longitude %>
-    <%= f.text_field :longitude %>
-
-    <%= f.label :location %>
-    <%= f.text_field :location %>
-
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-
-    <%= f.label :google_address %>
-    <%= f.text_field :google_address %>
-
-    <%= f.submit %>
-  <% end %>
+  <%= render partial: 'form' %>
 </div>
