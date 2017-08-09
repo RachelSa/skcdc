@@ -3,6 +3,7 @@ before_action :authenticate_user, only: [:new, :edit]
 
   def new
     @classroom = Classroom.new
+
   end
 
   def create
