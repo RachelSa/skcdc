@@ -18,15 +18,6 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
-  <!-- <%= f.label :latitude %>
-  <%= f.text_field :latitude %>
-
-  <%= f.label :longitude %>
-  <%= f.text_field :longitude %> -->
-
-  <!-- <%= f.label :location %>
-  <%= f.text_field :location %> -->
-
   <%= f.label :phone %>
   <%= f.text_field :phone %>
 
@@ -34,14 +25,11 @@
   <%= f.text_field :google_address %>
 
   <% if @programs %>
-    <%= f.label :programs %>
-
-    <% @programs.each do |program| %>
-      <p> <%= check_box_tag 'classroom[program_ids][]', program.id,
-      @classroom.programs.include?(program), :id => dom_id(program) %>
-      <%= label_tag dom_id(program), program.title, :class => "check_box_label" %>
-    <% end %><br></br>
-<% end %>
+    <%= f.label :programs %><br>
+      <%= f.collection_check_boxes(:program_ids, @programs, :id, :title) do |b| %>
+        <div> <%= b.check_box %><%= b.label { b.text } %></div>
+        <% end %>
+  <% end %><br>
 
   <%= f.submit %>
 <% end %>

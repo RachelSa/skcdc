@@ -3,7 +3,6 @@ before_action :authenticate_user, only: [:new, :edit]
 
   def new
     @classroom = Classroom.new
-
   end
 
   def create
@@ -33,7 +32,8 @@ before_action :authenticate_user, only: [:new, :edit]
   def update
     @classroom = Classroom.find(params[:id])
     if @classroom.update(classroom_params)
-      @programs = classroom_program_params["program_ids"].map {|id| Program.find(id)}
+      program_ids = classroom_program_params[:program_ids].delete_if {|program| program == ""}
+      @programs = program_ids.map {|id| Program.find(id)}
       @classroom.update(programs: @programs)
       redirect_to users_path, :notice => "#{@classroom.name} updated"
     else
