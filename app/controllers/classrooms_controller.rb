@@ -32,9 +32,6 @@ before_action :authenticate_user, only: [:new, :edit]
   def update
     @classroom = Classroom.find(params[:id])
     if @classroom.update(classroom_params)
-      program_ids = classroom_program_params[:program_ids].delete_if {|program| program == ""}
-      @programs = program_ids.map {|id| Program.find(id)}
-      @classroom.update(programs: @programs)
       redirect_to users_path, :notice => "#{@classroom.name} updated"
     else
       flash[:notice] = "Classrooms must have a name"
@@ -52,10 +49,10 @@ before_action :authenticate_user, only: [:new, :edit]
   private
 
   def classroom_params
-    params.require(:classroom).permit(:name, :location, :map_url, :image_url, :description, :longitude, :latitude, :google_address, :phone)
+    params.require(:classroom).permit(:name, :location, :map_url, :image_url, :description, :longitude, :latitude, :google_address, :phone, {:program_ids => []})
   end
 
-  def classroom_program_params
-      params.require(:classroom).permit({:program_ids => []})
-  end
+  # def classroom_program_params
+  #     params.require(:classroom).permit()
+  # end
 end

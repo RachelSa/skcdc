@@ -28,7 +28,7 @@
     <%= f.label :programs %><br>
       <%= f.collection_check_boxes(:program_ids, @programs, :id, :title) do |b| %>
         <div> <%= b.check_box %><%= b.label { b.text } %></div>
-        <% end %>
+      <% end %>
   <% end %><br>
 
   <%= f.submit %>
