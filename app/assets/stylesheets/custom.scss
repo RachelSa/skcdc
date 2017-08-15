@@ -8,9 +8,6 @@ body {
    flex: 1 0 auto;
  }
 
-h1 {
-  color: #03a9f4;
-}
 
 .yellow-title {
   color: #ffc107;
@@ -18,6 +15,10 @@ h1 {
 
 .blue-title {
   color: #03a9f4;
+}
+
+.large {
+  font-size: 3em;
 }
 
 .left-card {
