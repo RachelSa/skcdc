@@ -7,17 +7,5 @@
 
 <div id="right-col" class='col l6'>
   <h5>Update Collaboration</h5>
-
-
-  <%= form_for @collaboration do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-
-<br>
-
-    <%= f.submit %>
-  <% end %>
+    <%= render partial: 'form' %>
 </div>

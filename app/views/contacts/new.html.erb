@@ -5,23 +5,5 @@
 
 <div id="right-col" class='col l6'>
   <h5>New Contact</h5>
-
-  <%= form_for @contact do |f| %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-
-    <%= f.label :ext %>
-    <%= f.text_field :ext %>
-
-    <%= f.submit %>
-  <% end %>
+  <%= render partial: 'form' %>
 </div>

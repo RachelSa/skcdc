@@ -52,7 +52,4 @@ before_action :authenticate_user, only: [:new, :edit]
     params.require(:classroom).permit(:name, :location, :map_url, :image_url, :description, :longitude, :latitude, :google_address, :phone, {:program_ids => []})
   end
 
-  # def classroom_program_params
-  #     params.require(:classroom).permit()
-  # end
 end

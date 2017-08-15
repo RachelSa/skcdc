@@ -8,21 +8,5 @@ Does <%= @program.title %> no longer exist?<br>
 
 <div id="right-col" class='col l6'>
   <h5>Edit <%= @program.title %></h5>
-
-
-  <%= form_for @program do |f| %>
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-
-    <%= f.label :description %>
-    <%= f.text_area :description %>
-
-<br>
-
-    <%= f.submit %>
-  <% end %> <br></br>
-
-
-
-
+    <%= render partial: 'form' %>
 </div>

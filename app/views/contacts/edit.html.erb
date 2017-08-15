@@ -7,23 +7,6 @@
 </div>
 
 <div id="right-col" class='col l6'>
-  <h5><%= @contact.title %></h5>
-  <%= form_for @contact do |f| %>
-    <%= f.label :first_name %>
-    <%= f.text_field :first_name %>
-
-    <%= f.label :last_name %>
-    <%= f.text_field :last_name %>
-
-    <%= f.label :email %>
-    <%= f.text_field :email %>
-
-    <%= f.label :phone %>
-    <%= f.text_field :phone %>
-
-    <%= f.label :ext %>
-    <%= f.text_field :ext %>
-
-    <%= f.submit %>
-  <% end %>
+  <h5>Edit <%= @contact.title %></h5>
+    <%= render partial: 'form' %>
 </div>
