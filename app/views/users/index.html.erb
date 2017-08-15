@@ -7,43 +7,44 @@
 
 <div id="right-col" class="col l6">
   <div class="col l6">
-    <h5>Update Blog</h5>
-      <% @posts.each do |post| %>
-        <p>&ensp;<%= link_to post.title, edit_post_path(post) %></p>
-      <% end %>
-      <%= link_to "+ new post", new_post_path %>
+
     <h5>Edit Contact</h5>
         <% @contact_names.each do |contact| %>
           <p>&ensp;<%= link_to "#{contact[0]} #{contact[1]}", "/contacts/#{contact[3]}/edit" %><br>&emsp; <%= contact[2] %></p>
         <% end %>
         <p><%= link_to "+ new contact", "contacts/new" %></p>
 
-        <h5>Edit Collaboration</h5>
-            <% @collaboration_titles.each do |collaboration| %>
-              <p>&ensp;<%= link_to "#{collaboration[0]}", "/collaborations/#{collaboration[1]}/edit" %></p>
-            <% end %>
-            <p><%= link_to "+ new collaboration", "collaborations/new" %></p>
-          </div>
+    <h5>Edit Collaboration</h5>
+        <% @collaboration_titles.each do |collaboration| %>
+          <p>&ensp;<%= link_to "#{collaboration[0]}", "/collaborations/#{collaboration[1]}/edit" %></p>
+        <% end %>
+        <p><%= link_to "+ new collaboration", "collaborations/new" %></p>
+
+      <h5>Update Blog</h5>
+        <% @posts.each do |post| %>
+          <p>&ensp;<%= link_to post.title, edit_post_path(post) %></p>
+        <% end %>
+        <%= link_to "+ new post", new_post_path %>
+        </div>
 
   <div class="col l6">
     <h5>Edit Classroom</h5>
+      <% @classroom_names.each do |classroom| %>
+        <p>&ensp;<%= link_to "#{classroom[0]}", "/classrooms/#{classroom[1]}/edit" %></p>
+      <% end %>
+        <p><%= link_to "+ new classroom", "classrooms/new" %></p>
 
-        <% @classroom_names.each do |classroom| %>
-          <p>&ensp;<%= link_to "#{classroom[0]}", "/classrooms/#{classroom[1]}/edit" %></p>
-        <% end %>
-          <p><%= link_to "+ new classroom", "classrooms/new" %></p>
     <h5>Edit Program</h5>
-
         <% @program_names.each do |program| %>
           <p>&ensp;<%= link_to "#{program[0]}", "/programs/#{program[1]}/edit" %></p>
         <% end %>
         <p><%= link_to "+ new program", "programs/new" %></p>
 
-        <h5>Edit Parent Resource</h5>
-        <% @parent_resources.each do |parent_resource| %>
-          <p>&ensp;<%= link_to "#{parent_resource[0]}", "/parent_resources/#{parent_resource[1]}/edit" %></p>
-        <% end %>
-        <p><%= link_to "+ new parent resource", "parent_resources/new" %></p>
+    <h5>Edit Parent Resource</h5>
+      <% @parent_resources.each do |parent_resource| %>
+        <p>&ensp;<%= link_to "#{parent_resource[0]}", "/parent_resources/#{parent_resource[1]}/edit" %></p>
+      <% end %>
+      <p><%= link_to "+ new parent resource", "parent_resources/new" %></p>
 
   </div>
 </div>
