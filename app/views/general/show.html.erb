@@ -12,9 +12,9 @@
       <% @recent_posts.each do |post| %>
         <li ><h6><%= link_to post.title, post_path(post), class:"blue-title" %></h6>
           <% if post.content.length > 70 %>
-            <%= post.content[0..70] + "..." %>
+            <%= post.content[0..70].html_safe + "..." %>
           <% else %>
-          <%= post.content %>
+          <%= post.content.html_safe %>
           <% end %>
           <br></br>
         </li>
