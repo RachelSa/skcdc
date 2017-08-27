@@ -4,6 +4,8 @@ class Post < ApplicationRecord
   validates :content, presence: true
 
   has_attached_file :upload_attachment
-  do_not_validate_attachment_file_type :upload_attachment
+  validates_attachment_content_type :upload_attachment, :content_type => ['application/pdf']
+
+
 
 end
