@@ -5,5 +5,8 @@
   <%= f.label :content %>
   <%= f.trix_editor :content %><br></br>
 
-  <%= f.submit %>
+  <%= f.label :upload_attachment %><br>
+  <%= f.file_field :upload_attachment %><br></br>
+
+  <%= f.submit 'submit', :class => "waves-effect waves-light amber lighten-1 white-text btn" %><br></br>
   <% end %>

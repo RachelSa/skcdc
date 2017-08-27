@@ -1,7 +1,12 @@
 <div id="left-col" class="col l4">
   <h5>Admin Account</h5>
   <p><%= link_to "see published post", post_path(@post) %></p>
-  <%= button_to "delete #{@post.title}", @post, :method => :delete, data: {confirm: "Are you sure you want to delete this post?"} %>
+  <div>delete <%= @post.title %>?</div>
+  <%= button_to "delete post", @post, :method => :delete, data: {confirm: "Are you sure you want to delete this post?"}, class: "waves-effect waves-light amber lighten-1 white-text btn" %>
+
+
+
+
 
 </div>
 
