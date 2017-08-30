@@ -14,5 +14,6 @@
 
 <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
 
-  <p><%= @post.content.html_safe %></p>
+  <p><%= sanitize @post.content %></p>
+
 </div>
