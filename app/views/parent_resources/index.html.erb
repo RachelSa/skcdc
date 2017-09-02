@@ -4,17 +4,16 @@
 
 
 <div id="right-col" class="col l7 m7 s12">
-  <div class="row">
-    <% @parent_resources.each do |parent_resource| %>
-      <div class="col s12 m12 l10">
-        <div class="card">
-          <div class="card-content white-text center-align">
-              <p><%= link_to parent_resource.title, parent_resource_path(parent_resource) %><p>
-            <% end %>
+  <h2>Our Resources</h2>
+    <div class="row">
+      <% @parent_resources.each do |parent_resource| %>
+        <div class="col s12 m12 l10">
+          <div class="card">
+            <div class="card-content white-text center-align">
+                <p><%= link_to parent_resource.title, parent_resource_path(parent_resource) %><p>
+              <% end %>
+            </div>
           </div>
         </div>
       </div>
-</div>
-
-
-</div>
+    </div>

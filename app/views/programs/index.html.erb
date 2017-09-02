@@ -1,21 +1,18 @@
-
-    <div id="left-col" class="col l4 m4">
-      <%= render file: "/general/_logo" %>
-    </div>
-
+<div id="left-col" class="col l4 m4">
+  <%= render file: "/general/_logo" %>
+</div>
 
 <div id="right-col" class="col l7 m7">
   <h2>Our Programs</h2>
-  <div class="row">
-    <% @programs.each do |program| %>
-    <div class="col s12 m12 l10">
-      <div class="card">
-        <div class="card-content blue-grey-text center-align">
-          <p><%= link_to "#{program.title}", program %></p>
+    <div class="row">
+      <% @programs.each do |program| %>
+        <div class="col s12 m12 l10">
+          <div class="card">
+            <div class="card-content blue-grey-text center-align">
+              <p><%= link_to "#{program.title}", program %></p>
+            </div>
+          </div>
         </div>
-      </div>
+      <% end %>
     </div>
-        <% end %>
-</div>
-
-</div>
+  </div>
