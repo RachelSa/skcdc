@@ -14,17 +14,16 @@
 <div id="right-col" class="col l6">
   <ul class="collection with-header">
     <li class="collection-header"><h4>Contact Us</h4></li>
-    <% @contacts.each do |contact| %>
-      <li class="collection-item">
-        <div class="row">
-        <div class='col l5'><%= "#{contact.first_name} #{contact.last_name}" %>
-        <br><%= "#{contact.title}" %></div>
-        <div class='col l5'><%= "#{contact.email}"%></div>
-        <div class='col l2'><%=" ext: #{contact.ext}" %></div>
-      </div>
+      <% @contacts.each do |contact| %>
+        <li class="collection-item">
+          <div class="row">
+          <div class='col l5'><%= "#{contact.first_name} #{contact.last_name}" %>
+            <br><%= "#{contact.title}" %></div>
+            <div class='col l5'><%= "#{contact.email}"%></div>
+            <div class='col l2'><%=" ext: #{contact.ext}" %>
+          </div>
+        </div>
       </li>
     <% end %>
-
   </ul>
-
 </div>

@@ -4,17 +4,16 @@
 
 
 <div id="right-col" class="col l7 m7">
-  <div class="row">
-      <% @posts.each do |post| %>
-          <div class="col s12 m12 l10">
-            <div class="card">
-              <div class="card-content blue-grey-text center-align">
-            <p><%= link_to post.title, post_path(post) %><p>
+  <h2>Posts</h2>
+    <div class="row">
+        <% @posts.each do |post| %>
+            <div class="col s12 m12 l10">
+              <div class="card">
+                <div class="card-content blue-grey-text center-align">
+              <p><%= link_to post.title, post_path(post) %><p>
+              </div>
             </div>
           </div>
-        </div>
-      <% end %>
-</div>
-
-
-</div>
+        <% end %>
+      </div>
+  </div>
