@@ -2,16 +2,17 @@
   <li><%= link_to "Mission", '/mission', class: "light-blue-text lighten-2" %></li>
   <li><%= link_to "Collaborations", '/collaborations', class: "light-blue-text lighten-2" %></li>
   <li><%= link_to "Contact",  contacts_path, class: "light-blue-text lighten-2"%></li>
+  <li><%= link_to "Careers",  "#", class: "light-blue-text lighten-2"%></li>
 </ul>
 <div class="row nav-wrapper">
   <nav class="nav-height light-blue lighten-2">
 
-    <div class="col l4" id="left-col">
+    <div class="col l4 m10 hide-on-small-and-down" id="left-col">
       <a href="/"><h5>Southern Kennebec Child<br>Development Corporation</h5></a>
     </div>
 
-    <div class="col l8">
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="large material-icons white-text right">menu</i></a>
+    <div class="col l8 m2 s4">
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons md-42 white-text">menu</i></a>
        <ul id="nav-mobile" class="right hide-on-med-and-down">
          <li><a class="dropdown-button white-text" href="#" data-activates="dropdown1">About<i class="material-icons right">arrow_drop_down</i></a></li>
          <li><%= link_to "Programs", programs_path, class: "white-text" %></li>
