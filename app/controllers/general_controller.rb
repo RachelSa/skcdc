@@ -6,4 +6,8 @@ class GeneralController < ApplicationController
     def mission
 
     end
+
+    def careers
+
+    end
   end

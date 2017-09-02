@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   post '/login', to: 'sessions#create'
   post '/logout', to: 'sessions#destroy'
   get '/mission', to: 'general#mission'
+  get '/careers', to: 'general#careers'
   #get '/login_request', to: 'users#request'
 
   resources :programs
