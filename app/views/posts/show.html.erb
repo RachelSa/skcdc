@@ -15,5 +15,6 @@
 <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
 
   <p><%= sanitize @post.content %></p>
+  <p class="blue-grey-text text-lighten-3 demphasize-text"> posted on <%= @post.created_at.strftime("%B %d, %Y") %></p>
 
 </div>
