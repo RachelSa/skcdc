@@ -1,0 +1,14 @@
+<div id="left-col" class="col l4">
+  <h5>Admin</h5>
+  <p>Any changes made will appear on the live SKCDC web site.</p>
+</div>
+
+<div id="right-col" class="col l6">
+  <h5>Edit Collaborations</h5>
+  <p><%= link_to "+ new collaboration", "/collaborations/new" %></p>
+    <% @collaboration_titles.each do |collaboration| %>
+      <p>&ensp;<%= link_to "#{collaboration[0]}", "/collaborations/#{collaboration[1]}/edit" %></p>
+    <% end %>
+    <br></br>
+    <p><%= link_to "◁ return to admin main page", '/admin' %></p>
+</div>

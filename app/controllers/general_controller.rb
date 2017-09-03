@@ -10,4 +10,8 @@ class GeneralController < ApplicationController
     def careers
       @recent_posts = Post.all.order('id DESC').limit(5)
     end
+
+    def admin
+
+    end
   end

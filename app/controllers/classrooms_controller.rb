@@ -46,6 +46,10 @@ before_action :authenticate_user, only: [:new, :edit]
     redirect_to :users, :notice => "Classroom deleted"
   end
 
+  def admin
+    @classroom_names = Classroom.all.pluck(:name, :id)
+  end
+
   private
 
   def classroom_params

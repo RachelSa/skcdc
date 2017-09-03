@@ -43,6 +43,10 @@ class ParentResourcesController < ApplicationController
     redirect_to :users, :notice => "Parent resource deleted"
   end
 
+  def admin
+    @parent_resources = ParentResource.all.pluck(:title, :id)
+  end
+
   private
 
   def parent_resource_params

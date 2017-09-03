@@ -1,6 +1,6 @@
 class ContactsController < ApplicationController
   before_action :authenticate_user, only: [:new, :edit]
-  
+
     def new
       @contact = Contact.new
     end
@@ -39,6 +39,10 @@ class ContactsController < ApplicationController
       @contact = Contact.find(params[:id])
       @contact.destroy
       redirect_to :users
+    end
+
+    def admin
+      @contact_names = Contact.all.pluck(:first_name, :last_name, :title, :id)
     end
 
     private
