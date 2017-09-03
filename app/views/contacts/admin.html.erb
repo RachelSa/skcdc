@@ -1,0 +1,14 @@
+<div id="left-col" class="col l4">
+  <h5>Admin</h5>
+  <p>Any changes made will appear on the live SKCDC web site.</p>
+</div>
+
+<div id="right-col" class="col l6">
+  <h5>Edit Contacts</h5>
+    <p><%= link_to "+ new contact", "/contacts/new" %></p>
+    <% @contact_names.each do |contact| %>
+      <p>&ensp;<%= link_to "#{contact[0]} #{contact[1]}", "/contacts/#{contact[3]}/edit" %><br>&emsp; <%= contact[2] %></p>
+    <% end %>
+    <br></br>
+    <p><%= link_to "◁ return to admin main page", '/admin' %></p>
+</div>

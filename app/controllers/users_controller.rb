@@ -17,14 +17,6 @@ class UsersController < ApplicationController
   end
 end
 
-  def index
-    @classroom_names = Classroom.all.pluck(:name, :id)
-    @program_names = Program.all.pluck(:title, :id)
-    @contact_names = Contact.all.pluck(:first_name, :last_name, :title, :id)
-    @collaboration_titles = Collaboration.all.pluck(:title, :id)
-    @parent_resources = ParentResource.all.pluck(:title, :id)
-    @posts = Post.all.order('id DESC').limit(5)
-  end
 
 
   private

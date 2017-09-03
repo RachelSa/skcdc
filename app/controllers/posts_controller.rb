@@ -6,7 +6,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('id DESC').limit(10)
   end
 
   def new
@@ -47,6 +47,9 @@ class PostsController < ApplicationController
     redirect_to users_path
   end
 
+  def admin
+    @posts = Post.all.order('id DESC').limit(20)
+  end
   private
 
   def post_params

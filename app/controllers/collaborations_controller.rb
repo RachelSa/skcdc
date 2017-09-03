@@ -44,6 +44,10 @@ class CollaborationsController < ApplicationController
     redirect_to :users
   end
 
+  def admin
+    @collaboration_titles = Collaboration.all.pluck(:title, :id)
+  end
+
   private
   def collaboration_params
     params.require(:collaboration).permit(:title, :description)

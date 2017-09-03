@@ -44,6 +44,10 @@ before_action :authenticate_user, only: [:new, :edit]
     redirect_to :users, :notice => "Program deleted"
   end
 
+  def admin
+    @program_names = Program.all.pluck(:title, :id)
+  end
+
   private
 
   def program_params
