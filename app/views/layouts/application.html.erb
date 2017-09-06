@@ -15,20 +15,12 @@
   <body>
 
 
-<header><%= render file: 'general/nav'%>
+<header class="center-align">
+  
+  <%= render file: 'general/nav'%>
 
-<!-- <div class="row lime lighten-3">
-
-  <div class="col l6"></div>
-
-    <% flash.each do |k, v| %>
-      <div id="col l5"><%= v %></div>
-    <% end %>
-
-  <div class="col l1"></div>
-
-</div> -->
 </header>
+
 <main>
 
    <div class="row">
@@ -36,6 +28,7 @@
     <%= yield %>
       <div class="col l1 m1">
       </div>
+
     </div>
 </main>
 

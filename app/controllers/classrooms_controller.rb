@@ -8,7 +8,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def create
     @classroom = Classroom.new(classroom_params)
     if @classroom.save
-      redirect_to :users, :notice => "#{@classroom.name} created"
+      redirect_to admin_path, :notice => "#{@classroom.name} created"
     else
       flash[:notice] = "Classrooms must have a name"
       render :new
@@ -32,7 +32,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def update
     @classroom = Classroom.find(params[:id])
     if @classroom.update(classroom_params)
-      redirect_to users_path, :notice => "#{@classroom.name} updated"
+      redirect_to admin_path, :notice => "#{@classroom.name} updated"
     else
       flash[:notice] = "Classrooms must have a name"
       @programs = Program.all
@@ -43,7 +43,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def destroy
     @classroom = Classroom.find(params[:id])
     @classroom.destroy
-    redirect_to :users, :notice => "Classroom deleted"
+    redirect_to admin_path, :notice => "Classroom deleted"
   end
 
   def admin

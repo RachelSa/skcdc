@@ -7,7 +7,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def create
     @program = Program.new(program_params)
     if @program.save
-      redirect_to :users, :notice => "#{@program.title} created"
+      redirect_to admin_path, :notice => "#{@program.title} created"
     else
       flash[:notice] = "Programs must have a title"
       render :new
@@ -30,7 +30,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def update
     @program = Program.find(params[:id])
     if @program.update(program_params)
-      redirect_to :users, :notice => "#{@program.title} updated"
+      redirect_to admin_path, :notice => "#{@program.title} updated"
     else
       flash[:notice] = "Programs must have a title"
       render :edit
@@ -41,7 +41,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def destroy
     @program = Program.find(params[:id])
     @program.destroy
-    redirect_to :users, :notice => "Program deleted"
+    redirect_to admin_path, :notice => "Program deleted"
   end
 
   def admin

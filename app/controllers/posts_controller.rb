@@ -18,7 +18,7 @@ class PostsController < ApplicationController
     @post.user = current_user
     if @post.save
       flash[:notice] = "Post published!"
-      redirect_to :users
+      redirect_to admin_path
     else
       flash[:notice] = "posts must have a title and content"
       render 'new'
@@ -33,7 +33,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     if @post.update(post_params)
       flash[:notice] = "post updated!"
-      redirect_to :users
+      redirect_to admin_path
     else
       flash[:notice] = "posts must have a title and content"
       render 'edit'
