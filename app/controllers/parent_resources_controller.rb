@@ -8,7 +8,7 @@ class ParentResourcesController < ApplicationController
     @parent_resource = ParentResource.new(parent_resource_params)
     if @parent_resource.save
       flash[:notice] = "Parent resource published!"
-      redirect_to :users
+      redirect_to admin_path
     else
       flash[:notice] = "parent_resources must have a title and description"
       render 'new'
@@ -30,7 +30,7 @@ class ParentResourcesController < ApplicationController
   def update
     if ParentResource.update(parent_resource_params)
       flash[:notice] = "Parent resource updated!"
-      redirect_to :users
+      redirect_to admin_path
     else
       flash[:notice] = "parent resources must have a title and description"
       render 'new'
@@ -40,7 +40,7 @@ class ParentResourcesController < ApplicationController
   def destroy
     @parent_resource = ParentResource.find(params[:id])
     @parent_resource.destroy
-    redirect_to :users, :notice => "Parent resource deleted"
+    redirect_to admin_path, :notice => "Parent resource deleted"
   end
 
   def admin

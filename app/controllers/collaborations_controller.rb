@@ -8,7 +8,7 @@ class CollaborationsController < ApplicationController
   def create
     @collaboration = Collaboration.new(collaboration_params)
     if @collaboration.save
-      redirect_to :users, :notice => "#{@collaboration.title} created"
+      redirect_to admin_path, :notice => "#{@collaboration.title} created"
     else
       flash[:notice] = "collaborations must have a title and description"
       render :new
@@ -31,7 +31,7 @@ class CollaborationsController < ApplicationController
   def update
     @collaboration = Collaboration.find(params[:id])
     if @collaboration.update(collaboration_params)
-      redirect_to :users, :notice => "#{@collaboration.title} updated"
+      redirect_to admin_path, :notice => "#{@collaboration.title} updated"
     else
       flash[:notice] = "collaborations must have a title and description"
       render :edit
@@ -41,7 +41,7 @@ class CollaborationsController < ApplicationController
   def destroy
     Collaboration.find(params[:id]).destroy
     flash[:notice] = "collaboration deleted"
-    redirect_to :users
+    redirect_to admin_path
   end
 
   def admin

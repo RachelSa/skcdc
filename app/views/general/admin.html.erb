@@ -1,10 +1,15 @@
 <div  id="left-col" class="col l4">
   <p>Welcome to the SKCDC admin dashboard. </p>
   <p>Any changes made here will appear on the live SKCDC web site.</p>
-  <%= render file: '/users/logout'%>
-</div>
+    <% if !flash.empty? %>
+      <% flash.each do |k, message| %>
+        <div class="lime lighten-3 chip center-align"><%= message %></div>
+      <% end %>
+    <% end %>
 
-<div id="right-col" class="col l4">
+</div>
+<div id="right-col" class="col l1"></div>
+<div class="col l4">
   <h4>Admin Dashboard</h4>
   <ul class="collection">
     <li class="collection-item"><%= link_to "Classrooms", '/classrooms/admin' %></li>
@@ -12,6 +17,9 @@
     <li class="collection-item"><%= link_to "Collaborations", '/collaborations/admin'%></li>
     <li class="collection-item"><%= link_to "Resources", '/parent_resources/admin' %></li>
     <li class="collection-item"><%= link_to "Contacts", '/contacts/admin'%></li>
-
-
+  </ul>
+</div>
+<div id="right-col" class="col l1"></div>
+<div id="right-col" class="col l2">
+  <%= render file: '/users/logout'%>
 </div>
