@@ -1,5 +1,5 @@
 class ClassroomsController < ApplicationController
-before_action :authenticate_user, only: [:new, :edit]
+  before_action :authenticate_user, only: [:new, :edit]
 
   def new
     @classroom = Classroom.new
@@ -21,7 +21,7 @@ before_action :authenticate_user, only: [:new, :edit]
 
   def show
     @classroom = Classroom.find(params[:id])
-    @map_url = "https://maps.googleapis.com/maps/api/staticmap?center=#{@classroom.latitude},#{@classroom.longitude}&zoom=15&size=400x400&markers=color:red%7C#{@classroom.google_address}&key=#{ENV["google_key"]}"
+    @map_url = "https://www.google.com/maps/search/?api=1&query=+#{@classroom.url_street_address}"
   end
 
   def edit
@@ -53,7 +53,7 @@ before_action :authenticate_user, only: [:new, :edit]
   private
 
   def classroom_params
-    params.require(:classroom).permit(:name, :location, :map_url, :image_url, :description, :longitude, :latitude, :google_address, :phone, {:program_ids => []})
+    params.require(:classroom).permit(:name, :street_address, :town, :zipcode, :map_url, :image_url, :description, :phone, {:program_ids => []})
   end
 
 end
