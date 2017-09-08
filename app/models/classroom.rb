@@ -1,7 +1,10 @@
 class Classroom < ApplicationRecord
   has_many :program_classrooms
   has_many :programs, through: :program_classrooms
-  # accepts_nested_attributes_for :programs
   validates :name, presence: true
+
+  def url_street_address
+    "#{name.gsub(" ", "+")}+#{street_address.gsub(" ", "+")}+#{town.gsub(" ", "+")}+#{zipcode}"
+  end
 
 end
