@@ -1,11 +1,7 @@
 <div  id="left-col" class="col l4">
   <p>Welcome to the SKCDC admin dashboard. </p>
   <p>Any changes made here will appear on the live SKCDC web site.</p>
-    <% if !flash.empty? %>
-      <% flash.each do |k, message| %>
-        <div class="lime lighten-3 chip center-align"><%= message %></div>
-      <% end %>
-    <% end %>
+  <%= render file: "/general/_flash_notice" %>
 
 </div>
 <div id="right-col" class="col l1"></div>

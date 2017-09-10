@@ -21,7 +21,9 @@
 <div id="right-col" class="col l7 m7">
   <h2><%= @classroom.name %></h2>
   <p><%= @classroom.description %></p>
-ADD PHOTO
+  <% if @classroom.image.url != "/images/original/missing.png" %>
+    <%= image_tag(@classroom.image.url(:small)) %>
+  <% end %>
 
   <p><%= link_to "◁ return to all classrooms", classrooms_path %></p>
 
