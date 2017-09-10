@@ -6,9 +6,6 @@
   <%= f.label :description %>
   <%= f.text_field :description %>
 
-  <%= f.label :image_url %>
-  <%= f.text_field :image_url %>
-
   <%= f.label :street_address %>
   <%= f.text_field :street_address %>
 
@@ -28,6 +25,9 @@
         <div> <%= b.check_box %><%= b.label { b.text } %></div>
       <% end %>
   <% end %><br>
+
+  <%= f.label :image %><br>
+  <%= f.file_field :image %><br></br>
 
   <%= f.submit 'submit', :class => "amber lighten-1 white-text btn", data: { confirm:
     "Ready to post this update? All changes will appear on the live SKCDC website." } %><br></br>

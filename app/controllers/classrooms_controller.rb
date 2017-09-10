@@ -34,8 +34,8 @@ class ClassroomsController < ApplicationController
     if @classroom.update(classroom_params)
       redirect_to admin_path, :notice => "#{@classroom.name} updated"
     else
-      flash[:notice] = "Classrooms must have a name"
       @programs = Program.all
+      flash[:notice] = "Classrooms must have a name. Attached images must be less than 1 MB"
       render :edit
     end
   end
@@ -53,7 +53,7 @@ class ClassroomsController < ApplicationController
   private
 
   def classroom_params
-    params.require(:classroom).permit(:name, :street_address, :town, :zipcode, :map_url, :image_url, :description, :phone, {:program_ids => []})
+    params.require(:classroom).permit(:name, :street_address, :town, :zipcode, :image, :description, :phone, {:program_ids => []})
   end
 
 end
