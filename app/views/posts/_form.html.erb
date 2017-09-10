@@ -8,5 +8,6 @@
   <%= f.label :upload_attachment %><br>
   <%= f.file_field :upload_attachment %><br></br>
 
-  <%= f.submit 'submit', :class => "waves-effect waves-light amber lighten-1 white-text btn" %><br></br>
+  <%= f.submit 'submit', :class => "amber lighten-1 white-text btn", data: { confirm:
+    "Ready to post this update? All changes will appear on the live SKCDC website." } %><br></br>
 <% end %>
