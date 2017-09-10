@@ -3,6 +3,9 @@
   <%= f.label :name %>
   <%= f.text_field :name %>
 
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
   <%= f.label :image_url %>
   <%= f.text_field :image_url %>
 
@@ -15,14 +18,9 @@
   <%= f.label :zipcode %>
   <%= f.text_field :zipcode %>
 
-  <%= f.label :description %>
-  <%= f.text_field :description %>
-
   <%= f.label :phone %>
   <%= f.text_field :phone %>
 
-  <%= f.label :google_address %>
-  <%= f.text_field :google_address %>
 
   <% if @programs %>
     <%= f.label :programs %><br>
@@ -31,5 +29,6 @@
       <% end %>
   <% end %><br>
 
-  <%= f.submit 'submit', :class => "waves-effect waves-light amber lighten-1 white-text btn" %><br></br>
+  <%= f.submit 'submit', :class => "amber lighten-1 white-text btn", data: { confirm:
+    "Ready to post this update? All changes will appear on the live SKCDC website." } %><br></br>
 <% end %>
