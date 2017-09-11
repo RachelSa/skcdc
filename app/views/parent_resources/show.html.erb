@@ -1,11 +1,10 @@
 <div id="left-col" class="col l4">
-
+  <%= render file: "/general/_logo" %>
   <a class="waves-light btn">apply</a>
 </div>
 
 <div id="right-col" class="col l6">
   <h2><%= @parent_resource.title %></h2>
-
-
-  <p><%= @parent_resource.description %></p>
+  <p><%= sanitize @parent_resource.description %></p><br></br>
+  <p><%= link_to "◁ return to all resources", parent_resources_path %></p>
 </div>
