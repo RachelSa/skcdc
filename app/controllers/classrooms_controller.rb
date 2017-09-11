@@ -35,7 +35,10 @@ class ClassroomsController < ApplicationController
       redirect_to admin_path, :notice => "#{@classroom.name} updated"
     else
       @programs = Program.all
-      flash[:notice] = "Classrooms must have a name. Attached images must be less than 1 MB"
+      @errors = @classroom.errors.messages
+      flash[:notice] = @errors
+      
+      #flash[:notice] = "Classrooms must have a name. Attached images must be less than 1 MB"
       render :edit
     end
   end
