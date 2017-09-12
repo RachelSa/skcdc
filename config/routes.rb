@@ -13,13 +13,11 @@ Rails.application.routes.draw do
   get '/collaborations/admin', to: 'collaborations#admin'
   get '/contacts/admin', to: 'contacts#admin'
   get '/posts/admin', to: 'posts#admin'
-  #get '/login_request', to: 'users#request'
 
   resources :programs
   resources :classrooms
   resources :contacts
   resources :users
-  resources :program_classrooms
   resources :collaborations
   resources :posts
   resources :parent_resources
