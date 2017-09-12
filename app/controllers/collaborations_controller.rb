@@ -17,7 +17,10 @@ class CollaborationsController < ApplicationController
   end
 
   def show
-    @collaboration = Collaboration.find(params[:id])
+    @collaboration = Collaboration.find_by(id: params[:id])
+    if !@collaboration
+      redirect_to collaborations_path
+    end
   end
 
   def index

@@ -14,6 +14,7 @@
 <div id="right-col" class="col l6">
   <ul class="collection with-header">
     <li class="collection-header"><h4>Contact Us</h4></li>
+    <% if @contacts.any? %>
       <% @contacts.each do |contact| %>
         <li class="collection-item">
           <div class="row">
@@ -24,6 +25,9 @@
           </div>
         </div>
       </li>
-    <% end %>
+      <% end %>
+      <% else %>
+        <p>Sorry, no contacts to show.</p>
+      <% end %>
   </ul>
 </div>

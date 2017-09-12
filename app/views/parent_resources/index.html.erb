@@ -6,16 +6,18 @@
 <div id="right-col" class="col l7 m7 s12">
   <h2>Our Resources</h2>
     <div class="row">
-      <% @parent_resources.each do |parent_resource| %>
-        <div class="col s12 m12 l10">
-          <div class="card">
-            <div class="card-content white-text center-align">
-                <p><%= link_to parent_resource.title, parent_resource_path(parent_resource) %><p>
-
+      <% if @parent_resources.any? %>
+        <% @parent_resources.each do |parent_resource| %>
+          <div class="col s12 m12 l10">
+            <div class="card">
+              <div class="card-content white-text center-align">
+                  <p><%= link_to parent_resource.title, parent_resource_path(parent_resource) %><p>
+              </div>
             </div>
           </div>
-        </div>
+        <% end %>
+        <% else %>
+        <p>Sorry, no resources to show.</p>
       <% end %>
-
     </div>
   </div>

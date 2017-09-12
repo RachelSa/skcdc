@@ -21,7 +21,10 @@ class ParentResourcesController < ApplicationController
   end
 
   def show
-    @parent_resource = ParentResource.find(params[:id])
+    @parent_resource = ParentResource.find_by(id: params[:id])
+    if !@parent_resource
+      redirect_to parent_resources_path
+    end
   end
 
   def edit
