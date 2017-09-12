@@ -7,9 +7,10 @@ before_action :authenticate_user, only: [:new, :edit]
   def create
     @program = Program.new(program_params)
     if @program.save
-      redirect_to admin_path, :notice => "#{@program.title} created"
+      redirect_to admin_path, :notice => "#Program created"
     else
-      flash[:notice] = "Programs must have a title"
+      @errors = @program.errors.messages
+      flash[:notice] = @errors
       render :new
     end
 
@@ -30,9 +31,10 @@ before_action :authenticate_user, only: [:new, :edit]
   def update
     @program = Program.find(params[:id])
     if @program.update(program_params)
-      redirect_to admin_path, :notice => "#{@program.title} updated"
+      redirect_to admin_path, :notice => "Program updated"
     else
-      flash[:notice] = "Programs must have a title"
+      @errors = @program.errors.messages
+      flash[:notice] = @errors
       render :edit
     end
 

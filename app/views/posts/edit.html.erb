@@ -1,16 +1,13 @@
 <div id="left-col" class="col l4">
-  <h5>Admin Account</h5>
+  <h5><%= link_to "Admin Account", admin_path %></h5>
   <p><%= link_to "see published post", post_path(@post) %></p>
   <div>delete <%= @post.title %>?</div>
   <%= button_to "delete post", @post, :method => :delete, data: {confirm: "Are you sure you want to delete this post?"}, class: "amber lighten-1 white-text btn" %>
 
-
-
-
-
 </div>
 
 <div id="right-col" class='col l6'>
+  <%= render partial: '/general/error_notice' %>
   <h5>Edit Post</h5>
   <%= render partial: 'form' %>
   <br></br>

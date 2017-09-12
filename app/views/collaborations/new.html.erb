@@ -1,9 +1,10 @@
 <div id="left-col" class="col l4">
-  <h5>Admin Account</h5>
+  <h5><%= link_to "Admin Account", admin_path %></h5>
 
 </div>
 
 <div id="right-col" class='col l6'>
+  <%= render partial: '/general/error_notice' %>
   <h5>New Collaboration</h5>
   <%= render partial: 'form' %>
 </div>
