@@ -10,8 +10,9 @@ class ParentResourcesController < ApplicationController
       flash[:notice] = "Parent resource published!"
       redirect_to admin_path
     else
-      flash[:notice] = "parent_resources must have a title and description"
-      render 'new'
+      @errors = @parent_resource.errors.messages
+      flash[:notice] = @errors
+      render :new
     end
   end
 
@@ -32,8 +33,9 @@ class ParentResourcesController < ApplicationController
       flash[:notice] = "Parent resource updated!"
       redirect_to admin_path
     else
-      flash[:notice] = "parent resources must have a title and description"
-      render 'new'
+      @errors = @parent_resource.errors.messages
+      flash[:notice] = @errors
+      render :edit
     end
   end
 

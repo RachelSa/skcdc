@@ -10,7 +10,8 @@ class ClassroomsController < ApplicationController
     if @classroom.save
       redirect_to admin_path, :notice => "#{@classroom.name} created"
     else
-      flash[:notice] = "Classrooms must have a name"
+      @errors = @classroom.errors.messages
+      flash[:notice] = @errors
       render :new
     end
   end
@@ -35,7 +36,8 @@ class ClassroomsController < ApplicationController
       redirect_to admin_path, :notice => "#{@classroom.name} updated"
     else
       @programs = Program.all
-      flash[:notice] = "Classrooms must have a name. Attached images must be less than 1 MB"
+      @errors = @classroom.errors.messages
+      flash[:notice] = @errors
       render :edit
     end
   end

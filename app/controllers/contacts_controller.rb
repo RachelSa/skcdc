@@ -8,9 +8,12 @@ class ContactsController < ApplicationController
     def create
       @contact = Contact.new(contact_params)
       if @contact.save
+        flash[:notice] = "contact created"
         redirect_to @contact
       else
-        redirect_to new_contact_path, :notice => "Contacts must have a first and last name"
+        @errors = @contact.errors.messages
+        flash[:notice] = @errors
+        render :new
       end
     end
 
@@ -25,9 +28,12 @@ class ContactsController < ApplicationController
     def update
       @contact = Contact.find(params[:id])
       if @contact.update(contact_params)
+        flash[:notice] = "contact updated"
         redirect_to @contact
       else
-        redirect_to edit_contact_path, :notice => "Contacts must have a first and last name"
+        @errors = @contact.errors.messages
+        flash[:notice] = @errors
+        render :edit
       end
     end
 
@@ -38,6 +44,7 @@ class ContactsController < ApplicationController
     def destroy
       @contact = Contact.find(params[:id])
       @contact.destroy
+      flash[:notice] = "Contact deleted"
       redirect_to admin_path
     end
 

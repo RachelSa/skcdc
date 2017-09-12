@@ -1,0 +1,7 @@
+<% if !flash.empty? %>
+  <% flash.each do |k, message| %>
+    <% message.each do |name,error| %>
+    <div class="lime lighten-3 chip center-align"><%= name.to_s %> <%= error[0] %></div>
+    <% end %>
+  <% end %>
+<% end %>

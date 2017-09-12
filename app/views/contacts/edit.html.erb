@@ -1,5 +1,5 @@
 <div id="left-col" class="col l4">
-  <h5>Admin Account</h5>
+  <h5><%= link_to "Admin Account", admin_path %></h5>
   Is <%= @contact.title %> no longer a contact?<br>
   <%= button_to "delete contact", @contact, :method => :delete, data: {confirm: "Are you sure you want to delete this contact?"}, class: "amber lighten-1 white-text btn" %>
 
@@ -7,6 +7,7 @@
 </div>
 
 <div id="right-col" class='col l6'>
+  <%= render partial: '/general/error_notice' %>
   <h5>Edit <%= @contact.title %></h5>
     <%= render partial: 'form' %>
 </div>

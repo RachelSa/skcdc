@@ -10,7 +10,8 @@ class CollaborationsController < ApplicationController
     if @collaboration.save
       redirect_to admin_path, :notice => "#{@collaboration.title} created"
     else
-      flash[:notice] = "collaborations must have a title and description"
+      @errors = @collaboration.errors.messages
+      flash[:notice] = @errors
       render :new
     end
   end
@@ -33,7 +34,8 @@ class CollaborationsController < ApplicationController
     if @collaboration.update(collaboration_params)
       redirect_to admin_path, :notice => "#{@collaboration.title} updated"
     else
-      flash[:notice] = "collaborations must have a title and description"
+      @errors = @collaboration.errors.messages
+      flash[:notice] = @errors
       render :edit
     end
   end

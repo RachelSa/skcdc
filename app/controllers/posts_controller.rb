@@ -20,8 +20,9 @@ class PostsController < ApplicationController
       flash[:notice] = "Post published!"
       redirect_to admin_path
     else
-      flash[:notice] = "posts must have a title and content"
-      render 'new'
+      @errors = @post.errors.messages
+      flash[:notice] = @errors
+      render :new
     end
   end
 
@@ -35,8 +36,9 @@ class PostsController < ApplicationController
       flash[:notice] = "post updated!"
       redirect_to admin_path
     else
-      flash[:notice] = "posts must have a title and content"
-      render 'edit'
+      @errors = @post.errors.messages
+      flash[:notice] = @errors
+      render :edit
     end
   end
 
@@ -44,7 +46,7 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     flash[:notice] = "Post deleted"
-    redirect_to users_path
+    redirect_to admin_path
   end
 
   def admin
