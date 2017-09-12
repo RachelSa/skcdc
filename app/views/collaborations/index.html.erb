@@ -6,14 +6,18 @@
 <div id="right-col" class="col l7 m7">
   <h2>Our Collaborations</h2>
     <div class="row">
-      <% @collaborations.each do |collaboration| %>
-        <div class="col s12 m12 l10">
-          <div class="card">
-            <div class="card-content blue-grey-text center-align">
-              <p><%= link_to "#{collaboration.title}", collaboration %></p>
+      <% if @collaborations.any? %>
+        <% @collaborations.each do |collaboration| %>
+          <div class="col s12 m12 l10">
+            <div class="card">
+              <div class="card-content blue-grey-text center-align">
+                <p><%= link_to "#{collaboration.title}", collaboration %></p>
+              </div>
             </div>
           </div>
-        </div>
+      <% end %>
+      <% else %>
+        <p>Sorry, no collaborations to show.</p>
       <% end %>
   </div>
 </div>

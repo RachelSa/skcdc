@@ -21,7 +21,10 @@ before_action :authenticate_user, only: [:new, :edit]
   end
 
   def show
-    @program = Program.find(params[:id])
+    @program = Program.find_by(id: params[:id])
+    if !@program
+      redirect_to programs_path
+    end
   end
 
   def edit

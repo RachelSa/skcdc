@@ -1,8 +1,12 @@
 class PostsController < ApplicationController
 
   def show
-    @post = Post.find(params[:id])
-    @recent_posts = Post.all.order('id DESC').limit(5)
+    @post = Post.find_by(id: params[:id])
+    if @post
+      @recent_posts = Post.all.order('id DESC').limit(5)
+    else
+      redirect_to posts_path
+    end
   end
 
   def index

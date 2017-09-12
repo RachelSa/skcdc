@@ -21,8 +21,12 @@ class ClassroomsController < ApplicationController
   end
 
   def show
-    @classroom = Classroom.find(params[:id])
-    @map_url = "https://www.google.com/maps/search/?api=1&query=+#{@classroom.url_street_address}"
+    @classroom = Classroom.find_by(id: params[:id])
+    if @classroom
+      @map_url = "https://www.google.com/maps/search/?api=1&query=+#{@classroom.url_street_address}"
+    else
+      redirect_to classrooms_path
+    end
   end
 
   def edit
