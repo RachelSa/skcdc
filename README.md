@@ -1,24 +1,18 @@
-# README
+# SKCDC Website
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+SKCDC is a non profit regional Head Start organization located in Central Maine. This repository is the public website and administrative content management system. 
 
-Things you may want to cover:
+  **Language:** Ruby 2.3.1
+  **Framework:** Rails 5
+  **Database:** Postgres
+  
+## Running Locally 
+  1. ```git clone <copied SSH>```
+  2. ```bundle install```
+  3. ```rake db:migrate```
+  4. ```rails s```
+  5. Navigate to ```http://localhost:3000/``` in browser
 
-* Ruby version
+## Sample Wireframe
+* [classroom view](https://wireframe.cc/8XTt3C)
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
