@@ -1,4 +1,5 @@
 Rails.application.configure do
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # In the development environment your application's code is reloaded on
@@ -9,8 +10,8 @@ Rails.application.configure do
   # Do not eager load code on boot.
   config.eager_load = false
 
-  # Show full error reports.
-  config.consider_all_requests_local = true
+  # Show full error reports. This was changed to test 404s.
+  config.consider_all_requests_local = false
 
   # Enable/disable caching. By default caching is disabled.
   if Rails.root.join('tmp/caching-dev.txt').exist?
