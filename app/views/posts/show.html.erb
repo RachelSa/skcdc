@@ -11,10 +11,10 @@
 
 <div id="right-col" class="col l6">
   <h2><%= @post.title %></h2>
-
-<%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
-
-  <p><%= sanitize @post.content %></p>
+  <div class="blog-indent">
+    <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
+    <p><%= sanitize @post.content %></p>
+  </div>
   <p class="blue-grey-text text-lighten-3 demphasize-text"> posted on <%= @post.created_at.strftime("%B %d, %Y") %></p>
   <%= link_to "◁ return to all posts", posts_path %>
 </div>
