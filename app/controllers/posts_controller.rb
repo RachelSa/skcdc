@@ -21,7 +21,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user = current_user
     if @post.save
-      flash[:notice] = "Post published!"
+      flash[:notice] = "Success! Visit <a href='#{post_path(@post)}'>published post</a>."
       redirect_to admin_path
     else
       @errors = @post.errors.messages
@@ -37,7 +37,7 @@ class PostsController < ApplicationController
   def update
     @post = Post.find(params[:id])
     if @post.update(post_params)
-      flash[:notice] = "post updated!"
+      flash[:notice] = "Success! Visit <a href='#{post_path(@post)}'>updated post</a>."
       redirect_to admin_path
     else
       @errors = @post.errors.messages

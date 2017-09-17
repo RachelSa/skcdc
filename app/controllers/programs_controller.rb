@@ -7,7 +7,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def create
     @program = Program.new(program_params)
     if @program.save
-      redirect_to admin_path, :notice => "#Program created"
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{program_path(@program)}'>published program</a>."
     else
       @errors = @program.errors.messages
       flash[:notice] = @errors
@@ -34,7 +34,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def update
     @program = Program.find(params[:id])
     if @program.update(program_params)
-      redirect_to admin_path, :notice => "Program updated"
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{program_path(@program)}'>updated program</a>."
     else
       @errors = @program.errors.messages
       flash[:notice] = @errors

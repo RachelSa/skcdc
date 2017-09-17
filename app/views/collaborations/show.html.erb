@@ -4,6 +4,6 @@
 
 <div id="right-col" class="col l7 m7">
   <h2><%= @collaboration.title %></h2>
-  <p><%= @collaboration.description %></p>
+  <p><%= sanitize @collaboration.description %></p>
   <p><%= link_to "◁ return to all collaborations", collaborations_path %></p>
 </div>

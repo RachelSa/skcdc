@@ -1,7 +1,7 @@
 class Classroom < ApplicationRecord
   has_many :program_classrooms
   has_many :programs, through: :program_classrooms
-  validates :name, presence: true
+  validates :name, :description, :street_address, :town, :zipcode, :phone, presence: true
   has_attached_file :image, styles: { small: "450x450" }
   validates_attachment :image, :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
   validates_with AttachmentSizeValidator, attributes: :image, less_than: 1.megabytes

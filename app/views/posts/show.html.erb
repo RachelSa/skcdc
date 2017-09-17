@@ -11,7 +11,7 @@
 
 <div id="right-col" class="col l6">
   <h2><%= @post.title %></h2>
-  <div class="blog-indent">
+  <div class="text-indent">
     <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
     <p><%= sanitize @post.content %></p>
   </div>

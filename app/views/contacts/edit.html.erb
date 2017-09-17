@@ -1,6 +1,6 @@
 <div id="left-col" class="col l4">
   <h5><%= link_to "Admin Account", admin_path %></h5>
-  Is <%= @contact.title %> no longer a contact?<br>
+  Is <%= @contact.first_name %> no longer a contact?<br>
   <%= button_to "delete contact", @contact, :method => :delete, data: {confirm: "Are you sure you want to delete this contact?"}, class: "amber lighten-1 white-text btn" %>
 
 

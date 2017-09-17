@@ -8,7 +8,7 @@ class CollaborationsController < ApplicationController
   def create
     @collaboration = Collaboration.new(collaboration_params)
     if @collaboration.save
-      redirect_to admin_path, :notice => "#{@collaboration.title} created"
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{collaboration_path(@collaboration)}'>published collaboration</a>."
     else
       @errors = @collaboration.errors.messages
       flash[:notice] = @errors
@@ -35,7 +35,7 @@ class CollaborationsController < ApplicationController
   def update
     @collaboration = Collaboration.find(params[:id])
     if @collaboration.update(collaboration_params)
-      redirect_to admin_path, :notice => "#{@collaboration.title} updated"
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{collaboration_path(@collaboration)}'>updated collaboration</a>."
     else
       @errors = @collaboration.errors.messages
       flash[:notice] = @errors

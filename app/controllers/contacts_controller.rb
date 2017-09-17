@@ -8,7 +8,7 @@ class ContactsController < ApplicationController
     def create
       @contact = Contact.new(contact_params)
       if @contact.save
-        flash[:notice] = "contact created"
+        flash[:notice] = "Success! Visit <a href='#{contacts_path}'>updated contact page</a>."
         redirect_to @contact
       else
         @errors = @contact.errors.messages
@@ -28,7 +28,7 @@ class ContactsController < ApplicationController
     def update
       @contact = Contact.find(params[:id])
       if @contact.update(contact_params)
-        flash[:notice] = "contact updated"
+        flash[:notice] = "Success! Visit <a href='#{contacts_path}'>updated contact page</a>."
         redirect_to @contact
       else
         @errors = @contact.errors.messages
