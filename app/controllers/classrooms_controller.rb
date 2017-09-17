@@ -8,7 +8,7 @@ class ClassroomsController < ApplicationController
   def create
     @classroom = Classroom.new(classroom_params)
     if @classroom.save
-      redirect_to admin_path, :notice => "#{@classroom.name} created"
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{classroom_path(@classroom)}'>published classroom</a>."
     else
       @errors = @classroom.errors.messages
       flash[:notice] = @errors
@@ -37,7 +37,7 @@ class ClassroomsController < ApplicationController
   def update
     @classroom = Classroom.find(params[:id])
     if @classroom.update(classroom_params)
-      redirect_to admin_path, :notice => "#{@classroom.name} updated"
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{classroom_path(@classroom)}'>updated classroom</a>."
     else
       @programs = Program.all
       @errors = @classroom.errors.messages

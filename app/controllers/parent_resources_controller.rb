@@ -7,7 +7,7 @@ class ParentResourcesController < ApplicationController
   def create
     @parent_resource = ParentResource.new(parent_resource_params)
     if @parent_resource.save
-      flash[:notice] = "Parent resource published!"
+      flash[:notice] = "Success! Visit <a href='#{parent_resource_path(@parent_resource)}'>published resource</a>."
       redirect_to admin_path
     else
       @errors = @parent_resource.errors.messages
@@ -32,8 +32,9 @@ class ParentResourcesController < ApplicationController
   end
 
   def update
-    if ParentResource.update(parent_resource_params)
-      flash[:notice] = "Parent resource updated!"
+    @parent_resource = ParentResource.find(params[:id])
+    if @parent_resource.update(parent_resource_params)
+      flash[:notice] = "Success! Visit <a href='#{parent_resource_path(@parent_resource)}'>updated resource</a>."
       redirect_to admin_path
     else
       @errors = @parent_resource.errors.messages

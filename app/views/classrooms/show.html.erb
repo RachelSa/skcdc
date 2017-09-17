@@ -1,31 +1,32 @@
-
 <div id="left-col" class="col l4 m4">
   <%= render file: "/general/_logo" %>
   <h5><%= @classroom.name %></h5>
   <%= @classroom.street_address %><br>
-  <%= @classroom.town %>, Maine <%= @classroom.zipcode %><br>
+  <%= @classroom.town %>, Maine
+  <%= @classroom.zipcode %><br>
   <%= link_to 'google map', @map_url, target: :_blank %>
 
   <%= @classroom.phone %>
   <% if @classroom.programs.present?  %>
-  <h5>  <%= "Programs offered:" %></h5>
+  <h5>
+    <%= "Programs offered:" %></h5>
   <% end %>
   <ul>
-  <% @classroom.programs.each do |program| %>
+    <% @classroom.programs.each do |program| %>
     <li><%= link_to "#{program.title}", program %></li>
-  <% end %>
+    <% end %>
   </ul>
   <a class="waves-effect waves-light amber lighten-1 white-text btn">apply</a>
 </div>
 
 <div id="right-col" class="col l7 m7">
   <h2><%= @classroom.name %></h2>
-  <p><%= @classroom.description %></p>
+
   <% if @classroom.image.url != "/images/original/missing.png" %>
-    <%= image_tag(@classroom.image.url(:small)) %>
+  <%= image_tag(@classroom.image.url(:small)) %>
   <% end %>
-
+  <div class="text-indent">
+    <p><%= sanitize @classroom.description %></p>
+  </div>
   <p><%= link_to "◁ return to all classrooms", classrooms_path %></p>
-
-
 </div>
