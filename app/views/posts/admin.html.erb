@@ -4,7 +4,7 @@
 </div>
 
 <div id="right-col" class="col l6">
-  <h5>Update Blog Posts</h5>
+  <h5>Update Posts</h5>
   <%= link_to "+ new post", new_post_path %>
   <% @posts.each do |post| %>
     <p>&ensp;<%= link_to post.title, edit_post_path(post) %></p>
