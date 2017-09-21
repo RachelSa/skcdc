@@ -4,20 +4,21 @@
 
 
 <div id="right-col" class="col l7 m7">
-  <h2>Recent Posts</h2>
-    <div class="row">
-      <% if @posts.any? %>
-          <% @posts.each do |post| %>
-              <div class="col s12 m12 l10">
-                <div class="card">
-                  <div class="card-content blue-grey-text center-align">
-                <p><%= link_to post.title, post_path(post) %><p>
-                </div>
-              </div>
+  <h2 class="center-align">Recent Posts</h2>
+  <div class="row">
+    <% if @posts.any? %>
+      <% @posts.each do |post| %>
+        <a href="<%= post_path(post) %>">
+          <div class="col s12 m10 l6 margin-bottom">
+            <div class="light-blue-text center-align">
+              <div><%= post.title.upcase %></div>
+              <div class="blue-grey-text text-lighten-3 demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></div>
             </div>
-          <% end %>
-        <% else %>
-          <p>Sorry, no posts to show.</p>
-        <% end %>
+          </div>
+        </a>
+      <% end %>
+    <% else %>
+      <p>Sorry, no posts to show.</p>
+    <% end %>
     </div>
-  </div>
+</div>
