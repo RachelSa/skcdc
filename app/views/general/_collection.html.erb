@@ -1,0 +1,16 @@
+
+  <div class="row">
+    <% if items.any? %>
+      <% items.each do |item| %>
+      <a href="<%= item.url_classname %>/<%= item.id %>">
+        <div class="col s12 m10 l4 margin-bottom">
+          <div class="light-blue-text center-align">
+              <p><%= item.title_or_name.upcase %></p>
+            </div>
+          </div>
+        </a>
+      <% end %>
+    <% else %>
+      <p>Sorry, no <%= items.title_classname %> to show.</p>
+    <% end %>
+</div>

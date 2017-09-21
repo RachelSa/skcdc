@@ -4,19 +4,5 @@
 
 <div id="right-col" class="col l7 m7">
   <h2 class="center-align">Our Programs</h2>
-    <div class="row">
-      <% if @programs.any? %>
-        <% @programs.each do |program| %>
-        <a href="<%= program_path(program) %>">
-          <div class="col s12 m10 l4 margin-bottom">
-            <div class="light-blue-text center-align">
-                <p><%= program.title.upcase %></p>
-              </div>
-            </div>
-          </a>
-        <% end %>
-      <% else %>
-        <p>Sorry, no programs to show.</p>
-      <% end %>
-  </div>
+  <%= render partial: "/general/collection", locals: {items: @programs} %>
 </div>

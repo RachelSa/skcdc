@@ -5,19 +5,5 @@
 
 <div id="right-col" class="col l7 m7">
   <h2 class="center-align">Our Collaborations</h2>
-    <div class="row">
-      <% if @collaborations.any? %>
-        <% @collaborations.each do |collaboration| %>
-          <a href="<%= collaboration_path(collaboration) %>">
-            <div class="col s12 m10 l4 margin-bottom">
-                <div class="light-blue-text center-align">
-                  <p><%= collaboration.title.upcase%></p>
-              </div>
-          </div>
-        </a>
-      <% end %>
-      <% else %>
-        <p>Sorry, no collaborations to show.</p>
-      <% end %>
-  </div>
+  <%= render partial: "/general/collection", locals: {items: @collaborations} %>
 </div>

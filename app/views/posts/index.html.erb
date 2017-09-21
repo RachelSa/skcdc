@@ -11,7 +11,8 @@
         <a href="<%= post_path(post) %>">
           <div class="col s12 m10 l6 margin-bottom">
             <div class="light-blue-text center-align">
-              <p><%= post.title.upcase %></p>
+              <div><%= post.title.upcase %></div>
+              <div class="blue-grey-text text-lighten-3 demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></div>
             </div>
           </div>
         </a>
