@@ -2,7 +2,7 @@
 
 </div>
 <div id="right-col" class="col l6">
-  <h3>Create Admin Account </h3>
+  <h3>Edit Admin User</h3>
   <%= render partial: '/general/error_notice' %>
 <%= form_for(@user) do |f|%>
 
@@ -20,9 +20,8 @@
   <br></br>
 
 
-  <%= f.submit 'submit', :class => "amber lighten-1 white-text btn" %><br></br>
+  <%= f.submit 'submit', :class => "waves-effect waves-light amber lighten-1 white-text btn" %><br></br>
 
 <% end %>
-
 <p><%= link_to "◁ return to super admin page", super_admin_path %></p>
 </div>

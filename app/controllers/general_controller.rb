@@ -1,4 +1,6 @@
 class GeneralController < ApplicationController
+  before_action :authenticate_user, only: [:admin]
+  
     def show
       @recent_posts = Post.all.order('id DESC').limit(5)
     end
@@ -14,4 +16,6 @@ class GeneralController < ApplicationController
     def admin
 
     end
+
+
   end

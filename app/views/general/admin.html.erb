@@ -1,6 +1,11 @@
 <div  id="left-col" class="col l4">
   <p>Welcome to the SKCDC admin dashboard. </p>
   <p>Any changes made here will appear on the live SKCDC web site.</p>
+    <div>
+    <% if current_user.super%>
+      <%=  link_to "super admin dashboard", super_admin_path %>
+    <% end %>
+  </div>
   <%= render file: "/general/_flash_notice" %>
 
 </div>
