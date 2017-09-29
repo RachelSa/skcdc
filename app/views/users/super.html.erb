@@ -1,0 +1,14 @@
+<div id="left-col" class="col l4 m4"></div>
+
+<div id="right-col" class="col l7 m8">
+  <h5>Create and Edit Users</h5>
+    <div class="text-indent">
+      <p><%= link_to "+ create new user", new_user_path %></p>
+      <% @users.each do |user| %>
+      <p><%= link_to "#{user.email}", edit_user_path(user) %></p>
+      <% end %>
+    </div>
+    <br></br>
+  <p><%= link_to "◁ return to admin main page", admin_path %></p>
+
+</div>

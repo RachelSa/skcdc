@@ -1,5 +1,5 @@
 class ParentResourcesController < ApplicationController
-
+  before_action :authenticate_user, only: [:new, :edit]
   def new
     @parent_resource = ParentResource.new
   end

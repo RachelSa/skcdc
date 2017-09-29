@@ -13,10 +13,12 @@ Rails.application.routes.draw do
   get '/collaborations/admin', to: 'collaborations#admin'
   get '/contacts/admin', to: 'contacts#admin'
   get '/posts/admin', to: 'posts#admin'
+  get '/admin/super', to: 'users#super', as: 'super_admin'
+  post '/super', to: 'users#create_super'
   resources :programs
   resources :classrooms
   resources :contacts
-  resources :users, only: [:new, :create]
+  resources :users, only: [:new, :create, :edit, :update]
   resources :collaborations
   resources :posts
   resources :parent_resources

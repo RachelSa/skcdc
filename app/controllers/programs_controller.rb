@@ -1,5 +1,5 @@
 class ProgramsController < ApplicationController
-before_action :authenticate_user, only: [:new, :edit]
+  before_action :authenticate_user, only: [:new, :edit]
   def new
     @program = Program.new
   end

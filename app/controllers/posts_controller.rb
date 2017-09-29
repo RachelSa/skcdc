@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-
+before_action :authenticate_user, only: [:new, :edit]
   def show
     @post = Post.find_by(id: params[:id])
     if @post
