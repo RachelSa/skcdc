@@ -3,20 +3,18 @@
 </div>
 
 
-<div id="right-col" class="col l7 m7">
+<div id="right-col" class="col l6 m6 s12">
   <h2 class="center-align">Recent Posts</h2>
   <div class="row">
     <% if @posts.any? %>
+      <div class="collection">
       <% @posts.each do |post| %>
-        <a href="<%= post_path(post) %>">
-          <div class="col s12 m10 l6 margin-bottom">
-            <div class="light-blue-text center-align">
-              <div><%= post.title.upcase %></div>
-              <div class="blue-grey-text text-lighten-3 demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></div>
-            </div>
-          </div>
+        <a href="<%= post_path(post) %>" class="collection-item">
+          <span class="emphasize-text light-blue-text"><%= post.title %></span>
+          <span class="demphasize-text light-blue-text"><%= post.created_at.strftime("%B %d, %Y") %></span>
         </a>
       <% end %>
+    </div>
     <% else %>
       <p>Sorry, no posts to show.</p>
     <% end %>

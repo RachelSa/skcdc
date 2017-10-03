@@ -1,26 +1,22 @@
-
 <div id="left-col" class="col l4 m4">
-    <%= render file: "/general/_logo" %>
+  <%= render file: "/general/_logo" %>
 
 </div>
 
-
-<div id="right-col" class="col l7 m7">
+<div id="right-col" class="col l6 m6 s12">
   <h2 class="center-align">Our Classrooms</h2>
-    <div class="row">
-      <% if @classrooms.any? %>
-        <% @classrooms.each do |classroom| %>
-          <a href="<%= classroom_path(classroom) %>">
-            <div class="col s12 m12 l4 margin-bottom">
-                <span class="light-blue-text center-align">
-                  <div><%= classroom.name.upcase %></div>
-                  <div><%= classroom.town %>, Maine</div>
-                </span>
-            </div>
-          </a>
-        <% end %>
-      <% else %>
-      <p>Sorry, no classrooms to show.</p>
+  <div class="row">
+    <% if @classrooms.any? %>
+    <div class="collection">
+      <% @classrooms.each do |classroom| %>
+      <a href="<%= classroom_path(classroom) %>" class="collection-item">
+        <span class="emphasize-text light-blue-text"><%= classroom.name %></span>&ensp;
+        <span class="demphasize-text light-blue-text"><%= classroom.town %>, Maine</span>
+      </a>
       <% end %>
     </div>
+  <% else %>
+    <p>Sorry, no classrooms to show.</p>
+    <% end %>
   </div>
+</div>
