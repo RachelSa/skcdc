@@ -1,4 +1,6 @@
 <div id="left-col" class="col l4">
+  Does this user no longer work here?<br>
+  <%= button_to "delete user", @user, :method => :delete, data: {confirm: "Are you sure you want to delete this user?"}, class: "amber lighten-1 white-text btn" %>
 
 </div>
 <div id="right-col" class="col l6">

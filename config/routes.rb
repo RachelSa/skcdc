@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   resources :programs
   resources :classrooms
   resources :contacts
-  resources :users, only: [:new, :create, :edit, :update]
+  resources :users, only: [:new, :create, :edit, :update, :destroy]
   resources :collaborations
   resources :posts
   resources :parent_resources
