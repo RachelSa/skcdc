@@ -25,7 +25,7 @@
       <div class="row">
         <% @contacts.each do |contact| %>
             <div class="col s6 m6 l6 margin-bottom">
-              <div><%= "#{contact.first_name} #{contact.last_name}".upcase %></div>
+              <div class="emphasize-text"><%= "#{contact.first_name} #{contact.last_name}" %></div>
               <div class="footer-text"><%= contact.title %></div>
               <div class="footer-text"><%= mail_to contact.email %></div>
               <div class="footer-text"><%=" ext: #{contact.ext}" %></div>
