@@ -19,5 +19,14 @@
  @import "materialize/components/color";
  $primary-color: color("blue", "lighten-2") !default;
  $secondary-color: color("amber", "lighten-1") !default;
+ $link-color: color("green", "lighten-1") !default;
+ $button-padding: 0 1.5rem !default;
+ $navbar-height: 72px !default;
+ $navbar-font-size: 1.1rem !default;
+ $collection-hover-bg-color: #fffde7 !default;
+ $collection-link-color: color("green", "lighten-1") !default;
+ $collection-line-height: 1.1rem !default;
+ $off-black: rgba(0, 0, 0, 0.75) !default;
+
 
 @import "materialize";

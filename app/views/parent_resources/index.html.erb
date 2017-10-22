@@ -1,9 +1,10 @@
 <div id="left-col" class="col l4 m4 s12">
   <%= render file: "/general/_logo" %>
+  <%= render partial: "/general/blog_sidebar" %>
 </div>
 
 
 <div id="right-col" class="col l6 m6 s12">
-  <h2 class="center-align">Our Resources</h2>
+  <h3 class="center-align yellow-title">Our Resources</h3>
     <%= render partial: "/general/collection", locals: {items: @parent_resources} %>
   </div>

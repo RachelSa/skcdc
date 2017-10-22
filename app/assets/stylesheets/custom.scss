@@ -9,9 +9,12 @@ body {
  }
 
  a:link {
-   color: #4fc3f7
+   color: #2FC13F;
  }
 
+ h1, h2, h3, h4, h5 {
+   font-family: 'Hind Siliguri', sans-serif;
+ }
 
 .yellow-title {
   color: #ffc107;
@@ -19,6 +22,10 @@ body {
 
 .blue-title {
   color: #03a9f4;
+}
+
+.green-title {
+  color: #2FC13F;
 }
 
 .emphasize-text {
@@ -46,11 +53,6 @@ body {
   width: 100%;
 }
 
-.nav-height{
-    height: 80px;
-    line-height: 80px;
-    }
-
 .logo-img {
   width: 100%;
 }
@@ -71,7 +73,11 @@ body {
 
 #right-col {
   padding-left: 3%;
+}
 
+#welcome-banner {
+  padding-top: 5%;
+  padding-bottom: 10%;
 }
 
 .container-custom {

@@ -1,14 +1,16 @@
 <ul>
-  <div class="z-depth-1 left-card">
-  <h4 class="padding-left"><%= link_to "Recent Updates", posts_path, class:"yellow-title" %></h4>
+
+  <h5 class="padding-left"><%= link_to "Recent Updates", posts_path, class:"yellow-title" %></h5>
   <ul>
   <% @recent_posts.each do |post| %>
     <li class="padding-left">
-      <div class="blue-grey-text text-lighten-3 demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></div>
-      <h6><%= link_to post.title, post_path(post), class:"blue-title" %></h6>
+      <div>
+        <%= link_to post.title, post_path(post), class:"green-title" %>
+
+      </div>
       <br>
     </li>
     <% end %>
-  </div>
+
 </ul>
 </ul>
