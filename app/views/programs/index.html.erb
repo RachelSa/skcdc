@@ -1,8 +1,9 @@
 <div id="left-col" class="col l4 m4">
   <%= render file: "/general/_logo" %>
+  <%= render partial: "/general/blog_sidebar" %>
 </div>
 
 <div id="right-col" class="col l6 m6 s12">
-  <h2 class="center-align">Our Programs</h2>
+  <h3 class="center-align yellow-title">Our Programs</h3>
   <%= render partial: "/general/collection", locals: {items: @programs} %>
 </div>

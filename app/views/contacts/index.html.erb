@@ -1,6 +1,7 @@
 
 <div id="left-col" class="col l4">
   <%= render file: "/general/_logo" %>
+  <%= render partial: "/general/blog_sidebar" %>
   <div class="row">
     <h5>Main Office</h5>
       <div class="col s6 m6 l12 margin-bottom">
@@ -20,7 +21,7 @@
 
 
 <div id="right-col" class="col l6">
-  <h2>Contact Us</h2>
+  <h3 class="center-align yellow-title">Contact Us</h3>
     <% if @contacts.any? %>
       <div class="row">
         <% @contacts.each do |contact| %>

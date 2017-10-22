@@ -1,17 +1,17 @@
 <div id="left-col" class="col l4 m4">
   <%= render file: "/general/_logo" %>
-
+  <%= render partial: "/general/blog_sidebar" %>
 </div>
 
 <div id="right-col" class="col l6 m6 s12">
-  <h2 class="center-align">Our Classrooms</h2>
+  <h3 class="center-align yellow-title">Our Classrooms</h3>
   <div class="row">
     <% if @classrooms.any? %>
     <div class="collection">
       <% @classrooms.each do |classroom| %>
       <a href="<%= classroom_path(classroom) %>" class="collection-item">
-        <span class="emphasize-text light-blue-text"><%= classroom.name %></span>&ensp;
-        <span class="demphasize-text light-blue-text"><%= classroom.town %>, Maine</span>
+        <span class="emphasize-text"><%= classroom.name %></span>&ensp;
+        <span class="demphasize-text"><%= classroom.town %>, Maine</span>
       </a>
       <% end %>
     </div>

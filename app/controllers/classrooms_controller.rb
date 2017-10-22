@@ -18,6 +18,7 @@ class ClassroomsController < ApplicationController
 
   def index
     @classrooms = Classroom.all
+    @recent_posts = Post.all.order('id DESC').limit(5)
   end
 
   def show
