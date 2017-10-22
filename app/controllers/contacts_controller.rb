@@ -19,6 +19,7 @@ class ContactsController < ApplicationController
 
     def index
       @contacts = Contact.all
+      @recent_posts = Post.all.order('id DESC').limit(5)
     end
 
     def edit
