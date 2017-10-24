@@ -3,7 +3,7 @@
   <%= f.text_field :title %>
 
   <%= f.label :description %>
-  <%= f.text_area :description %>
+  <%= f.trix_editor :description %><br></br>
   <br>
   <%= f.submit 'submit', :class => "amber lighten-1 white-text btn", data: { confirm:
     "Ready to post this update? All changes will appear on the live SKCDC website." } %><br></br>
