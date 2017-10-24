@@ -7,7 +7,7 @@ class Classroom < ApplicationRecord
   validates_with AttachmentSizeValidator, attributes: :image, less_than: 1.megabytes
 
   def url_street_address
-    "#{name.gsub(" ", "+")}+#{street_address.gsub(" ", "+")}+#{town.gsub(" ", "+")}+#{zipcode}"
+    "#{street_address.gsub(" ", "+")}+#{town.gsub(" ", "+")}+#{zipcode}"
   end
 
 end

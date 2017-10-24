@@ -17,7 +17,7 @@ class ClassroomsController < ApplicationController
   end
 
   def index
-    @classrooms = Classroom.all
+    @classrooms = Classroom.order(:name)
     @recent_posts = Post.all.order('id DESC').limit(5)
   end
 
@@ -54,7 +54,7 @@ class ClassroomsController < ApplicationController
   end
 
   def admin
-    @classroom_names = Classroom.all.pluck(:name, :id)
+    @classroom_names = Classroom.order(:name).pluck(:name, :id)
   end
 
   private

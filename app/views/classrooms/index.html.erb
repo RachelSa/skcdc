@@ -9,8 +9,8 @@
     <% if @classrooms.any? %>
     <div class="collection">
       <% @classrooms.each do |classroom| %>
-      <a href="<%= classroom_path(classroom) %>" class="collection-item">
-        <span class="emphasize-text"><%= classroom.name %></span>&ensp;
+      <a href="<%= classroom_path(classroom) %>" class="collection-item center-align">
+        <div class="emphasize-text"><%= classroom.name %></div>
         <span class="demphasize-text"><%= classroom.town %>, Maine</span>
       </a>
       <% end %>

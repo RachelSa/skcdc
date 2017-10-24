@@ -17,7 +17,7 @@
 <div id="right-col" class="col l7 m7">
   <h2><%= @program.title %></h2>
 
-  <p><%= @program.description %></p>
+  <p><%= sanitize @program.description %></p>
 
   <p><%= link_to "◁ return to all programs", programs_path %></p>
 </div>
