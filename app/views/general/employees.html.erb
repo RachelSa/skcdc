@@ -1,0 +1,20 @@
+<div  id="left-col" class="col l4">
+  <%= render partial: "blog_sidebar" %>
+</div>
+
+<div class="col l6">
+  <div class="center-align">
+    <h5 class="yellow-title">SKCDC Employees</h5>
+    <p>Welcome to the SKCDC employee dashboard.</p>
+    <ul class="collection">
+      <li class="collection-item">
+        <%= link_to "Sharepoint Login", "https://login.microsoftonline.com/70026f7c-5617-4a4d-adfe-f8a7b58abc08/oauth2/authorize?client_id=00000003-0000-0ff1-ce00-000000000000&response_mode=form_post&response_type=code%20id_token&resource=00000003-0000-0ff1-ce00-000000000000&scope=openid&nonce=512597EDC3B73E082C27C5F6DE176955D10E5BBB10735ADA-E5CAF4C1F691EA65413407F11E451C78EDA640093746CDCCAFBF645A2AFFD2C1&redirect_uri=https:%2F%2Fskcdc.sharepoint.com%2F_forms%2Fdefault.aspx&state=0&wsucxt=1&client-request-id=e16b279e-409e-4000-920e-a0c18320a1f3"%>
+      </li>
+      <li class="collection-item">
+        <%= link_to "ADP Portal", "https://online.adp.com/portal/login.html" %>
+      </li>
+    </ul>
+  </div>
+
+
+</div>
