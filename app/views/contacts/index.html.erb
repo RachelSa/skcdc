@@ -2,15 +2,14 @@
 <div id="left-col" class="col l4 m12 s12">
   <div class="row center-align">
 
-    <h5>Main Office</h5>
-      <div class="col s12 m12 l12 margin-bottom">
+    <h5 class="yellow-title">Main Office</h5>
+      <div class="col s12 m6 l12 margin-bottom">
         <div>Southern Kennebec Child<br>Development Corporation</div>
         <div>337 Maine Avenue</div>
         <div>Farmingdale, ME 04344</div>
       </div>
 
-      <div class="col s12 m12 l12">
-
+      <div class="col s12 m6 l12">
         <div>Telephone: (207) 582-3110</div>
         <div>Toll Free: (800) 525-2229</div>
         <div>Fax (General): (207) 582-3112</div>
@@ -20,22 +19,23 @@
   </div>
 
 
-<div id="right-col" class="col l6 m12 s12">
-  <h3 class="center-align yellow-title">Contact Us</h3>
-    <% if @contacts.any? %>
-      <div class="row">
-        <% @contacts.each do |contact| %>
-            <div class="col s6 m6 l6 margin-bottom">
-              <div class="emphasize-text"><%= "#{contact.first_name} #{contact.last_name}" %></div>
-              <div class="footer-text"><%= contact.title %></div>
-              <div class="footer-text"><%= mail_to contact.email %></div>
-              <div class="footer-text"><%=" ext: #{contact.ext}" %></div>
+<div id="right-col" class="col l8 m12 s12">
+  <div class="center-align">
+    <h3 class="yellow-title">Contact Us</h3>
+      <% if @contacts.any? %>
+        <div class="row">
+          <% @contacts.each do |contact| %>
+              <div class="col s12 m6 l6 margin-bottom">
+                <div class="emphasize-text"><%= "#{contact.first_name} #{contact.last_name}" %></div>
+                <div class="footer-text"><%= contact.title %></div>
+                <div class="footer-text"><%= mail_to contact.email %></div>
+                <div class="footer-text"><%=" ext: #{contact.ext}" %></div>
+              </div>
+              <% end %>
             </div>
-            <% end %>
-          </div>
-        </div>
-      <% else %>
-        <p>Sorry, no contacts to show.</p>
-      <% end %>
-  </ul>
-</div>
+
+        <% else %>
+          <p>Sorry, no contacts to show.</p>
+        <% end %>
+      </div>
+  </div>
