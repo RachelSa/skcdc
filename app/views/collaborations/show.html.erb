@@ -1,9 +1,9 @@
-<div id="left-col" class="col l4 m4">
-  <%= render file: "/general/_logo" %>
+<div id="left-col" class="col l4 m4 s12">
+  <p class="center-align"><%= link_to "◁ return to all collaborations", collaborations_path %></p>
 </div>
 
 <div id="right-col" class="col l7 m7">
   <h3 class="center-align yellow-title"><%= @collaboration.title %></h3>
   <p><%= sanitize @collaboration.description %></p>
-  <p><%= link_to "◁ return to all collaborations", collaborations_path %></p>
+
 </div>
