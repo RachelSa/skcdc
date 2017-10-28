@@ -17,8 +17,8 @@ class ProgramsController < ApplicationController
   end
 
   def index
-    @programs = Program.all
-    @recent_posts = Post.all.order('id DESC').limit(5)
+    @programs = Program.order(:title)
+    @recent_posts = Post.all.order('id DESC').limit(3)
   end
 
   def show

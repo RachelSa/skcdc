@@ -1,5 +1,5 @@
 <div id="left-col" class="col l4 m4">
-  <%= render file: "/general/_logo" %>
+
 </div>
 
 
@@ -9,9 +9,9 @@
     <% if @posts.any? %>
       <div class="collection">
       <% @posts.each do |post| %>
-        <a href="<%= post_path(post) %>" class="collection-item">
-          <span class="emphasize-text light-blue-text"><%= post.title %></span>
-          <span class="demphasize-text light-blue-text"><%= post.created_at.strftime("%B %d, %Y") %></span>
+        <a href="<%= post_path(post) %>" class="collection-item center-align">
+          <div class="emphasize-text"><%= post.title %></div>
+          <span class="demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></span>
         </a>
       <% end %>
     </div>

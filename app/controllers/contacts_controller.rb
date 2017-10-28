@@ -18,8 +18,8 @@ class ContactsController < ApplicationController
     end
 
     def index
-      @contacts = Contact.all
-      @recent_posts = Post.all.order('id DESC').limit(5)
+      @contacts = Contact.all.order(:first_name)
+      @recent_posts = Post.all.order('id DESC').limit(3)
     end
 
     def edit

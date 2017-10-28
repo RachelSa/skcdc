@@ -1,9 +1,8 @@
-<ul>
-
-  <h5 class="padding-left"><%= link_to "Recent Updates", posts_path, class:"yellow-title" %></h5>
+<ul class="center-align">
+  <h5><%= link_to "Recent Updates", posts_path, class:"yellow-title" %></h5>
   <ul>
   <% @recent_posts.each do |post| %>
-    <li class="padding-left">
+    <li>
       <div>
         <%= link_to post.title, post_path(post), class:"green-title" %>
 

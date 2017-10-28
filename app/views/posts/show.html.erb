@@ -1,20 +1,16 @@
-<div id="left-col" class="col l4 m4">
-  <%= render file: "/general/_logo" %>
-
-  <h5>Recent Updates</h5>
-  <% @recent_posts.each do |post| %>
-    <p><%= link_to post.title, post_path(post) %><p>
-  <% end %>
-
-
+<div id="left-col" class="col l4 m4 s12">
+  <div class="center-align">
+    <%= link_to "◁ return to all posts", posts_path %>
+  </div>
 </div>
 
-<div id="right-col" class="col l6">
-  <h2><%= @post.title %></h2>
-  <div class="text-indent">
-    <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
-    <p><%= sanitize @post.content %></p>
+<div id="right-col" class="col l6 m6 s12">
+  <div class="center-align">
+    <h3 class="yellow-title"><%= @post.title %></h3>
+    <div class="text-indent">
+      <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
+      <p><%= sanitize @post.content %></p>
+    </div>
+    <p class="blue-grey-text text-lighten-3 demphasize-text"> posted on <%= @post.created_at.strftime("%B %d, %Y") %></p>
   </div>
-  <p class="blue-grey-text text-lighten-3 demphasize-text"> posted on <%= @post.created_at.strftime("%B %d, %Y") %></p>
-  <%= link_to "◁ return to all posts", posts_path %>
 </div>

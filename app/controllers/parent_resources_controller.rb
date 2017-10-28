@@ -17,8 +17,8 @@ class ParentResourcesController < ApplicationController
   end
 
   def index
-    @parent_resources = ParentResource.all.order('id DESC')
-    @recent_posts = Post.all.order('id DESC').limit(5)
+    @parent_resources = ParentResource.order(:title)
+    @recent_posts = Post.all.order('id DESC').limit(3)
   end
 
   def show
