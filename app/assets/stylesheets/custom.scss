@@ -48,6 +48,10 @@ body {
   font-size: 3em;
 }
 
+.card {
+ width: 175px;
+}
+
 .left-card {
   padding: 2%;
   width: 100%;
@@ -90,6 +94,12 @@ body {
 
 #logo-margin {
   margin-top: 100px;
+  outline-color: black;
+  outline-width: 5px;
+}
+
+#title-image {
+  box-shadow: 4px 4px 5px #aaa;
 }
 
 .container-custom {
@@ -142,4 +152,8 @@ body {
   opacity: .5;
   position: absolute;
   z-index: -1;
+}
+
+.max-350 {
+  max-width: 350px;
 }
