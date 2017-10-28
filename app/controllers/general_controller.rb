@@ -17,5 +17,9 @@ class GeneralController < ApplicationController
 
     end
 
+    def employees
+      @recent_posts = Post.all.order('id DESC').limit(3)
+    end
+
 
   end

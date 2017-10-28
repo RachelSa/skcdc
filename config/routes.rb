@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   post '/logout', to: 'sessions#destroy'
   get '/mission', to: 'general#mission'
   get '/careers', to: 'general#careers'
+  get '/employees', to: 'general#employees'
   get '/admin', to: 'general#admin', as: 'admin'
   get '/classrooms/admin', to: 'classrooms#admin'
   get '/programs/admin', to: 'programs#admin'
