@@ -2,8 +2,9 @@
   <p class="center-align"><%= link_to "◁ return to all collaborations", collaborations_path %></p>
 </div>
 
-<div id="right-col" class="col l7 m7">
-  <h3 class="center-align yellow-title"><%= @collaboration.title %></h3>
-  <p><%= sanitize @collaboration.description %></p>
-
+<div id="right-col" class="col l7 m7 s12">
+  <div class="center-align">
+    <h3 class="yellow-title"><%= @collaboration.title %></h3>
+    <p><%= sanitize @collaboration.description %></p>
+  </div>
 </div>
