@@ -6,21 +6,24 @@
 </ul>
   <nav class="light-blue lighten-2">
     <div class="row">
-      <div class="col l4 m6 hide-on-small-and-down" id="left-col">
-        <%= render partial: "general/logo" %>
+      <div class="col l4 m6 s10" id="left-col">
+        <div class="hide-on-med-and-up"><h1 id="logo-margin">SKCDC</h1></div>
+        <div class="hide-on-small-only"><%= render partial: "general/logo" %></div>
       </div>
 
-      <div class="col m4"></div>
+      <div class="col l8 m6 s2">
+        <%= link_to "Apply", "https://www.childplus.net/apply/en-us/017F68AD81794F169ADE0ADB6A45176C/ACEF2899299E7C53224719C17012D582", class: "btn right", id: "apply-margin" %>
 
-      <div class="col l8 m2 s4">
+        <a href="#" data-activates="mobile-demo" class="button-collapse right">
+          <i class="material-icons md-42 white-text">menu</i>
+        </a>
+
         <div class="padding-top">
-        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons md-42 white-text">menu</i></a>
-         <ul id="nav-mobile" class="right hide-on-med-and-down">
+         <ul id="nav-mobile" class="right">
            <li><a class="dropdown-button white-text" href="#" data-activates="dropdown1">About<i class="material-icons right">arrow_drop_down</i></a></li>
            <li><%= link_to "Programs", programs_path, class: "white-text" %></li>
            <li><%= link_to "Classrooms", classrooms_path, class: "white-text" %></li>
            <li><%= link_to "Resources", parent_resources_path, class: "white-text" %></li>
-           <li><%= link_to "Apply", "https://www.childplus.net/apply/en-us/017F68AD81794F169ADE0ADB6A45176C/ACEF2899299E7C53224719C17012D582", class: "amber lighten-1 white-text btn" %></li>
          </ul>
          <ul class="side-nav" id="mobile-demo">
            <li><%= link_to "Our Mission", '/mission' %></li>

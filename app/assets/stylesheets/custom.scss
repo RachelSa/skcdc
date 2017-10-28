@@ -54,7 +54,7 @@ body {
 }
 
 .logo-img {
-  width: 350px;
+  max-width: 325px;
   margin: 2px;
   border-radius: 20px;
   border: 2px solid #03a9f4;
@@ -78,6 +78,14 @@ body {
 #welcome-banner {
   padding-top: 4%;
   padding-bottom: 5%;
+}
+
+#apply-margin {
+  margin-top: 10px;
+}
+
+#logo-margin {
+  margin-top: 100px;
 }
 
 .container-custom {
@@ -115,7 +123,7 @@ body {
 }
 
 .padding-top {
-  padding-top: 110px;
+  padding-top: 100px;
 }
 
 .text-indent {
@@ -124,4 +132,10 @@ body {
 
 .card-display {
   max-height: 100px;
+}
+
+.transparency {
+  opacity: .5;
+  position: absolute;
+  z-index: -1;
 }
