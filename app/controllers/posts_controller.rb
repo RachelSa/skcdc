@@ -3,7 +3,7 @@ before_action :authenticate_user, only: [:new, :edit]
   def show
     @post = Post.find_by(id: params[:id])
     if @post
-      @recent_posts = Post.all.order('id DESC').limit(5)
+      @recent_posts = Post.all.order('id DESC').limit(3)
     else
       redirect_to posts_path
     end

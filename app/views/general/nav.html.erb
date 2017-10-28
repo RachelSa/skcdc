@@ -6,7 +6,7 @@
 </ul>
   <nav class="light-blue lighten-2">
     <div class="row">
-      <div class="col l4 m6 s10" id="left-col">
+      <div class="col l4 m6 s10">
         <div class="hide-on-med-and-up"><h1 id="logo-margin"><%= link_to "SKCDC", "/"%></h1></div>
         <div class="hide-on-small-only"><%= render partial: "general/logo" %></div>
       </div>
@@ -24,14 +24,16 @@
            <li><%= link_to "Programs", programs_path, class: "white-text" %></li>
            <li><%= link_to "Classrooms", classrooms_path, class: "white-text" %></li>
            <li><%= link_to "Resources", parent_resources_path, class: "white-text" %></li>
+           <li><%= link_to "Updates", posts_path, class: "white-text" %></li>
          </ul>
          <ul class="side-nav" id="mobile-demo">
-           <li><%= link_to "Our Mission", '/mission' %></li>
-           <li><%= link_to "Our Collaborations", '/collaborations' %></li>
+           <li><%= link_to "Mission", '/mission' %></li>
+           <li><%= link_to "Collaborations", '/collaborations' %></li>
            <li><%= link_to "Programs", programs_path %></li>
            <li><%= link_to "Classrooms", classrooms_path %></li>
            <li><%= link_to "Resources", parent_resources_path %></li>
-           <li><%= link_to "Contact Us", contacts_path%></li>
+           <li><%= link_to "Contact Us", contacts_path %></li>
+           <li><%= link_to "Updates", posts_path %></li>
           </ul>
         </div>
         </div>
