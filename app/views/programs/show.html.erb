@@ -1,6 +1,6 @@
 
 <div id="left-col" class="col l4 m4">
-  <%= render file: "/general/_logo" %>
+  <p class="center-align"><%= link_to "◁ return to all programs", programs_path %></p>
 
   <% if @program.classrooms.present?  %>
     <h5><%= "Classrooms offering this program:" %></h5>
@@ -19,5 +19,5 @@
 
   <p><%= sanitize @program.description %></p>
 
-  <p><%= link_to "◁ return to all programs", programs_path %></p>
+
 </div>
