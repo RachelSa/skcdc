@@ -10,10 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927010745) do
+ActiveRecord::Schema.define(version: 20171105235209) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "carousels", force: :cascade do |t|
+    t.string   "photo_1_file_name"
+    t.string   "photo_1_content_type"
+    t.integer  "photo_1_file_size"
+    t.datetime "photo_1_updated_at"
+    t.string   "photo_2_file_name"
+    t.string   "photo_2_content_type"
+    t.integer  "photo_2_file_size"
+    t.datetime "photo_2_updated_at"
+    t.string   "photo_3_file_name"
+    t.string   "photo_3_content_type"
+    t.integer  "photo_3_file_size"
+    t.datetime "photo_3_updated_at"
+    t.string   "photo_4_file_name"
+    t.string   "photo_4_content_type"
+    t.integer  "photo_4_file_size"
+    t.datetime "photo_4_updated_at"
+  end
 
   create_table "classrooms", force: :cascade do |t|
     t.string   "name"

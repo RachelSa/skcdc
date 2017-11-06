@@ -1,0 +1,32 @@
+<div id="left-col" class="col l4 m4 s12">
+
+  <%= render file: "/general/_flash_notice" %>
+</div>
+
+<div id="right-col" class="col l6 m4 s12">
+  <h3>Edit Photo Carousel</h3>
+  <p>Upload photos for the SKCDC public <%= link_to "main page", "/"%>.</p>
+  <% if @carousel %>
+    <h5>photo 1</h5>
+    <%= @carousel.photo_1 || "no photo" %>
+    <h5>photo 2</h5>
+    <%= @carousel.photo_2 || "no photo" %>
+    <h5>photo 3</h5>
+    <%= @carousel.photo_3 || "no photo" %>
+    <h5>photo 4</h5>
+    <%= @carousel.photo_4 || "no photo" %>
+  <% else %>
+    <% form_tag '/caurousel/admin' do %>
+      <%= label_tag "photo 1"%>
+      <%= file_field "carousel[photo_1]" %>
+      <%= label_tag "photo 2"%>
+      <%= file_field "carousel[photo_2]" %>
+      <%= label_tag "photo 3"%>
+      <%= file_field "carousel[photo_3]" %>
+      <%= label_tag "photo 4"%>
+      <%= file_field "carousel[photo_4]" %>
+      <%= button_tag "submit" %>
+    <% end %>
+  <% end %>
+
+</div>

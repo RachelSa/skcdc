@@ -16,6 +16,8 @@ Rails.application.routes.draw do
   get '/posts/admin', to: 'posts#admin'
   get '/admin/super', to: 'users#super', as: 'super_admin'
   post '/super', to: 'users#create_super'
+  get '/carousel/admin', to: 'carousel#edit'
+  post '/carousel/admin', to: 'carousel#update'
   resources :programs
   resources :classrooms
   resources :contacts
