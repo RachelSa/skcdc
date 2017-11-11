@@ -23,6 +23,7 @@ class ProgramsController < ApplicationController
 
   def show
     @program = Program.find_by(id: params[:id])
+    @recent_posts = Post.all.order('id DESC').limit(3)
     if !@program
       redirect_to programs_path
     end
