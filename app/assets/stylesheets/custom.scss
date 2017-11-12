@@ -111,6 +111,33 @@ text-
   box-shadow: 4px 4px 5px #aaa;
 }
 
+#program-button {
+  background-image: url("/assets/blocks.jpg");
+  opacity: .75;
+  width: 255px;
+  height: 120px;
+  margin: 1% 1% 1% 10%;
+  border-radius: 20px;
+}
+
+#classroom-button {
+  background-image: url("/assets/southgardinerbutton.jpg");
+  opacity: .75;
+  width: 255px;
+  height: 120px;
+  margin: 1% 1% 1% 10%;
+  border-radius: 20px;
+}
+
+#resources-button {
+  background-image: url("/assets/family.jpg");
+  opacity: .75;
+  width: 255px;
+  height: 120px;
+  margin: 1% 1% 1% 10%;
+  border-radius: 20px;
+}
+
 .container-custom {
   margin: 0 auto;
   max-width: 1280px;
