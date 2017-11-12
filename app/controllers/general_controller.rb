@@ -3,6 +3,7 @@ class GeneralController < ApplicationController
 
     def show
       @recent_posts = Post.all.order('id DESC').limit(3)
+      @carousel = Carousel.first
     end
 
     def mission

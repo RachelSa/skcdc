@@ -58,17 +58,24 @@ body {
 }
 
 .logo-img {
-  max-width: 325px;
-  margin: 2px 2px 2px 10px;
+  max-width: 320px;
+  margin: 3px 3px 3px 10px;
   border-radius: 20px;
-  border: 2px solid #03a9f4;
+  border: 1px solid #424242;
   float: left;
 }
+
+text-
 
 .card-xs {
  max-width:200px;
  height: auto;
  padding: 2px;
+}
+
+.carousel-img {
+    height: 300px;
+    width: auto !important;
 }
 
 #nav-mobile a {
@@ -84,8 +91,10 @@ body {
 }
 
 #welcome-banner {
-  padding-top: 4%;
-  padding-bottom: 5%;
+  background-color:#ffc107;
+  border-radius: 20px;
+  margin-top: 15px;
+  padding: .25%
 }
 
 #apply-margin {

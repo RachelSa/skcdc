@@ -1,21 +1,22 @@
 <div id="left-col" class="col l4 m4 s12">
-  <h5>Current Carousel Photos</h5>
-  <div>photo 1</div>
-  <div><%= image_tag(@carousel.photo_1.url, class: "small-image") %></div>
-  <div>photo 2</div>
-  <div><%= image_tag(@carousel.photo_2.url, class: "small-image") %></div>
-  <div>photo 3</div>
-  <div><%= image_tag(@carousel.photo_3.url, class: "small-image") %></div>
-  <div>photo 4</div>
-  <div><%= image_tag(@carousel.photo_4.url, class: "small-image") %></div>
+  <div class="center">
+    <h5>Current Carousel Photos</h5>
+    <div>photo 1</div>
+    <div><%= image_tag(@carousel.photo_1.url, class: "small-image") %></div>
+    <div>photo 2</div>
+    <div><%= image_tag(@carousel.photo_2.url, class: "small-image") %></div>
+    <div>photo 3</div>
+    <div><%= image_tag(@carousel.photo_3.url, class: "small-image") %></div>
+    <div>photo 4</div>
+    <div><%= image_tag(@carousel.photo_4.url, class: "small-image") %></div>
 
-  <%= render file: "/general/_flash_notice" %>
+  </div>
 </div>
 
 <div id="right-col" class="col l6 m4 s12">
   <h3>Edit Photo Carousel</h3>
   <p>Upload photos for the SKCDC public <%= link_to "main page", "/"%>. Any photos without uploaded replacements will remain unchanged.</p>
-
+  <%= render file: "/general/_error_notice" %>
   <%= form_for @carousel do |f| %>
     <%= f.label :photo_1 %><br>
     <%= f.file_field :photo_1 %><br>
@@ -26,7 +27,7 @@
     <%= f.label :photo_4 %><br>
     <%= f.file_field :photo_4 %>
     <br></br>
-    <%= f.button 'submit' %>
+    <%= f.button 'submit', :class => "amber lighten-1 white-text btn" %>
   <% end %>
 
 </div>
