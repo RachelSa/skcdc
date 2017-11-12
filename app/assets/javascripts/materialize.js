@@ -5,4 +5,6 @@ $(document).on('turbolinks:load', function() {
   $(".button-collapse").sideNav({
     edge: 'right',
     constrainWidth: false });
+  $('.carousel.carousel-slider').carousel({fullWidth: true, indicators:true});
+
 });
