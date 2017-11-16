@@ -16,24 +16,27 @@
               <li>email: info@skcdc.org</li>
             </ul>
           </div>
-          <div class="col l2 m6 s12">
-              <div class="margin-bottom">
-                <a href="https://www.facebook.com/MaineSKCDC" target="_blank"><img src="/assets/FB-f-Logo__blue_50.png" alt="Facebook"></a>
+          <div class="col l2 m6 s6">
+              <div class="margin-top margin-bottom">
+                <a href="https://www.facebook.com/MaineSKCDC" target="_blank">
+                  <%= image_tag "/assets/FB-f-Logo__blue_50.png", alt: "Facebook" %>
+                  </a>
               </div>
-              <img src="/assets/uw_3s_ful.jpg" alt="United Way">
+              <%= image_tag "/assets/uw_3s_ful.jpg", alt: "United Way" %>
               <div class="footer-text">United Way member agency</div>
           </div>
-          <div class="col l2 m6 s12 margin-bottom">
-              <div><a href="https://visitor.r20.constantcontact.com/manage/optin?v=001GdFFDTteOV2ViUikdn92VxrhndPVLQWI3dyLfGgkOIn-oaYHF1fKVXGjDSu710dmK1agNyFYhj6bFPDu4nSugpLoUD1nwLEfHaoKWt-a8C_lZzjQHmcGNxFX5MH3J0jF-25gGaZ0CUrJCSHSeiedHoMgTqs_UDGS"  target="_blank">Receive our newsletter!</a></div>
+          <div class="col l2 m6 s6 margin-bottom">
               <a href="https://www.paypal.com/donate/?token=Quo-0AyoJ-kUBl7ZooMJfJ_eX5RzYfawQeg6GQTN0EgjG5djxOJ7I43dYz03nJL7Oxggw0&country.x=US&locale.x=US"  target="_blank" class="btn margin-top margin-bottom">Donate</a>
               <div><%= link_to "contact", contacts_path%></div>
               <div><%= link_to "careers", "/careers" %></div>
           </div>
           <div class="col l4 m12 s12">
-            <img class="footer-logo" src="/assets/mhighwaysafetyemblem.png" alt="Main Highway Safety">
-            <p class="footer-text">Partnering with the Bureau of Highway Safety as an authorized Car Seat Distribution Center with Certified Car Seat Technicians</p>
+            <div class="margin-top">
+              <%= image_tag "/assets/dhhs-logo.png", alt: "DHHS logo" %>
+              <%= image_tag "/assets/mhighwaysafetyemblem.png", class: "footer-logo", alt: "Main Highway Safety" %>
+              <p class="footer-text">Partnering with the Bureau of Highway Safety as an authorized Car Seat Distribution Center with Certified Car Seat Technicians</p>
+            </div>
           </div>
-
         </div>
       <div class="footer-copyright light-blue lighten-2">
         <div class="container white-text">
