@@ -50,7 +50,7 @@ class CollaborationsController < ApplicationController
   end
 
   def admin
-    @collaboration_titles = Collaboration.all.pluck(:title, :id)
+    @collaboration_titles = Collaboration.order(:title).pluck(:title, :id)
   end
 
   private

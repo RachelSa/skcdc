@@ -44,7 +44,7 @@ end
 
 def super
   current_user
-  @users = User.all
+  @users = User.order(:email)
 end
 
 def destroy

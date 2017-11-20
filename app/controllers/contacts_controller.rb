@@ -53,7 +53,7 @@ class ContactsController < ApplicationController
     end
 
     def admin
-      @contact_names = Contact.all.pluck(:first_name, :last_name, :title, :id)
+      @contact_names = Contact.order(:first_name).pluck(:first_name, :last_name, :title, :id)
     end
 
     private

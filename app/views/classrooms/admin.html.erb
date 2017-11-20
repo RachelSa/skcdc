@@ -5,8 +5,8 @@
 </div>
 
 <div id="right-col" class="col l6">
-<h5>Edit Classrooms</h5>
-  <p><%= link_to "+ new classroom", "/classrooms/new" %></p>
+<h5>Edit Centers</h5>
+  <p><%= link_to "+ new center", "/classrooms/new" %></p>
   <% @classroom_names.each do |classroom| %>
     <p>&ensp;<%= link_to "#{classroom[0]}", "/classrooms/#{classroom[1]}/edit" %></p>
   <% end %>

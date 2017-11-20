@@ -51,7 +51,7 @@ class ParentResourcesController < ApplicationController
   end
 
   def admin
-    @parent_resources = ParentResource.all.pluck(:title, :id)
+    @parent_resources = ParentResource.order(:title).pluck(:title, :id)
   end
 
   private
