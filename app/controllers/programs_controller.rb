@@ -52,7 +52,7 @@ class ProgramsController < ApplicationController
   end
 
   def admin
-    @program_names = Program.all.pluck(:title, :id)
+    @program_names = Program.order(:title).pluck(:title, :id)
   end
 
   private
