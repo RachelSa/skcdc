@@ -1,6 +1,6 @@
 <div id="left-col" class="col l4 m4 s12">
   <div class="center">
-    <h5>Current Carousel Photos</h5>
+    <h5 class="yellow-title">Current Carousel Photos</h5>
     <div>photo 1</div>
     <div><%= image_tag(@carousel.photo_1.url, class: "small-image") %></div>
     <div>photo 2</div>
@@ -27,7 +27,7 @@
     <%= f.label :photo_4 %><br>
     <%= f.file_field :photo_4 %>
     <br></br>
-    <%= f.button 'submit', :class => "amber lighten-1 white-text btn" %>
+    <%= f.button 'submit', :class => "btn" %>
   <% end %>
 
 </div>
