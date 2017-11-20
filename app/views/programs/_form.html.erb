@@ -4,7 +4,15 @@
 
   <%= f.label :description %>
   <%= f.trix_editor :description %><br></br>
-  <br>
+
+  <p>program categories:</p>
+
+  <%= f.check_box :early_care_education %>
+  <%= f.label :early_care_education, "Early Care and Education" %><br></br>
+
+  <%= f.check_box :supporting_families_communities %>
+  <%= f.label :supporting_families_communities, "Supporting Families and Communities"  %><br></br>
+
   <%= f.submit 'submit', :class => "amber lighten-1 white-text btn", data: { confirm:
     "Ready to post this update? All changes will appear on the live SKCDC website." } %><br></br>
 <% end %>

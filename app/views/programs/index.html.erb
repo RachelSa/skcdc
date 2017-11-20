@@ -5,5 +5,8 @@
 
 <div id="right-col" class="col l6 m6 s12">
   <h3 class="center-align yellow-title">Our Programs</h3>
-  <%= render partial: "/general/collection", locals: {items: @programs} %>
+  <h5 class="center-align yellow-title">Early Care and Education</h5>
+  <%= render partial: "/general/collection", locals: {items: @ed_programs} %>
+  <h5 class="center-align yellow-title">Supporting Families and Communities</h5>
+  <%= render partial: "/general/collection", locals: {items: @community_programs} %>
 </div>

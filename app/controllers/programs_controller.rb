@@ -17,7 +17,8 @@ class ProgramsController < ApplicationController
   end
 
   def index
-    @programs = Program.order(:title)
+    @ed_programs = Program.where(early_care_education: true).order(:title)
+    @community_programs = Program.where(supporting_families_communities: true).order(:title)
     @recent_posts = Post.all.order('id DESC').limit(3)
   end
 
@@ -58,7 +59,7 @@ class ProgramsController < ApplicationController
   private
 
   def program_params
-    params.require(:program).permit(:title, :description)
+    params.require(:program).permit(:title, :description, :early_care_education, :supporting_families_communities)
   end
 
 end
