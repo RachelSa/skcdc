@@ -1,16 +1,19 @@
 
 <div id="left-col" class="col l4 m4">
-  <p class="center-align"><%= link_to "◁ return to all programs", programs_path %></p>
+  <div class="center-align">
+    <p><%= link_to "◁ return to all programs", programs_path %></p>
 
-  <% if @program.classrooms.present?  %>
-    <h5><%= "Classrooms offering this program:" %></h5>
-  <% end %>
-
-  <ul>
-  <% @program.classrooms.each do |classroom| %>
-    <li> <%= link_to "#{classroom.name}", classroom %></li>
+    <% if @program.classrooms.present?  %>
+      <h5><%= "Classrooms offering this program:" %></h5>
     <% end %>
-  </ul>
+
+    <ul>
+    <% @program.classrooms.each do |classroom| %>
+      <li> <%= link_to "#{classroom.name}", classroom %></li>
+      <% end %>
+    </ul>
+  </div>
+
 
 </div>
 
