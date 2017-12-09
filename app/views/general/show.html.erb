@@ -1,20 +1,18 @@
 <!-- LEFT COLUMN -->
-  <div id="left-col" class="col l4 m4 s12">
+<div id="left-col" class="col l4 m4 s12 center-align">
     <%= render partial: "photo_buttons" %>
     <%= render partial: "blog_sidebar" %>
 </div>
 
 <!-- RIGHT COLUMN -->
-
-  <div id="right-col" class="col l7 m8">
-
-    <div id="welcome-banner" class="center-align">
-      <h3 class="white-text">Welcome to SKCDC</h3>
+  <div id="right-col" class="col l8 m8">
+    <div class="border-clear">
+      <div id="welcome-banner" class="center-align">
+        <h3 class="white-text">Welcome to SKCDC</h3>
+      </div>
+      <div class="center-align">
+        <p>We offer high quality early learning programs throughout Southern Kennebec County and serve children and families from birth right up to Kindergarten. With a variety of program options and locations,  SKCDC offers learning experiences that support school readiness, family engagement, and fun! We welcome you to learn more out our Head Start and Child Care programs.</p>
+          <%= render partial: "carousel" %>
+      </div>
     </div>
-    <div class="center-align">
-      <p>We offer high quality early learning programs throughout Southern Kennebec County and serve children and families from birth right up to Kindergarten. With a variety of program options and locations,  SKCDC offers learning experiences that support school readiness, family engagement, and fun! We welcome you to learn more out our Head Start and Child Care programs.</p>
-      <%= render partial: "carousel" %>
-    </div>
-
-
 </div>
