@@ -65,8 +65,6 @@ body {
   float: left;
 }
 
-text-
-
 .card-xs {
  max-width:200px;
  height: auto;
@@ -83,7 +81,7 @@ text-
 }
 
 #right-col {
-  padding-left: 4%;
+  padding-top: 1%
 }
 
 #left-col {
@@ -93,7 +91,6 @@ text-
 #welcome-banner {
   background-color:#ffc107;
   border-radius: 20px;
-  margin-top: 15px;
   padding: .25%
 }
 
@@ -111,31 +108,8 @@ text-
   box-shadow: 4px 4px 5px #aaa;
 }
 
-#program-button {
-  background-image: url("/assets/blocks.jpg");
-  opacity: .75;
-  width: 255px;
-  height: 120px;
-  margin: 1% 1% 1% 10%;
-  border-radius: 20px;
-}
-
-#classroom-button {
-  background-image: url("/assets/southgardinerbutton.jpg");
-  opacity: .75;
-  width: 255px;
-  height: 120px;
-  margin: 1% 1% 1% 10%;
-  border-radius: 20px;
-}
-
-#resources-button {
-  background-image: url("/assets/family.jpg");
-  opacity: .75;
-  width: 255px;
-  height: 120px;
-  margin: 1% 1% 1% 10%;
-  border-radius: 20px;
+.center-of-outline {
+  left: 20%;
 }
 
 .container-custom {
@@ -192,4 +166,27 @@ text-
 
 .max-350 {
   max-width: 350px;
+}
+
+.border-yellow {
+  border: 1px solid #ffc107;
+  border-radius: 20px;
+  margin: 2% 2% 2% 2%;
+  padding: 2% 2% 2% 2%;
+}
+
+.border-clear {
+  margin: 1% 1% 1% 1%;
+}
+.image-button {
+  max-width:100%;
+  margin: 1% 1% 1% 1%;
+  border-radius: 20px;
+  opacity: .75;
+}
+
+.image-container {
+  position: relative;
+  text-align: center;
+
 }
