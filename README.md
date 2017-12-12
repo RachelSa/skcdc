@@ -5,6 +5,7 @@ SKCDC is a non profit regional Head Start organization located in Central Maine.
   - **Language:** Ruby 2.3.1
   - **Framework:** Rails 5
   - **Database:** Postgres
+  - **Styling:** Materialize
 
 ## Running Locally
   1. ```git clone <copied SSH>```
@@ -13,11 +14,5 @@ SKCDC is a non profit regional Head Start organization located in Central Maine.
   4. ```rails s```
   5. Navigate to ```http://localhost:3000/``` in browser
 
-## Sample Wireframe
-- [classroom view](https://wireframe.cc/8XTt3C)
-
-## WIP Images
-wip home page
-![work in progress home page](https://farm5.staticflickr.com/4377/36471161483_99d87782f8_b.jpg)
-wip edit page
-![work in progress edit page](https://farm5.staticflickr.com/4387/36471158883_d3f56fd123_b.jpg)
+## Site Tour
+[![SKCDC Site Tour](https://ih0.redbubble.net/image.25011287.7046/flat,800x800,070,f.u2.jpg)](https://youtu.be/bC6DY0esG5I "SKCDC Site Tour")
