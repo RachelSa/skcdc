@@ -1,8 +1,6 @@
-<div id="left-col" class="col l4 m4">
-  <%= render partial: "/general/blog_sidebar" %>
-</div>
+<%= render partial: "/general/left_sidebar" %>
 
-<div id="right-col" class="col l6 m6">
+<div id="right-col" class="col l8 m8">
   <div class="center-align">
     <h3 class="yellow-title">Our Collaborations</h3>
     <%= render partial: "/general/collection", locals: {items: @collaborations} %>

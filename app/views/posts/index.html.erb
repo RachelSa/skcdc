@@ -1,9 +1,9 @@
-<div id="left-col" class="col l4 m4">
-
+<div id="left-col" class="col l4 m4 s12 center-align border-yellow hide-on-small-and-down">
+  <%= render partial: "/general/photo_buttons" %>
 </div>
 
 
-<div id="right-col" class="col l6 m6 s12">
+<div id="right-col" class="col l8 m8 s12">
   <h3 class="center-align yellow-title">Recent Posts</h3>
   <div class="row">
     <% if @posts.any? %>
