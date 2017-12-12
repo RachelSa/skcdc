@@ -1,15 +1,11 @@
-<div id="left-col" class="col l4">
-  <h5>Admin</h5>
-  <p>Any changes made will appear on the live SKCDC web site.</p>
-</div>
+<%= render partial: "/general/admin_left_sidebar" %>
 
-<div id="right-col" class="col l6">
-  <h5>Edit Parent Resources</h5>
-  <p><%= link_to "+ new parent resource", "/parent_resources/new" %></p>
+<div id="right-col" class="col l8 m8 s12 center-align">
+  <h5 class='yellow-title'>Edit Parent Resources</h5>
+  <ul class="collection">
+    <li class="collection-item"><%= link_to "+ new parent resource", "/parent_resources/new" %></li>
     <% @parent_resources.each do |parent_resource| %>
-      <p>&ensp;<%= link_to "#{parent_resource[0]}", "/parent_resources/#{parent_resource[1]}/edit" %></p>
+      <li class="collection-item"><%= link_to "#{parent_resource[0]}", "/parent_resources/#{parent_resource[1]}/edit" %></li>
     <% end %>
-
-    <br></br>
-    <p><%= link_to "◁ return to admin main page", '/admin' %></p>
+  </ul>
 </div>

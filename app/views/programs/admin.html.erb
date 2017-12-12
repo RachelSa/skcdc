@@ -1,14 +1,13 @@
-<div id="left-col" class="col l4">
-  <h5>Admin</h5>
-  <p>Any changes made will appear on the live SKCDC web site.</p>
-</div>
+<%= render partial: "/general/admin_left_sidebar" %>
 
-<div id="right-col" class="col l6">
-  <h5>Edit Programs</h5>
-      <p><%= link_to "+ new program", "/programs/new" %></p>
+<div id="right-col" class="col l8 m8 s12 center-align">
+  <h5 class="yellow-title">Edit Programs</h5>
+  <ul class="collection">
+    <li class="collection-item"><%= link_to "+ new program", "/programs/new" %></li>
     <% @program_names.each do |program| %>
-      <p>&ensp;<%= link_to "#{program[0]}", "/programs/#{program[1]}/edit" %></p>
+      <li class="collection-item">
+        <%= link_to "#{program[0]}", "/programs/#{program[1]}/edit" %>
+      </l1>
     <% end %>
-    <br></br>
-    <p><%= link_to "◁ return to admin main page", '/admin' %></p>
+  </ul>
 </div>

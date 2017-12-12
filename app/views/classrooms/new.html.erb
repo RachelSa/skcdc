@@ -1,11 +1,9 @@
-<div id="left-col" class="col l4">
+<div id="left-col" class="col l4 m4 s12 center-align">
   <h5><%= link_to "Admin Account", admin_path %></h5>
-
 </div>
 
-<div id="right-col" class='col l6'>
+<div id="right-col" class='col l8 m8 s12'>
   <%= render partial: '/general/error_notice' %>
-  <h5>New Center</h5>
+  <h5 class="yellow-title">New Center</h5>
   <%= render partial: 'form' %>
-
 </div>
