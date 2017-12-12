@@ -15,4 +15,4 @@ SKCDC is a non profit regional Head Start organization located in Central Maine.
   5. Navigate to ```http://localhost:3000/``` in browser
 
 ## Site Tour
-[![SKCDC Site Tour](https://ih0.redbubble.net/image.25011287.7046/flat,800x800,070,f.u2.jpg)](https://youtu.be/bC6DY0esG5I "SKCDC Site Tour")
+[![SKCDC Site Tour](https://ih0.redbubble.net/image.25011287.7046/flat,800x800,070,f.u2.jpg)](https://youtu.be/bC6DY0esG5I =100x)
