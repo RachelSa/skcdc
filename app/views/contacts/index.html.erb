@@ -1,14 +1,16 @@
+<h3 class="yellow-title center-align">Contact Us</h3>
+<hr class="yellow-rule-sm">
 
-<div id="left-col" class="col l4 m12 s12">
   <div class="row center-align">
     <%= render partial: 'general/main_office' %>
   </div>
-</div>
 
 
-<div id="right-col" class="col l8 m12 s12">
+<hr class="yellow-rule-sm">
+
+<h5 class="yellow-title center-align">Staff</h5>
+
   <div class="center-align">
-    <h3 class="yellow-title">Contact Us</h3>
       <% if @contacts.any? %>
         <div class="row">
           <% @contacts.each do |contact| %>
@@ -20,9 +22,7 @@
               </div>
               <% end %>
             </div>
-
         <% else %>
           <p>Sorry, no contacts to show.</p>
         <% end %>
       </div>
-  </div>

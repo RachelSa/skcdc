@@ -76,12 +76,16 @@ body {
     width: auto !important;
 }
 
+#wrapper {
+  margin: 1%
+}
+
 #nav-mobile a {
   color: black;
 }
 
 #right-col {
-  padding-top: 1%
+  padding: 1% 8% 1% 8%
 }
 
 #left-col {
@@ -171,7 +175,6 @@ body {
 .border-yellow {
   border: 1px solid #ffc107;
   border-radius: 20px;
-  margin: 2% 2% 2% 2%;
   padding: 2% 2% 2% 2%;
 }
 
@@ -188,5 +191,14 @@ body {
 .image-container {
   position: relative;
   text-align: center;
+}
 
+.yellow-rule {
+  border-top: 1px solid #ffc107;
+  margin: 8%
+}
+
+.yellow-rule-sm {
+  border-top: 1px solid #ffc107;
+  margin: 4%
 }

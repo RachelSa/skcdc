@@ -1,9 +1,6 @@
-<div id="left-col" class="col l4 m4">
+<%= render partial: "/general/left_sidebar" %>
 
-  <%= render partial: "/general/blog_sidebar" %>
-</div>
-
-<div id="right-col" class="col l6 m6 s12">
+<div id="right-col" class="col l8 m8 s12">
   <h3 class="center-align yellow-title">Our Programs</h3>
   <h5 class="center-align yellow-title">Early Care and Education</h5>
   <%= render partial: "/general/collection", locals: {items: @ed_programs} %>

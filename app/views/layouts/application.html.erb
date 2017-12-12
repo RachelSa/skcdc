@@ -18,20 +18,14 @@
     <link href="https://fonts.googleapis.com/css?family=Hind+Siliguri" rel="stylesheet">
 
   </head>
-
   <body>
-
     <%= render file: 'general/nav'%>
-  <main>
-   <div class="row">
-
-    <%= yield %>
-
-    </div>
-</main>
-
+    <main>
+      <div id="wrapper" class="row">
+        <%= yield %>
+      </div>
+    </main>
     <%= render file: 'general/footer'%>
-
   </body>
 
 </html>

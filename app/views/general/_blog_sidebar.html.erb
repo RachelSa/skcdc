@@ -1,4 +1,4 @@
-<div class="row center-align hide-on-small-and-down border-yellow">
+<div class="row center-align">
   <h5><%= link_to "Recent Updates", posts_path, class:"yellow-title" %></h5>
     <ul>
     <% @recent_posts.each do |post| %>
@@ -7,7 +7,6 @@
           <%= link_to post.title, post_path(post), class:"green-title" %>
           <%= sanitize post.content.truncate(80, separator: ' ') %>
         </div>
-        <br>
       </li>
       <% end %>
     </ul>
