@@ -1,18 +1,21 @@
-<div  id="left-col" class="col l4">
+<div  id="left-col" class="col l4 border-yellow center-align">
   <%= render file: '/users/logout'%>
+  <hr class="yellow-rule">
   <p>Welcome to the SKCDC admin dashboard. </p>
   <p>Any changes made here will appear on the live SKCDC web site.</p>
-    <div>
-    <% if current_user.super%>
-      <%=  link_to "super admin dashboard", super_admin_path %>
-    <% end %>
-  </div>
-  <%= render file: "/general/_flash_notice" %>
 
+  <% if current_user.super%>
+    <hr class="yellow-rule">
+    <%=  link_to "super admin dashboard", super_admin_path %>
+  <% end %>
+
+  <hr class="yellow-rule">
+  <%= render file: "/general/_flash_notice" %>
 </div>
-<div id="right-col" class="col l1"></div>
-<div class="col l4">
-  <h4>Admin Dashboard</h4>
+
+
+<div id="right-col" class="col l8 m8 s12 center-align">
+  <h4 class="yellow-title">Admin Dashboard</h4>
   <ul class="collection">
     <li class="collection-item"><%= link_to "Centers", '/classrooms/admin' %></li>
     <li class="collection-item"><%= link_to "Programs", '/programs/admin' %></li>
@@ -23,7 +26,6 @@
     <li class="collection-item"><%= link_to "Photo Carousel", "/carousel/admin" %></li>
   </ul>
 </div>
-<div id="right-col" class="col l1"></div>
-<div id="right-col" class="col l2">
+
 
 </div>

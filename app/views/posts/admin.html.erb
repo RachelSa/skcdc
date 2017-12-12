@@ -1,15 +1,11 @@
-<div id="left-col" class="col l4">
-  <h5>Admin</h5>
-  <p>Any changes made will appear on the live SKCDC web site.</p>
-</div>
+<%= render partial: "/general/admin_left_sidebar" %>
 
-<div id="right-col" class="col l6">
-  <h5>Update Posts</h5>
-  <%= link_to "+ new post", new_post_path %>
-  <% @posts.each do |post| %>
-    <p>&ensp;<%= link_to post.title, edit_post_path(post) %></p>
-  <% end %>
-
-  <br></br>
-  <p><%= link_to "◁ return to admin main page", '/admin' %></p>
+<div id="right-col" class="col l8 m8 s12 center-align">
+  <h5 class='yellow-title'>Update Posts</h5>
+  <ul class="collection">
+    <li class="collection-item"><%= link_to "+ new post", new_post_path %></li>
+    <% @posts.each do |post| %>
+      <li class="collection-item"><%= link_to post.title, edit_post_path(post) %></li>
+    <% end %>
+  </ul>
 </div>
