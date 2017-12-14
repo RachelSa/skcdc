@@ -8,7 +8,7 @@ class ClassroomsController < ApplicationController
   def create
     @classroom = Classroom.new(classroom_params)
     if @classroom.save
-      redirect_to admin_path, :notice => "Success! Visit <a href='#{classroom_path(@classroom)}'>published classroom</a>."
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{classroom_path(@classroom)}'>published center</a>."
     else
       @errors = @classroom.errors.messages
       flash[:notice] = @errors
@@ -38,7 +38,7 @@ class ClassroomsController < ApplicationController
   def update
     @classroom = Classroom.find(params[:id])
     if @classroom.update(classroom_params)
-      redirect_to admin_path, :notice => "Success! Visit <a href='#{classroom_path(@classroom)}'>updated classroom</a>."
+      redirect_to admin_path, :notice => "Success! Visit <a href='#{classroom_path(@classroom)}'>updated center</a>."
     else
       @programs = Program.all
       @errors = @classroom.errors.messages
@@ -50,7 +50,7 @@ class ClassroomsController < ApplicationController
   def destroy
     @classroom = Classroom.find(params[:id])
     @classroom.destroy
-    redirect_to admin_path, :notice => "Classroom deleted"
+    redirect_to admin_path, :notice => "Center deleted"
   end
 
   def admin
