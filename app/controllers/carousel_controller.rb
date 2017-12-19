@@ -11,7 +11,7 @@ class CarouselController < ApplicationController
       redirect_to admin_path, :notice => "Success! Visit <a href='/'>homepage</a>."
     else
       @errors = @carousel.errors.messages
-  
+
       flash[:notice] = @errors
       render :new
     end
