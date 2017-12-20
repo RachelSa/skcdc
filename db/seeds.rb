@@ -17,3 +17,5 @@ require 'csv'
 # locations.each do |loc|
 #   Classroom.create(name:loc[0], street_address:loc[1], town:loc[2], zipcode:loc[3], phone:loc[4], description:"add description from spreadsheet")
 # end
+
+# c = Carousel.create()
