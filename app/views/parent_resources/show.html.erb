@@ -1,14 +1,11 @@
-<div id="left-col" class="col l4 m12 s12">
-  <p class="center-align">
-    <%= link_to "◁ return to all family resources", parent_resources_path %>
-  </p>
+<div class="col l2 m2"></div>
 
-</div>
 
-<div id="right-col" class="col l6 m12 s12">
-  <div class="center-align ">
+
+<div id="right-col" class="col l8 m8 s12">
     <h3 class="yellow-title"><%= @parent_resource.title %></h3>
-    <p><%= sanitize @parent_resource.description %></p><br></br>
-  </div>
-
+    <p><%= sanitize @parent_resource.description %></p>
+    <%= link_to "◁ return to all resources", parent_resources_path %>
 </div>
+
+<div class="col l2 m2"></div>

@@ -16,6 +16,18 @@ body {
    font-family: 'Hind Siliguri', sans-serif;
  }
 
+ .background-image {
+   background-image: url("/assets/colors.jpeg");
+ }
+
+ .dark-background-image {
+   background-image: url("/assets/colors-dark.jpeg");
+ }
+
+ .white-background {
+   background-color: rgba(255, 255, 255, 0.8);
+ }
+
 .yellow-title {
   color: #ffc107;
 }
@@ -89,7 +101,7 @@ body {
 }
 
 #left-col {
-  padding-top: 1%
+  padding: 1%
 }
 
 #welcome-banner {
