@@ -6,12 +6,12 @@
     <% if @classrooms.any? %>
     <div class="collection">
       <a href="/contacts" class="collection-item center-align">
-        <div class="flow-text">Main Office</div>
+        <div class="flow-text small-margin-bottom">Main Office</div>
         <span class="demphasize-text">Farmingdale, Maine</span>
       </a>
       <% @classrooms.each do |classroom| %>
       <a href="<%= classroom_path(classroom) %>" class="collection-item center-align">
-        <div class="emphasize-text flow-text"><%= classroom.name %></div>
+        <div class="emphasize-text flow-text small-margin-bottom"><%= classroom.name %></div>
         <span class="demphasize-text"><%= classroom.town %>, Maine</span>
       </a>
       <% end %>

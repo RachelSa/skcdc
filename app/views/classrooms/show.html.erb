@@ -3,18 +3,19 @@
 <div class="col l10 m10">
 
   <h3 class="yellow-title"><%= @classroom.name %></h3>
+  <% if @classroom.image.url != "/images/original/missing.png" %>
+    <div><%= image_tag(@classroom.image.url(:small)) %></div>
+  <% end %>
 
   <div class="row">
-    <div class="col l6 m6 s12">
-    <% if @classroom.image.url != "/images/original/missing.png" %>
-      <div><%= image_tag(@classroom.image.url(:small)) %></div>
-    <% end %>
-    </div>
-    <div class="col l6 m6 s12">
+    <div class="col l4 m4 s12">
+      <h5>Contact</h5>
       <div class="demphasize-text"><%= @classroom.street_address%></div>
       <div class="demphasize-text" ><%= @classroom.town %>, Maine <%= @classroom.zipcode %></div>
       <div class="demphasize-text"><%= @classroom.phone %></div>
       <div><%= link_to 'google map', @map_url, target: :_blank %></div>
+    </div>
+    <div class="col l8 m8 s12">
       <% if @classroom.programs.present?  %>
       <h5>Programs</h5>
       <ul>
@@ -25,8 +26,9 @@
       <% end %>
     </div>
   </div>
+  <hr class="yellow-rule-sm">
   <h5>Description</h5>
-  <div class="flow-text"><%= sanitize @classroom.description%></div>
+  <div class="flow-text"><%= sanitize @classroom.description%></div><br>
   <a class="btn">apply</a>
   <p><%= link_to "◁ return to all centers", classrooms_path %></p>
 </div>
