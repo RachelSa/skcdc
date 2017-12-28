@@ -1,13 +1,13 @@
-<div class="col l2 m2"></div>
+<div class="col l1 m1"></div>
 
-<div id="right-col" class="col l8 m8 s12">
+<div class="col l10 m10">
   <h3 class="center-align yellow-title">Recent Posts</h3>
   <div class="row">
     <% if @posts.any? %>
       <div class="collection">
       <% @posts.each do |post| %>
         <a href="<%= post_path(post) %>" class="collection-item center-align">
-          <div class="emphasize-text"><%= post.title %></div>
+          <div class="emphasize-text flow-text"><%= post.title %></div>
           <div class="demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></div>
           <div class="demphasize-text"><%= sanitize post.content.truncate(150, separator: ' ') %></div>
         </a>
@@ -19,4 +19,4 @@
     </div>
 </div>
 
-<div class="col l2 m2"></div>
+<div class="col l1 m1"></div>

@@ -1,11 +1,9 @@
-<div class="col l2 m2"></div>
+<div class="col l1 m1"></div>
 
-
-
-<div id="right-col" class="col l8 m8 s12">
+<div class="col l10 m10">
     <h3 class="yellow-title"><%= @parent_resource.title %></h3>
-    <p><%= sanitize @parent_resource.description %></p>
+    <div class="flow-text"><%= sanitize @parent_resource.description %></div>
     <%= link_to "◁ return to all resources", parent_resources_path %>
 </div>
 
-<div class="col l2 m2"></div>
+<div class="col l1 m1"></div>

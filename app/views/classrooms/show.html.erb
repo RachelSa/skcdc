@@ -1,13 +1,13 @@
-<div class="col l2 m2"></div>
+<div class="col l1 m1"></div>
 
-<div id="right-col" class="col l8 m8">
+<div class="col l10 m10">
 
   <h3 class="yellow-title"><%= @classroom.name %></h3>
 
   <div class="row">
     <div class="col l6 m6 s12">
     <% if @classroom.image.url != "/images/original/missing.png" %>
-      <div><%= image_tag(@classroom.image.url(:small), class: "small-image") %></div>
+      <div><%= image_tag(@classroom.image.url(:small)) %></div>
     <% end %>
     </div>
     <div class="col l6 m6 s12">
@@ -26,10 +26,10 @@
     </div>
   </div>
   <h5>Description</h5>
-  <p><%= sanitize @classroom.description %></p>
+  <div class="flow-text"><%= sanitize @classroom.description%></div>
   <a class="btn">apply</a>
   <p><%= link_to "◁ return to all centers", classrooms_path %></p>
 </div>
 
 
-<div class="col l2 m2"></div>
+<div class="col l1 m1"></div>

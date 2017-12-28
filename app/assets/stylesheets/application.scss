@@ -25,12 +25,18 @@
  $navbar-line-height: 55px !default;
  $navbar-height-mobile: 172px !default;
  $navbar-font-size: 1.1rem !default;
- $sidenav-item-height: 40px !default;
- $sidenav-line-height: 40px !default;
+ $sidenav-item-height: 50px !default;
+ $sidenav-line-height: 50px !default;
+ $sidenav-font-color: rgba(0,0,0,.75) !default;
+ $sidenav-font-size: 20px !default;
  $collection-hover-bg-color: #fffde7 !default;
  $collection-link-color: color("green", "lighten-1") !default;
- $collection-line-height: 1.1rem !default;
+ $collection-line-height: 1.2rem !default;
  $off-black: rgba(0, 0, 0, 0.75) !default;
+ $small-screen-up: 901px !default;
+ $medium-screen-up: 1001px !default;
+ $small-screen: 900px !default;
+ $medium-screen: 1000px !default;
 
 
 @import "materialize";
