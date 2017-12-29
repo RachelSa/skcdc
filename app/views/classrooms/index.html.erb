@@ -1,24 +1,17 @@
-<div id="left-col" class="col l4 m4 s12 border-yellow hide-on-small-and-down">
-  <div class="row center-align">
-    <h5 class="yellow-title">Main Office</h5>
-    <div>Southern Kennebec Child<br>Development Corporation</div>
-    <div>337 Maine Avenue</div>
-    <div>Farmingdale, ME 04344</div>
-  </div>
-    <hr class="yellow-rule">
-    <%= render partial: "/general/photo_buttons" %>
-    <hr class="yellow-rule">
-    <%= render partial: "/general/blog_sidebar" %>
-</div>
+<div class="col l1 m1"></div>
 
-<div id="right-col" class="col l8 m8 s12">
+<div class="col l10 m10">
   <h3 class="center-align yellow-title">Our Centers</h3>
   <div class="row">
     <% if @classrooms.any? %>
     <div class="collection">
+      <a href="/contacts" class="collection-item center-align">
+        <div class="flow-text small-margin-bottom">Main Office</div>
+        <span class="demphasize-text">Farmingdale, Maine</span>
+      </a>
       <% @classrooms.each do |classroom| %>
       <a href="<%= classroom_path(classroom) %>" class="collection-item center-align">
-        <div class="emphasize-text"><%= classroom.name %></div>
+        <div class="emphasize-text flow-text small-margin-bottom"><%= classroom.name %></div>
         <span class="demphasize-text"><%= classroom.town %>, Maine</span>
       </a>
       <% end %>
@@ -27,4 +20,6 @@
     <p>Sorry, no centers to show.</p>
     <% end %>
   </div>
-</div>
+
+
+<div class="col l1 m1"></div>

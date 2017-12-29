@@ -1,13 +1,10 @@
 
-  <div class="row">
     <% if items.any? %>
-      <div class="col s12 m10 l12 margin-bottom">
         <div class="collection">
           <% items.each do |item| %>
-            <a href="<%= item.url_classname %>/<%= item.id %>" class="collection-item center-align"><%= item.title_or_name %></a>
+          <a href="<%= item.url_classname %>/<%= item.id %>" class="collection-item center-align flow-text"><%= item.title_or_name %></a>
         <% end %>
         </div>
     <% else %>
       <p>Sorry, no <%= items.title_classname %> to show.</p>
     <% end %>
-</div>

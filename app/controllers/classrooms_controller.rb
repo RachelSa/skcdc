@@ -38,7 +38,7 @@ class ClassroomsController < ApplicationController
   def update
     @classroom = Classroom.find(params[:id])
     if @classroom.update(classroom_params)
-      redirect_to admin_path, :notice => "Success! Visit <a href='#{classroom_path(@classroom)}'>updated center</a>."
+      redirect_to admin_path, :notice => "Success! Visit <a target='_blank' href='#{classroom_path(@classroom)}'>updated center</a>."
     else
       @programs = Program.all
       @errors = @classroom.errors.messages

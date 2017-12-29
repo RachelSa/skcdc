@@ -1,35 +1,37 @@
-<div id="left-col" class="col l4 m4 s12">
-  <div class="center-align">
-    <p><%= link_to "◁ return to all centers", classrooms_path %></p>
-    <h5 class="yellow-title"><%= @classroom.name %></h5>
-    <div><%= @classroom.street_address %></div>
-    <div><%= @classroom.town %>, Maine</div>
-    <div><%= @classroom.zipcode %></div>
-    <div><%= @classroom.phone %></div>
-    <div><%= link_to 'google map', @map_url, target: :_blank %></div>
+<div class="col l1 m1"></div>
 
-    <% if @classroom.programs.present?  %>
-    <h5>
-      <%= "Programs offered:" %></h5>
-    <% end %>
-    <ul>
-      <% @classroom.programs.each do |program| %>
-      <li><%= link_to "#{program.title}", program %></li>
-      <% end %>
-    </ul>
-    <a class="btn">apply</a>
-  </div>
-</div>
+<div class="col l10 m10">
 
-<div id="right-col" class="col l7 m7">
-  <h3 class="center-align yellow-title"><%= @classroom.name %></h3>
-
+  <h3 class="yellow-title"><%= @classroom.name %></h3>
   <% if @classroom.image.url != "/images/original/missing.png" %>
-    <div class="center-align"><%= image_tag(@classroom.image.url(:small), class: "small-image") %></div>
+    <div><%= image_tag(@classroom.image.url(:small)) %></div>
   <% end %>
-  <div class="center-align">
-    <p><%= sanitize @classroom.description %></p>
 
+  <div class="row">
+    <div class="col l4 m4 s12">
+      <h5>Contact</h5>
+      <div class="demphasize-text"><%= @classroom.street_address%></div>
+      <div class="demphasize-text" ><%= @classroom.town %>, Maine <%= @classroom.zipcode %></div>
+      <div class="demphasize-text"><%= @classroom.phone %></div>
+      <div><%= link_to 'google map', @map_url, target: :_blank %></div>
+    </div>
+    <div class="col l8 m8 s12">
+      <% if @classroom.programs.present?  %>
+      <h5>Programs</h5>
+      <ul>
+        <% @classroom.programs.each do |program| %>
+        <li><%= link_to "#{program.title}", program %></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </div>
   </div>
-
+  <hr class="yellow-rule-sm">
+  <h5>Description</h5>
+  <div class="flow-text"><%= sanitize @classroom.description%></div><br>
+  <a class="btn">apply</a>
+  <p><%= link_to "◁ return to all centers", classrooms_path %></p>
 </div>
+
+
+<div class="col l1 m1"></div>

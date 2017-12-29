@@ -16,6 +16,19 @@ body {
    font-family: 'Hind Siliguri', sans-serif;
  }
 
+
+ .background-image {
+   background-image: url("/assets/letters-3.JPG");
+ }
+
+ .dark-background-image {
+   background-image: url("/assets/letters-3-dark.JPG");
+ }
+
+ .white-background {
+   background-color: rgba(255, 255, 255, 0.8);
+ }
+
 .yellow-title {
   color: #ffc107;
 }
@@ -40,8 +53,8 @@ body {
   font-size: .9em;
 }
 
-.material-icons.md-42 {
-  font-size: 42px;
+.material-icons.md-60 {
+  font-size: 60px;
 }
 
 .large {
@@ -89,7 +102,7 @@ body {
 }
 
 #left-col {
-  padding-top: 1%
+  padding: 1%
 }
 
 #welcome-banner {
@@ -144,6 +157,10 @@ body {
 
 .margin-top {
   margin-top: 10px;
+}
+
+.small-margin-bottom {
+  margin-bottom: 8px;
 }
 
 .padding-left {

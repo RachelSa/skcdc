@@ -1,9 +1,11 @@
-<%= render partial: "/general/left_sidebar" %>
+<div class="col l1 m1"></div>
 
-<div id="right-col" class="col l8 m8 s12">
+<div class="col l10 m10 s12">
   <h3 class="center-align yellow-title">Our Programs</h3>
   <h5 class="center-align yellow-title">Early Care and Education</h5>
-  <%= render partial: "/general/collection", locals: {items: @ed_programs} %>
+  <%= render partial: "/general/collection", locals: {items: @ed_programs} %><br>
   <h5 class="center-align yellow-title">Supporting Families and Communities</h5>
   <%= render partial: "/general/collection", locals: {items: @community_programs} %>
 </div>
+
+<div class="col l1 m1"></div>
