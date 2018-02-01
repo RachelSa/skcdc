@@ -37,7 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 gem "figaro"
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 gem 'trix'
-gem "paperclip", "~> 5.0.0"
+gem 'paperclip', '~> 5.2', '>= 5.2.1'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
