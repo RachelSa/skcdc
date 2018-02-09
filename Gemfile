@@ -39,7 +39,7 @@ gem "figaro"
 gem 'rest-client', '~> 2.0', '>= 2.0.2'
 gem 'trix'
 gem 'paperclip', '~> 5.2', '>= 5.2.1'
-gem 'aws-sdk', '~> 3.0', '>= 3.0.1'
+gem 'aws-sdk', '2.10.47'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
