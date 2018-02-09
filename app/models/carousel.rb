@@ -11,4 +11,5 @@ class Carousel < ApplicationRecord
   has_attached_file :photo_4
   validates_attachment :photo_4, :content_type => { :content_type => ["image/jpeg", "image/gif", "image/png"] }
   validates_with AttachmentSizeValidator, attributes: :photo_4, less_than: 1.megabytes
+
 end
