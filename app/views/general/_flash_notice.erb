@@ -1,4 +1,4 @@
-<% if !flash.empty? %>
+<% if !flash.empty? && flash.notice.is_a?(String) %>
   <% flash.each do |k, message| %>
     <div class="lime lighten-3 chip center-align"><%=sanitize message %></div>
   <% end %>

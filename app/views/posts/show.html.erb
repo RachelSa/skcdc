@@ -7,7 +7,7 @@
       <div class="flow-text"><%= sanitize @post.content %></div>
     </div>
     <p class="blue-grey-text text-lighten-3 demphasize-text"> posted on <%= @post.created_at.strftime("%B %d, %Y") %></p>
-    <%= link_to "◁ return to all posts", posts_path %>
+    <p class="back-link"><%= link_to "◁ return to all posts", posts_path %></p>
 </div>
 
 <div class="col l1 m1"></div>
