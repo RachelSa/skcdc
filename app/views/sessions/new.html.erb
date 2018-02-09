@@ -19,6 +19,6 @@
 
   <% end %>
   <h5>Need an account?</h5>
-  <p>Email SKCDC's Information Systems Manager: <%= mail_to "rachel.salois@gmail.com", "#{@admin.email}", subject: "Request Login Credentials for SKCDC", body: "Hello #{@admin.first_name}, I would like to request login credentials for SKCDC's website." %>.</p>
+  <p>Email SKCDC's Information Systems Manager: <%= mail_to "#{@admin.email}", "#{@admin.email}", subject: "Request Login Credentials for SKCDC", body: "Hello #{@admin.first_name}, I would like to request login credentials for SKCDC's website." %>.</p>
 
 <div class="col l2 m2"></div>
