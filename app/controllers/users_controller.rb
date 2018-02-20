@@ -7,55 +7,51 @@ class UsersController < ApplicationController
   end
 
   def create
-  @user = User.new(user_params)
-  @user.email.downcase!
-  if @user.save
-    flash[:notice] = "user created"
-    redirect_to admin_path
-   else
-    flash.now[:notice] = "User emails must be unique SKCDC emails. Passwords must be six characters in length."
-    render :new
+    @user = User.new(user_params)
+    @user.email.downcase!
+    if @user.save
+      flash[:notice] = "user created"
+      redirect_to admin_path
+     else
+      flash.now[:notice] = "User emails must be unique SKCDC emails. Passwords must be six characters in length."
+      render :new
+    end
   end
-end
 
-def edit
-  @user = User.find(params[:id])
-end
+  def edit
+    @user = User.find(params[:id])
+  end
 
-def update
-  @user = User.find(params[:id])
-  if @user.update(user_params)
-    if User.super_count >= 1
-      flash[:notice] = "user updated"
-      redirect_to super_admin_path
+  def update
+    @user = User.find(params[:id])
+    if @user.update(user_params)
+      if User.super_count >= 1
+        flash[:notice] = "user updated"
+        redirect_to super_admin_path
+      else
+        @user.update(super: 'true')
+        @user.errors.add(:super, "there must be at least 1 super admin")
+        @errors = @user.errors.messages
+        flash[:notice] = @errors
+        render :edit
+      end
     else
-      @user.update(super: 'true')
-      @user.errors.add(:super, "there must be at least 1 super admin")
       @errors = @user.errors.messages
       flash[:notice] = @errors
       render :edit
     end
-  else
-    @errors = @user.errors.messages
-    flash[:notice] = @errors
-    render :edit
   end
-end
 
-def super
-  current_user
-  @users = User.order(:email)
-end
+  def super
+    current_user
+    @users = User.order(:email)
+  end
 
-def destroy
-  @user = User.find(params[:id])
-  @user.destroy
-  redirect_to super_admin_path, :notice => "user deleted"
-end
-
-
-
-#delete user
+  def destroy
+    @user = User.find(params[:id])
+    @user.destroy
+    redirect_to super_admin_path, :notice => "user deleted"
+  end
 
   private
 
