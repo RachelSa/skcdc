@@ -1,28 +1,21 @@
-<div id="left-col" class="col l4">
+<%= render partial: "/general/admin_left_sidebar" %>
 
-</div>
-<div id="right-col" class="col l6">
+<div id="right-col" class='col l8 m8 s12'>
+  <%= render partial: '/general/flash_notice' %>
   <h3>Create Admin Account </h3>
-  <%= render partial: '/general/error_notice' %>
-<%= form_for(@user) do |f|%>
+  <%= form_for(@user) do |f|%>
+    <%= f.label :email %>
+    <%= f.text_field :email %><br>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password %><br>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %><br>
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
 
-  <%= f.label :password_confirmation %>
-  <%= f.password_field :password_confirmation %>
-
-  <%= f.check_box :super %>
-  <%= f.label :super, "super admin" %>
-  <br></br>
-
-
-  <%= f.submit 'submit', :class => "amber lighten-1 white-text btn" %><br></br>
-
-<% end %>
-
-<p><%= link_to "◁ return to super admin page", super_admin_path %></p>
+    <%= f.check_box :super %>
+    <%= f.label :super, "super admin" %>
+    <br></br>
+    <%= f.submit 'submit', :class => "amber lighten-1 white-text btn" %><br></br>
+  <% end %>
 </div>
