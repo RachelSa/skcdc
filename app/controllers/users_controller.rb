@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     flash[:notice] = "user created"
     redirect_to admin_path
    else
-    flash[:notice] = "User emails must be unique SKCDC emails. Passwords must be six characters in length."
+    flash.now[:notice] = "User emails must be unique SKCDC emails. Passwords must be six characters in length."
     render :new
   end
 end
