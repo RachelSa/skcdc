@@ -47,11 +47,11 @@ class UsersController < ApplicationController
     @users = User.order(:email)
   end
 
-  def destroy
-    @user = User.find(params[:id])
-    @user.destroy
-    redirect_to super_admin_path, :notice => "user deleted"
-  end
+def destroy
+  @user = User.find(params[:id])
+  @user.destroy
+  redirect_to super_admin_path, :notice => "user deleted"
+end
 
   private
 

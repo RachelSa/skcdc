@@ -3,7 +3,9 @@
 <div class="col l10 m10">
     <h3 class="yellow-title"><%= @post.title %></h3>
     <div class="text-indent">
-      <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
+      <% if @post.upload_attachment_file_name %>
+        <%= link_to @post.upload_attachment_file_name, @post.upload_attachment.url %>
+      <% end %>  
       <div class="flow-text"><%= sanitize @post.content %></div>
     </div>
     <p class="blue-grey-text text-lighten-3 demphasize-text"> posted on <%= @post.created_at.strftime("%B %d, %Y") %></p>
