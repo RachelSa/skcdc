@@ -9,7 +9,6 @@
         <a href="<%= post_path(post) %>" class="collection-item center-align">
           <div class="emphasize-text flow-text"><%= post.title %></div>
           <p class="demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></p>
-          <div class="demphasize-text"><%= sanitize post.content.truncate(150, separator: ' ') %></div>
         </a>
       <% end %>
     </div>
