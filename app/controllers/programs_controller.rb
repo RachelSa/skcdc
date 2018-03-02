@@ -59,7 +59,7 @@ class ProgramsController < ApplicationController
   private
 
   def program_params
-    params.require(:program).permit(:title, :description, :early_care_education, :supporting_families_communities)
+    params.require(:program).permit(:title, :description, :early_care_education, :supporting_families_communities, :upload_attachment)
   end
 
 end

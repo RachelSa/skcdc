@@ -11,10 +11,14 @@
       <% end %>
     </ul>
   <% end %>
-<h5>Description</h5>
+  <h5>Description</h5>
   <div class="flow-text"><%= sanitize @program.description %></div>
   <p class="back-link"><%= link_to "◁ return to all programs", programs_path %></p>
 
+  <% if @program.upload_attachment_file_name %>
+    <h5>Additional Information</h5>
+    <%= link_to "test", @program.upload_attachment.url %>
+    <% end %>
 </div>
 
 <div class="col l1 m1"></div>
