@@ -6,7 +6,7 @@
     <% if @posts.any? %>
       <div class="collection">
       <% @posts.each do |post| %>
-        <a href="<%= post_path(post) %>" class="collection-item center-align">
+        <a target="_" href="<%= post_path(post) %>" class="collection-item center-align">
           <div class="emphasize-text flow-text"><%= post.title %></div>
           <p class="demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></p>
         </a>
