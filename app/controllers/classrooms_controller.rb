@@ -3,6 +3,7 @@ class ClassroomsController < ApplicationController
 
   def new
     @classroom = Classroom.new
+    @programs = Program.all
   end
 
   def create
