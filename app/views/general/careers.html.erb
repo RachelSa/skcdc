@@ -10,13 +10,14 @@
         <a target="_" href="https://www.monster.com/jobs/c-southern-kennebec-child-development-corporation.aspx" class="collection-item">Monster</a>
     </div>
 
+  <% if @benefits.any? %>
     <h5>Agency Benefits</h5>
-    <ul class="collection">
-      <% @benefits.each do |b| %>
-        <li class="collection-item"><%= b.benefit %></li>
-      <% end %>
-
-    </ul>
+      <ul class="collection">
+        <% @benefits.each do |b| %>
+          <li class="collection-item"><%= b.benefit %></li>
+        <% end %>
+      </ul>
+  <% end %>
 
   </div>
 </div>
