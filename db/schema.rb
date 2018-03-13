@@ -10,10 +10,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171120193437) do
+ActiveRecord::Schema.define(version: 20180313191953) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "benefits", force: :cascade do |t|
+    t.text "benefit"
+  end
 
   create_table "carousels", force: :cascade do |t|
     t.string   "photo_1_file_name"
@@ -62,6 +66,15 @@ ActiveRecord::Schema.define(version: 20171120193437) do
     t.string   "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "dinosaurs", id: :bigserial, force: :cascade do |t|
+    t.string   "species"
+    t.integer  "health"
+    t.integer  "happiness"
+    t.integer  "radiating_positivity"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
   end
 
   create_table "parent_resources", force: :cascade do |t|

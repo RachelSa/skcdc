@@ -1,0 +1,14 @@
+<div id="left-col" class="col l4 m4 s12 center-align">
+  <h5><%= link_to "Admin Account", admin_path %></h5>
+  <%= link_to "see published benefits", @benefit %>
+  <hr class="yellow-rule">
+  Does this benefit no longer exist?<br>
+  <%= button_to "delete benefit", @benefit, :method => :delete, data: {confirm: "Are you sure you want to delete this benefit?"}, class: "amber lighten-1 white-text btn" %>
+  <hr class="yellow-rule">
+</div>
+
+<div id="right-col" class='col l8 m8 s12'>
+  <%= render partial: '/general/error_notice' %>
+  <h5 class="yellow-title">Update Benefit</h5>
+  <%= render partial: 'form' %>
+</div>

@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/parent_resources/admin', to: 'parent_resources#admin'
   get '/collaborations/admin', to: 'collaborations#admin'
   get '/contacts/admin', to: 'contacts#admin'
+  get '/benefits/admin', to: 'benefits#admin'
   get '/posts/admin', to: 'posts#admin'
   get '/admin/super', to: 'users#super', as: 'super_admin'
   post '/super', to: 'users#create_super'
@@ -25,6 +26,7 @@ Rails.application.routes.draw do
   resources :collaborations
   resources :posts
   resources :parent_resources
+  resources :benefits, only: [:new, :create, :edit, :update, :destroy]
   match "/404", :to => "errors#not_found", :via => :all
   match "/500", :to => "errors#internal_server_error", :via => :all
 
