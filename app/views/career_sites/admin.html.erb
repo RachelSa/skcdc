@@ -1,0 +1,14 @@
+<%= render partial: "/general/admin_left_sidebar" %>
+
+<div id="right-col" class="col l8 m8 s12 center-align">
+  <h5 class="yellow-title">Edit Career Sites</h5>
+  <ul class="collection">
+    <li class="collection-item"><%= link_to "+ new career site", "/career_sites/new" %></li>
+  <% @career_sites.each do |site| %>
+    <li class="collection-item">
+      <%= link_to "#{site.name}", edit_career_site_path(site) %>
+    </li>
+  <% end %>
+</ul>
+
+</div>
