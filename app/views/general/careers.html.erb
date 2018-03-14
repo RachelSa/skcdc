@@ -4,11 +4,14 @@
   <div class="center-align">
     <h3 class="yellow-title">Employment Opportunities</h3>
     <p>SKCDC is always seeking qualified candidates.</p>
-    <h5>Explore our current listings:</h5>
-    <div class="collection">
-        <a target="_" href="https://www.servingschools.com/employerjobs/vy5e" class="collection-item"> Serving Schools</a>
-        <a target="_" href="https://www.monster.com/jobs/c-southern-kennebec-child-development-corporation.aspx" class="collection-item">Monster</a>
-    </div>
+    <% if @career_sites.any? %>
+      <h5>Explore our current listings:</h5>
+      <div class="collection">
+        <% @career_sites.each do |cs| %>
+          <a target="_" href=<%=cs.url%> class="collection-item"><%= cs.name %></a>
+        <% end %>
+      </div>
+    <% end %>
 
   <% if @benefits.any? %>
     <h5>Agency Benefits</h5>

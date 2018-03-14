@@ -12,6 +12,7 @@ class GeneralController < ApplicationController
 
     def careers
       @benefits = Benefit.all
+      @career_sites = CareerSite.all
     end
 
     def admin
