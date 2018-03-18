@@ -1,0 +1,10 @@
+<%= form_for @employee_resource do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+
+  <%= f.submit 'submit', :class => "amber lighten-1 white-text btn", data: { confirm:
+    "Ready to post this update? All changes will appear on the live SKCDC website." } %><br></br>
+<% end %>

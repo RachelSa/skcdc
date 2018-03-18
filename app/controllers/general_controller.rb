@@ -20,7 +20,7 @@ class GeneralController < ApplicationController
     end
 
     def employees
-
+      @employee_resources = EmployeeResource.all
     end
 
 
