@@ -1,0 +1,14 @@
+<%= render partial: "/general/admin_left_sidebar" %>
+
+<div id="right-col" class="col l8 m8 s12 center-align">
+  <h5 class="yellow-title">Edit Employee Resources</h5>
+  <ul class="collection">
+    <li class="collection-item"><%= link_to "+ new employee resource", "/employee_resources/new" %></li>
+  <% @employee_resources.each do |er| %>
+    <li class="collection-item">
+      <%= link_to "#{er.name}", edit_employee_resource_path(er) %>
+    </li>
+  <% end %>
+</ul>
+
+</div>
