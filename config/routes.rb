@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   get '/login', to: 'sessions#new'
   post '/login', to: 'sessions#create'
   post '/logout', to: 'sessions#destroy'
+  get '/donate', to: 'general#donate'
   get '/mission', to: 'general#mission'
   get '/careers', to: 'general#careers'
   get '/employees', to: 'general#employees'
