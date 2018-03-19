@@ -23,5 +23,9 @@ class GeneralController < ApplicationController
       @employee_resources = EmployeeResource.all
     end
 
+    def donate
+
+    end
+
 
   end
