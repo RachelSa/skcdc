@@ -16,6 +16,11 @@ body {
    font-family: 'Hind Siliguri', sans-serif;
  }
 
+ #programs-title {
+   font-family: 'Hind Siliguri', sans-serif;
+   font-size: 1.3em;
+ }
+
 
  .background-image {
    background-image: url("https://s3.us-east-2.amazonaws.com/skcdc-website-photos/letters-3.JPG");
@@ -127,7 +132,7 @@ body {
 }
 
 #carousel-container {
-  width: 455px;
+  width: 500px;
   margin: auto;
 }
 
