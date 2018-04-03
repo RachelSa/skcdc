@@ -1,4 +1,5 @@
 $(document).on('turbolinks:load', function() {
+
   $(".dropdown-button").dropdown({
     hover: true,
     constrainWidth: false
@@ -8,7 +9,9 @@ $(document).on('turbolinks:load', function() {
     constrainWidth: false });
 
   $('.carousel.carousel-slider').carousel({fullWidth: true, indicators:true, duration:600});
-  setInterval(() => {
+
+  setTimeout(() => {
     $('.carousel.carousel-slider').carousel('next');
-  }, 5000);
+  }, 3000);
+
 });
