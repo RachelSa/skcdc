@@ -3,31 +3,29 @@
 <div class="col l10 m10">
 
   <h3 class="yellow-title"><%= @classroom.name %></h3>
+
+  <div class="row">
+    <div class="col l4 m4 s6">
+      <div><%= @classroom.street_address%></div>
+      <div><%= @classroom.town %>, Maine <%= @classroom.zipcode %></div>
+      <div><%= @classroom.phone %></div>
+      <div><%= link_to 'google map', @map_url, target: :_blank %></div>
+    </div>
+    <div class="col l8 m8 s6">
+      <% if @classroom.programs.present?  %>
+      <div id="programs-title">Programs</div>
+        <% @classroom.programs.each do |program| %>
+        <div><%= link_to "#{program.title}", program %></div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
   <% if @classroom.image.url != "/images/original/missing.png" %>
     <div><%= image_tag(@classroom.image.url(:small)) %></div>
   <% end %>
 
-  <div class="row">
-    <div class="col l4 m4 s12">
-      <h5>Contact</h5>
-      <div class="demphasize-text"><%= @classroom.street_address%></div>
-      <div class="demphasize-text" ><%= @classroom.town %>, Maine <%= @classroom.zipcode %></div>
-      <div class="demphasize-text"><%= @classroom.phone %></div>
-      <div><%= link_to 'google map', @map_url, target: :_blank %></div>
-    </div>
-    <div class="col l8 m8 s12">
-      <% if @classroom.programs.present?  %>
-      <h5>Programs</h5>
-      <ul>
-        <% @classroom.programs.each do |program| %>
-        <li><%= link_to "#{program.title}", program %></li>
-        <% end %>
-      </ul>
-      <% end %>
-    </div>
-  </div>
-  <hr class="yellow-rule-sm">
-  <h5>Description</h5>
+
   <div class="flow-text"><%= sanitize @classroom.description%></div><br>
   <a target="_" class="btn" href="https://www.childplus.net/apply/en-us/017F68AD81794F169ADE0ADB6A45176C/ACEF2899299E7C53224719C17012D582">apply</a>
   <p class="back-link"><%= link_to "◁ return to all centers", classrooms_path %></p>
