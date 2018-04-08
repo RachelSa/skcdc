@@ -7,8 +7,8 @@
       <div class="collection">
       <% @posts.each do |post| %>
         <a target="_" href="<%= post_path(post) %>" class="collection-item center-align">
-          <div class="emphasize-text flow-text"><%= post.title %></div>
-          <p class="demphasize-text"><%= post.created_at.strftime("%B %d, %Y") %></p>
+          <div class="emphasize-text flow-text small-margin-bottom"><%= post.title %></div>
+          <span><%= post.created_at.strftime("%B %d, %Y") %></span>
         </a>
       <% end %>
     </div>
