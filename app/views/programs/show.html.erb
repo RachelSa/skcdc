@@ -13,11 +13,7 @@
   <% end %>
 <h5>Description</h5>
   <div class="flow-text"><%= sanitize @program.description %></div>
-  <% if @program.title == "Child Care Options"%>
-  <%= render partial: "child_care_options" %>
-  <% end %>
   <p class="back-link"><%= link_to "◁ return to all programs", programs_path %></p>
-
 </div>
 
 <div class="col l1 m1"></div>
