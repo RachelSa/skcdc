@@ -4,17 +4,33 @@ $(document).on('turbolinks:load', function() {
     hover: true,
     constrainWidth: false
   });
+
   $(".button-collapse").sideNav({
     edge: 'right',
-    constrainWidth: false });
+    constrainWidth: false
+  });
 
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators:true,
-    duration:600});
+    indicators: true,
+    onCycleTo : function() {
+        stopAutoplay();
+        startAutoplay();
+      }
+  });
 
-  setTimeout(function() {
-    $('.carousel.carousel-slider').carousel('next');
-  }, 3000);
+  var autoplay_id;
+
+  function startAutoplay() {
+    autoplay_id = setInterval(() => {
+      $('.carousel.carousel-slider').carousel('next')
+    }, 4500)
+  }
+
+  function stopAutoplay() {
+    if(autoplay_id) {
+      clearInterval(autoplay_id)
+    }
+  }
 
 });
