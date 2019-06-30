@@ -22,7 +22,7 @@ $(document).on('turbolinks:load', function() {
   var autoplay_id;
 
   function startAutoplay() {
-    autoplay_id = setInterval(() => {
+    autoplay_id = setInterval(function() {
       $('.carousel.carousel-slider').carousel('next')
     }, 4500)
   }
