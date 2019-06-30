@@ -4,17 +4,22 @@ $(document).on('turbolinks:load', function() {
     hover: true,
     constrainWidth: false
   });
+
   $(".button-collapse").sideNav({
     edge: 'right',
-    constrainWidth: false });
+    constrainWidth: false
+  });
 
   $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators:true,
-    duration:600});
+    indicators: true,
+    duration: 600
+  });
 
-  setTimeout(function() {
+  function autoplay() {
     $('.carousel.carousel-slider').carousel('next');
-  }, 3000);
+    setTimeout(autoplay, 4500);
+  }
 
+  autoplay();
 });
