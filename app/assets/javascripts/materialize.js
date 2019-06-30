@@ -32,6 +32,4 @@ $(document).on('turbolinks:load', function() {
       clearInterval(autoplay_id)
     }
   }
-
-  autoplay();
 });
